@@ -37,7 +37,7 @@ export const SHOTS: Shot[] = [
 	)},
 	{at: s0(10), render: (d, r) => <InkRoom dur={d} phase="close" at={r(w0(12, 'లేచి'))} />},
 	{at: s0(14), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“We will not accept this,” one of them says.', '“You cannot take this decision, Madam.”', '“We will not take no for an answer.”']} hi={[[0, 2, 30], [1, r(s0(15)), r(s0(15)) + 40], [2, r(s0(16)), r(s0(16)) + 36]]} />},
-	{at: s0(17), render: (d) => <ExcerptShot dur={d} source={IE} lines={['They physically surround me.', 'I am shaken. I feel overpowered.']} hi={[[1, 30, 70]]} />},
+	{at: s0(17), render: (d) => <ExcerptShot dur={d} source={IE} lines={['They physically surround me.', 'I am shaken. I feel overpowered.']} hi={[[1, 30, 70]]}  under={<InkRoom dur={d} phase="close" at={-200} />} />},
 	{at: s0(18), render: (d) => <InkRoom dur={d} phase="close" at={-200} />},
 	{at: s0(19), render: (d, r) => (
 		<>
@@ -127,7 +127,7 @@ export const SHOTS: Shot[] = [
 	{at: s0(81), render: (d) => <PhotoShot dur={d} {...ph('indira1983')} grade="night" move="out" te="ఇక ఆన్సర్ చెప్పడం లేదు" labelAt={20} />},
 	{at: s0(83), render: (d, r) => <StampShot dur={d} {...ph('memorial2')} big="2:00 PM" sub="31 OCTOBER 1984 · DECLARED DEAD" subAt={r(w0(83, 'చనిపోయారని'))} />},
 	{at: s0(84), render: (d, r) => <MapShot dur={d} a={{at: PLACE.kolkata, label: 'WEST BENGAL'}} b={{at: PLACE.delhi, label: 'NEW DELHI'}} head="plane" go={r(w0(85, 'హడావిడిగా'))} arrive={r(w0(85, 'హాస్పిటల్'))} />},
-	{at: s0(86), render: (d, r) => <ExcerptShot dur={d} source={GUARD} lines={['“We held each other …', '‘I have been asked;', 'They want me to be sworn in', 'as prime minister.’”']} hi={[[2, r(s0(88)), r(s0(88)) + 50], [3, r(s0(88)) + 30, r(s0(88)) + 70]]} />},
+	{at: s0(86), render: (d, r) => <ExcerptShot dur={d} source={GUARD} lines={['“We held each other …', '‘I have been asked;', 'They want me to be sworn in', 'as prime minister.’”']} hi={[[2, r(s0(88)), r(s0(88)) + 50], [3, r(s0(88)) + 30, r(s0(88)) + 70]]}  under={<PhotoShot dur={d} {...ph('memorial2')} grade="night" />} />},
 	{at: s0(89), render: (d) => (
 		<>
 			<Dim red><InkMirror dur={d} showRight={99999} /></Dim>
@@ -135,7 +135,7 @@ export const SHOTS: Shot[] = [
 		</>
 	)},
 	{at: s0(90), render: (d) => <InkMirror dur={d} showRight={99999} />},
-	{at: s0(94), render: (d, r) => <ExcerptShot dur={d} source={GUARD} lines={['“They will kill you;', 'they will kill you, too!”', '', 'Rajiv: “They will kill me anyway.”']} hi={[[3, r(s0(95)), r(s0(95)) + 40]]} />},
+	{at: s0(94), render: (d, r) => <ExcerptShot dur={d} source={GUARD} lines={['“They will kill you;', 'they will kill you, too!”', '', 'Rajiv: “They will kill me anyway.”']} hi={[[3, r(s0(95)), r(s0(95)) + 40]]}  under={<PhotoShot dur={d} {...ph('memorial1')} grade="night" />} />},
 	{at: s0(96), render: (d) => (
 		<>
 			<Dim><InkMirror dur={d} showRight={99999} /></Dim>
@@ -145,7 +145,7 @@ export const SHOTS: Shot[] = [
 	{at: s0(98), render: (d) => <PhotoShot dur={d} {...ph('rajivThatcher')} grade="warm" move="in" te="ప్రైమ్ మినిస్టర్ రాజీవ్ గాంధీ" en="WITH MARGARET THATCHER, 1985" labelAt={4} />},
 	// ---------------------------------------------------------------- 1991
 	{at: s0(100), render: (d, r) => <StampShot dur={d} {...ph('rajiv1987')} grade="night" big="1991" sub="RAJIV IS CAMPAIGNING AGAIN" subAt={r(s0(101))} />},
-	{at: s0(102), render: (d, r) => <ExcerptShot dur={d} source={TOI} lines={['Rahul, two months before:', '“If something isn’t done about Pa’s security,', 'I know I’ll soon have to come back', 'for his funeral.”']} hi={[[1, r(s0(103)), r(s0(103)) + 50], [3, r(w0(103, 'ఫ్యూనరల్')), r(w0(103, 'ఫ్యూనరల్')) + 20]]} />},
+	{at: s0(102), render: (d, r) => <ExcerptShot dur={d} source={TOI} lines={['Rahul, two months before:', '“If something isn’t done about Pa’s security,', 'I know I’ll soon have to come back', 'for his funeral.”']} hi={[[1, r(s0(103)), r(s0(103)) + 50], [3, r(w0(103, 'ఫ్యూనరల్')), r(w0(103, 'ఫ్యూనరల్')) + 20]]}  under={<PhotoShot dur={d} {...ph('rajiv1987')} grade="bw" contain />} />},
 	{at: s0(104), render: (d) => <StampShot dur={d} {...ph('sriperumbudur')} big="21 MAY 1991" sub="RAJIV'S LAST DAY OF CAMPAIGNING" />},
 	{at: s0(105), render: (d, r) => <PhotoShot dur={d} {...ph('vizag')} grade="warm" move="l" te="మన విశాఖపట్నం" en="VISAKHAPATNAM" labelAt={r(w0(105, 'విశాఖపట్నం'))} />},
 	{at: s0(106), render: (d, r) => <MapShot dur={d} a={{at: PLACE.vizag, label: 'VISAKHAPATNAM'}} b={{at: PLACE.sriperumbudur, label: 'SRIPERUMBUDUR'}} go={4} arrive={r(w0(106, 'శ్రీపెరంబుదూర్'))} />},
@@ -164,7 +164,7 @@ export const SHOTS: Shot[] = [
 			<Words items={[{t: 'మళ్ళీ', at: r(s0(112))}, {t: 'పాలిటిక్స్ లోకి', at: r(s0(112)) + 10, gold: true}, {t: 'ఎందుకు?', at: r(w0(112, 'ఎందుకు')), red: true}]} />
 		</>
 	)},
-	{at: s0(113), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I had experienced it through Rajiv:', 'in its peaks of high endeavour,', 'as well as in all its ugliness and venality.', 'How could I even think of getting into it?”']} hi={[[2, r(w0(114, 'అసహ్యంగా')), r(w0(114, 'అసహ్యంగా')) + 40], [3, r(s0(115)), r(s0(115)) + 60]]} />},
+	{at: s0(113), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I had experienced it through Rajiv:', 'in its peaks of high endeavour,', 'as well as in all its ugliness and venality.', 'How could I even think of getting into it?”']} hi={[[2, r(w0(114, 'అసహ్యంగా')), r(w0(114, 'అసహ్యంగా')) + 40], [3, r(s0(115)), r(s0(115)) + 60]]}  under={<PhotoShot dur={d} {...ph('parliament')} grade="night" />} />},
 	{at: s0(116), render: (d, r) => <StampShot dur={d} {...ph('parliament')} big="1996" sub="CONGRESS DEFEATED · LEADERS LEAVE" subAt={r(s0(117))} />},
 	{at: s0(118), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I’d wake up in the middle of the night', 'wondering what I should do …', 'That pull was now getting hold of me.”']} hi={[[0, 6, 50], [2, r(s0(119)), r(s0(119)) + 60]]} />},
 	{at: s0(120), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I was after all the outsider.', 'I had been reminded of that status', 'again and again.”']} hi={[[0, r(s0(121)), r(s0(121)) + 30], [2, r(s0(122)) + 20, r(s0(122)) + 60]]} />},
@@ -196,10 +196,10 @@ export const SHOTS: Shot[] = [
 	{at: s0(137), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“I kept my views firmly to myself,', 'not even confiding in my closest colleagues.”']} hi={[[0, 6, 50]]} te="మౌనం" />},
 	{at: s0(141), render: (d) => <InkRoom dur={d} phase="close" at={-200} />},
 	{at: s0(144), render: (d) => <InkWindow dur={d} />},
-	{at: s0(146), render: (d) => <ExcerptShot dur={d} source={IE} lines={['She tore into the house to look for Rahul,', 'tears running down her face.']} hi={[[1, 40, 90]]} />},
+	{at: s0(146), render: (d) => <ExcerptShot dur={d} source={IE} lines={['She tore into the house to look for Rahul,', 'tears running down her face.']} hi={[[1, 40, 90]]}  under={<InkWindow dur={d} />} />},
 	{at: s0(147), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“She’s said yes to them!', 'They’re all around her,', 'she’s said yes!”']} hi={[[0, 2, 30], [2, 50, 80]]} />},
 	{at: s0(149), render: (d) => <InkCorridor dur={d} />},
-	{at: s0(150), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“You said yes?” thundered Rahul.']} hi={[[0, r(s0(151)), r(s0(151)) + 30]]} />},
+	{at: s0(150), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“You said yes?” thundered Rahul.']} hi={[[0, r(s0(151)), r(s0(151)) + 30]]}  under={<InkCorridor dur={d} />} />},
 	{at: s0(152), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“They wouldn’t listen to me,” I replied,', '“I don’t want to do it, you know I don’t.', 'I was being pressurised.”']} hi={[[2, r(s0(154)), r(s0(154)) + 40]]} />},
 	{at: s0(155), render: (d, r) => (
 		<>
@@ -217,12 +217,12 @@ export const SHOTS: Shot[] = [
 			<Words items={[{t: 'పిల్లల భయం', at: 4}, {t: 'ఒక్కటే కాదు', at: 20, gold: true}]} />
 		</>
 	)},
-	{at: s0(173), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“The BJP and its allies would for certain', 'use my “foreign origin” as an issue …', 'How could I agree to holding the office', 'knowing it could wound my country?”']} hi={[[1, r(w0(173, 'ఫారిన్')), r(w0(173, 'ఫారిన్')) + 30], [3, r(s0(175)) + 20, r(s0(175)) + 80]]} />},
+	{at: s0(173), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“The BJP and its allies would for certain', 'use my “foreign origin” as an issue …', 'How could I agree to holding the office', 'knowing it could wound my country?”']} hi={[[1, r(w0(173, 'ఫారిన్')), r(w0(173, 'ఫారిన్')) + 30], [3, r(s0(175)) + 20, r(s0(175)) + 80]]}  under={<PhotoShot dur={d} {...ph('sonia2013')} grade="bw" />} />},
 	// ---------------------------------------------------------------- the night
 	{at: s0(176), render: (d) => <InkBed dur={d} />},
 	{at: s0(179), render: (d, r) => <InkBed dur={d} lines={[{t: 'ఇటలీలో పుట్టి పెరిగిన నువ్వు, దేశాన్ని నడిపించాలా?', at: 4, side: 'l'}, {t: 'ఇది నీ దేశం.', at: r(s0(182)), side: 'r'}]} />},
 	{at: s0(185), render: (d) => <PhotoShot dur={d} {...ph('reagan1985')} grade="bw" move="in" focus="55% 40%" te="రాజీవ్ పక్కన ఉంటే బాగుండు" en="RAJIV AND SONIA GANDHI WITH THE REAGANS, 1985" labelAt={8} />},
-	{at: s0(187), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“Sonia, be true to yourself,”', 'I could hear myself say.', '“You’ve always known it. Just leave it!”']} hi={[[0, 4, 40], [2, r(s0(189)) - 20, r(s0(189)) + 10]]} />},
+	{at: s0(187), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“Sonia, be true to yourself,”', 'I could hear myself say.', '“You’ve always known it. Just leave it!”']} hi={[[0, 4, 40], [2, r(s0(189)) - 20, r(s0(189)) + 10]]}  under={<InkBed dur={d} />} />},
 	{at: s0(190), render: (d) => <InkDoor dur={d} />},
 	{at: s0(192), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“I’ve made up my mind.', 'I’m going to stick to my stand.”']} hi={[[0, 4, 30], [1, 40, 80]]} />},
 	{at: s0(194), render: (d, r) => (
@@ -234,7 +234,7 @@ export const SHOTS: Shot[] = [
 	// ---------------------------------------------------------------- Central Hall
 	{at: s0(196), render: (d) => <InkHall dur={d} />},
 	{at: s0(199), render: (d) => <InkHall dur={d} />},
-	{at: s0(201), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“I can hear my breath', 'above the whirring of the fans.”']} hi={[[0, 20, 60]]} />},
+	{at: s0(201), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“I can hear my breath', 'above the whirring of the fans.”']} hi={[[0, 20, 60]]}  under={<InkHall dur={d} />} />},
 	{at: s0(203), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“… the post of prime minister is not my aim.', 'I would follow my own inner voice.', 'Today that voice tells me', 'I must humbly decline this post.”']} hi={[[0, r(s0(204)), r(s0(204)) + 50], [1, r(w0(205, 'అంతరాత్మ')), r(w0(205, 'అంతరాత్మ')) + 40], [3, r(w0(206, 'వినయంగా')), r(w0(206, 'వినయంగా')) + 40]]} />},
 	{at: s0(207), render: (d) => <InkHall dur={d} surge={10} />},
 	{at: s0(213), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“I request you to accept my decision', 'and to recognize that I will not reverse it.”']} hi={[[1, 40, 100]]} />},
@@ -246,7 +246,7 @@ export const SHOTS: Shot[] = [
 		</>
 	)},
 	{at: s0(219), render: (d, r) => <PrintShot dur={d} {...ph('pvrao')} caption="P. V. NARASIMHA RAO" grade="warm" te="మన పీవీ నరసింహారావు" en="MANMOHAN SINGH WAS HIS FINANCE MINISTER" labelAt={r(s0(220))} width={760} />},
-	{at: s0(221), render: (d) => <ExcerptShot dur={d} source={TOI} lines={['“… his integrity unquestionable.”', '“I knew that our beloved country', 'would be safe in his hands.”']} hi={[[0, 10, 50], [2, 90, 140]]} />},
+	{at: s0(221), render: (d) => <ExcerptShot dur={d} source={TOI} lines={['“… his integrity unquestionable.”', '“I knew that our beloved country', 'would be safe in his hands.”']} hi={[[0, 10, 50], [2, 90, 140]]}  under={<PhotoShot dur={d} {...ph('manmohan')} grade="warm" contain />} />},
 	{at: s0(222), render: (d, r) => (
 		<>
 			<Dim dur={d} file={M.clinton2000.file} />

@@ -11,19 +11,10 @@ export const spring1 = (f: number, at: number, fps: number, d = 0.55): number =>
 const src = (f: string): string => staticFile(f.startsWith('media/') || f.startsWith('fonts/') ? f : `media/${f}`);
 
 // ------------------------------------------------------------------ atmosphere (layer 2 in every frame)
-export const Grain: React.FC<{o?: number}> = ({o = 0.12}) => {
+export const Grain: React.FC<{o?: number}> = ({o = 0.1}) => {
 	const f = useCurrentFrame();
-	return (
-		<AbsoluteFill style={{pointerEvents: 'none', mixBlendMode: 'overlay', opacity: o}}>
-			<svg width="100%" height="100%">
-				<filter id={`gr${f % 6}`}>
-					<feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={f % 6} />
-					<feColorMatrix type="saturate" values="0" />
-				</filter>
-				<rect width="100%" height="100%" filter={`url(#gr${f % 6})`} />
-			</svg>
-		</AbsoluteFill>
-	);
+	// pre-rendered noise frames (tools/make_tex.py): an SVG turbulence per frame cost ~40% of the render
+	return <Img src={staticFile(`tex/grain${Math.floor(f / 2) % 6}.png`)} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', mixBlendMode: 'overlay', opacity: o, pointerEvents: 'none'}} />;
 };
 export const Vignette: React.FC<{s?: number}> = ({s = 0.6}) => (
 	<AbsoluteFill style={{pointerEvents: 'none', background: `radial-gradient(ellipse 75% 70% at 50% 48%, rgba(0,0,0,0) 45%, rgba(0,0,0,${s}) 100%)`}} />
@@ -56,14 +47,7 @@ export const Desk: React.FC<{lamp?: number}> = ({lamp = 1}) => {
 	return (
 		<AbsoluteFill style={{background: C.desk, overflow: 'hidden'}}>
 			<AbsoluteFill style={{transform: `translate(${noise2D('dx', f / 600, 0) * 18}px, ${noise2D('dy', 0, f / 650) * 12}px) scale(1.1) rotate(-3deg)`}}>
-				<svg width="100%" height="100%">
-					<filter id="wood">
-						<feTurbulence type="fractalNoise" baseFrequency="0.006 0.035" numOctaves={4} seed={3} />
-						<feColorMatrix type="matrix" values="0 0 0 0 0.20  0 0 0 0 0.14  0 0 0 0 0.09  0 0 0 0.9 0" />
-					</filter>
-					<rect width="100%" height="100%" fill="#120D09" />
-					<rect width="100%" height="100%" filter="url(#wood)" opacity={0.28} />
-				</svg>
+				<Img src={staticFile('tex/desk.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
 			</AbsoluteFill>
 			<AbsoluteFill style={{background: `radial-gradient(ellipse 52% 58% at ${lx}% 42%, rgba(255,190,120,${0.22 * lamp}) 0%, rgba(0,0,0,0) 72%)`, mixBlendMode: 'screen'}} />
 		</AbsoluteFill>
@@ -242,7 +226,10 @@ export const BookShot: React.FC<{dur: number; te?: string; en?: string; labelAt?
  * A page of the excerpt as typeset text on paper (plainly typography, never a fake scan), the highlighter sweeping
  * the quoted words as the voice reaches them. `lines`: the excerpt's own words; `hi`: [line index, from, to] frames.
  */
-export const ExcerptShot: React.FC<{dur: number; lines: string[]; hi?: [number, number, number][]; source: string; te?: string}> = ({dur, lines, hi = [], source, te}) => {
+export const ExcerptShot: React.FC<{dur: number; lines: string[]; hi?: [number, number, number][]; source: string; te?: string; under?: React.ReactNode}> = ({dur, lines, hi = [], source, te, under}) => {
+	const seedR = random(`ex${lines.join('')}`);
+	const tilt = (seedR - 0.5) * 5;
+	const shift = (random(`exs${lines[0]}`) - 0.5) * 160;
 	const f = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const p = spring1(f, 0, fps, 0.7);
@@ -251,7 +238,7 @@ export const ExcerptShot: React.FC<{dur: number; lines: string[]; hi?: [number, 
 	return (
 		<AbsoluteFill style={{overflow: 'hidden'}}>
 			<AbsoluteFill style={{transform: `scale(${cam}) translateY(${tw(f, 0, dur, 20, -20)}px)`}}>
-				<Desk />
+				{under ? <Dim>{under}</Dim> : <Desk />}
 				<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', perspective: 1100}}>
 					<div
 						style={{
@@ -259,7 +246,7 @@ export const ExcerptShot: React.FC<{dur: number; lines: string[]; hi?: [number, 
 							padding: '70px 90px',
 							background: 'linear-gradient(165deg, #F3EBD8 0%, #E6D8B9 75%, #D9C59E 100%)',
 							boxShadow: '0 45px 90px rgba(0,0,0,0.65)',
-							transform: `translateY(${(1 - p) * 120}px) rotateX(${9 + sway * 1.5}deg) rotateY(${-4 + sway * 2}deg)`,
+							transform: `translate(${shift}px, ${(1 - p) * 120}px) rotateX(${9 + sway * 1.5}deg) rotateY(${-4 + sway * 2}deg) rotateZ(${tilt}deg)`,
 							opacity: Math.min(1, p * 1.5),
 						}}
 					>
