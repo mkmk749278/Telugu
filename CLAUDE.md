@@ -9,7 +9,8 @@ a Remotion reference). Owner, 2026-11-10: "Work on Telugu, don't edit anything i
 
 ## Audio (owner, 2026-11-10)
 - **The owner generates the audio himself. Never call ElevenLabs or any TTS API from a session.**
-- Give him recording blocks of **at most 10,000 characters each**, as click-to-copy code blocks in the chat and in
+- Give him recording blocks of **at most 1,500 characters each** (owner, 2026-11-10: 10,000-character blocks skipped
+  content when generated), all in one file, as click-to-copy code blocks in the chat and in
   `projects/<slug>/audio_blocks.md`, built by `python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>"`
   (it lints the text and splits at paragraphs).
 - Recording text: Telugu script only (English words written in Telugu, numbers as English number words in Telugu

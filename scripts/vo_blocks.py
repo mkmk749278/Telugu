@@ -2,10 +2,10 @@
 """Lint a Telugu vo.txt and split it into recording blocks for the owner.
 
 The owner generates the audio himself (owner, 2026-11-10): no TTS API from the session.
-Blocks break only at blank lines (paragraphs), each at most --max characters, and are
+Blocks break only at blank lines (paragraphs), each at most --max characters (default 1,500: the owner heard long blocks skip content, 2026-11-10), and are
 balanced so no block is tiny. Writes a Markdown file with one click-to-copy block each.
 
-Usage: python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>" [--max 10000]
+Usage: python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>" [--max 1500]
 """
 import argparse
 import math
@@ -37,29 +37,47 @@ def lint(text: str) -> list[str]:
 
 
 def split(paragraphs: list[str], limit: int) -> list[str]:
-    total = len("\n\n".join(paragraphs))
-    n = max(1, math.ceil(total / limit))
-    while True:
-        target = total / n
-        blocks, cur = [], []
-        for p in paragraphs:
-            cand = "\n\n".join(cur + [p])
-            if cur and (len(cand) > limit or (len(cand) > target and len(blocks) < n - 1)):
-                blocks.append("\n\n".join(cur))
-                cur = [p]
-            else:
-                cur.append(p)
-        blocks.append("\n\n".join(cur))
-        if all(len(b) <= limit for b in blocks):
-            return blocks
-        n += 1
+    """Contiguous groups of paragraphs, fewest blocks within the limit, sizes as even as possible."""
+    sep = 2  # the blank line between paragraphs
+    lens = [len(p) for p in paragraphs]
+    m = len(lens)
+
+    def size(i: int, j: int) -> int:  # paragraphs i..j-1 joined
+        return sum(lens[i:j]) + sep * (j - i - 1)
+
+    if any(n > limit for n in lens):
+        raise SystemExit("a single paragraph is longer than the block limit: split it in vo.txt")
+    total = size(0, m)
+    for n in range(max(1, math.ceil(total / limit)), m + 1):
+        # best[k][j]: smallest possible largest block when the first j paragraphs make k blocks
+        inf = float("inf")
+        best = [[inf] * (m + 1) for _ in range(n + 1)]
+        cut = [[0] * (m + 1) for _ in range(n + 1)]
+        best[0][0] = 0
+        for k in range(1, n + 1):
+            for j in range(1, m + 1):
+                for i in range(k - 1, j):
+                    s_ij = size(i, j)
+                    if s_ij > limit:
+                        continue
+                    v = max(best[k - 1][i], s_ij)
+                    if v < best[k][j]:
+                        best[k][j], cut[k][j] = v, i
+        if best[n][m] < inf:
+            bounds, j = [], m
+            for k in range(n, 0, -1):
+                i = cut[k][j]
+                bounds.append((i, j))
+                j = i
+            return ["\n\n".join(paragraphs[i:j]) for i, j in reversed(bounds)]
+    raise SystemExit("could not split")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("vo")
     ap.add_argument("--title", required=True)
-    ap.add_argument("--max", type=int, default=10000)
+    ap.add_argument("--max", type=int, default=1500)
     ap.add_argument("--out")
     a = ap.parse_args()
     vo = Path(a.vo)
