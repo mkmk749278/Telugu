@@ -25,3 +25,5 @@ silence), 48 kHz WAV for the edit; length 12:31. Loudness is left at about −23
 normalised with music.
 
 Drive: `Creator/Telugu/sonia-belonging/sonia-belonging_vo_full.mp3`; originals in `.../vo_takes/`.
+
+**Owner approved the audio on 10 Nov 2026.**

@@ -1,0 +1,2622 @@
+[
+ {
+  "line": 1,
+  "start": 0.0,
+  "end": 3.652,
+  "te": "సోనియా గాంధీ, ప్రైమ్ మినిస్టర్ పదవికి ఒకసారి సరే అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 2.015,
+  "confidence": "high"
+ },
+ {
+  "line": 2,
+  "start": 4.108,
+  "end": 5.551,
+  "te": "ఇది ఎవరో చెప్పిన గాసిప్ కాదు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 2.015,
+  "confidence": "high"
+ },
+ {
+  "line": 3,
+  "start": 5.956,
+  "end": 9.224,
+  "te": "ఈరోజు రిలీజ్ అయిన ఆమె సొంత పుస్తకంలో, ఆమే రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.16,
+  "boundary_margin": 0.443,
+  "confidence": "high"
+ },
+ {
+  "line": 4,
+  "start": 9.656,
+  "end": 10.933,
+  "te": "మే, టూ థౌజండ్ ఫోర్.",
+  "en": "",
+  "speech_vs_text": 1.39,
+  "boundary_margin": 0.305,
+  "confidence": "high"
+ },
+ {
+  "line": 5,
+  "start": 11.319,
+  "end": 12.783,
+  "te": "ఢిల్లీ, టెన్ జన్పథ్.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.305,
+  "confidence": "high"
+ },
+ {
+  "line": 6,
+  "start": 13.185,
+  "end": 14.168,
+  "te": "ఎలక్షన్ రిజల్ట్స్ వచ్చాయి.",
+  "en": "",
+  "speech_vs_text": 0.65,
+  "boundary_margin": 0.42,
+  "confidence": "check"
+ },
+ {
+  "line": 7,
+  "start": 14.565,
+  "end": 16.728,
+  "te": "కాంగ్రెస్ నడిపే యూపీఏ అలయన్స్ గెలిచింది.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.3,
+  "confidence": "high"
+ },
+ {
+  "line": 8,
+  "start": 17.101,
+  "end": 23.096,
+  "te": "ఆ ఇంట్లో, ఒకప్పుడు రాజీవ్ గాంధీ వాడిన కాన్ఫరెన్స్ రూమ్ లో, అలయన్స్ లీడర్లు గంటకు పైగా మాట్లాడుతున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.3,
+  "confidence": "high"
+ },
+ {
+  "line": 9,
+  "start": 23.53,
+  "end": 24.736,
+  "te": "అందరిదీ ఒకటే మాట.",
+  "en": "",
+  "speech_vs_text": 1.31,
+  "boundary_margin": 1.894,
+  "confidence": "high"
+ },
+ {
+  "line": 10,
+  "start": 25.112,
+  "end": 26.384,
+  "te": "మీరే ప్రైమ్ మినిస్టర్ కావాలి.",
+  "en": "",
+  "speech_vs_text": 0.77,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 11,
+  "start": 26.832,
+  "end": 27.962,
+  "te": "సోనియా నో అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.15,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 12,
+  "start": 28.303,
+  "end": 28.635,
+  "te": "అంతే.",
+  "en": "",
+  "speech_vs_text": 1.26,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 13,
+  "start": 28.943,
+  "end": 30.606,
+  "te": "రూమ్ లో అందరూ లేచి నిలబడ్డారు.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 14,
+  "start": 30.941,
+  "end": 32.909,
+  "te": "లీడర్లు ఆమె చుట్టూ వచ్చి నిలబడ్డారు.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 15,
+  "start": 33.358,
+  "end": 33.978,
+  "te": "మేము ఒప్పుకోం.",
+  "en": "",
+  "speech_vs_text": 0.79,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 16,
+  "start": 34.181,
+  "end": 35.887,
+  "te": "మీరు ఈ డెసిషన్ తీసుకోకూడదు, మేడమ్.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 17,
+  "start": 36.163,
+  "end": 37.525,
+  "te": "నో అనే ఆన్సర్ మాకు వద్దు.",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.888,
+  "confidence": "high"
+ },
+ {
+  "line": 18,
+  "start": 37.919,
+  "end": 41.241,
+  "te": "ఆమె మాటల్లో చెప్పాలంటే, ఆ క్షణం ఆమె షేక్ అయిపోయారు.",
+  "en": "",
+  "speech_vs_text": 1.15,
+  "boundary_margin": 0.781,
+  "confidence": "high"
+ },
+ {
+  "line": 19,
+  "start": 41.592,
+  "end": 45.292,
+  "te": "గొంతు దాదాపు వినిపించనంత మెల్లగా, ఒకే ఒక్క మాట అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.16,
+  "boundary_margin": 0.781,
+  "confidence": "high"
+ },
+ {
+  "line": 20,
+  "start": 45.73,
+  "end": 46.141,
+  "te": "ఠీక్ హై.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 1.384,
+  "confidence": "high"
+ },
+ {
+  "line": 21,
+  "start": 46.578,
+  "end": 47.021,
+  "te": "అంటే, సరే.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.057,
+  "confidence": "high"
+ },
+ {
+  "line": 22,
+  "start": 47.333,
+  "end": 50.892,
+  "te": "ఆ మాట పూర్తి కాకముందే, కంగ్రాచ్యులేషన్స్ మొదలయ్యాయి.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.057,
+  "confidence": "high"
+ },
+ {
+  "line": 23,
+  "start": 51.194,
+  "end": 52.855,
+  "te": "కానీ ఆ రూమ్ కిటికీ తెరిచే ఉంది.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 1.589,
+  "confidence": "high"
+ },
+ {
+  "line": 24,
+  "start": 53.178,
+  "end": 56.818,
+  "te": "బయట, ఆ కిటికీ దగ్గర, ఒక అమ్మాయి మొత్తం చూస్తూ నిలబడింది.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 0.588,
+  "confidence": "high"
+ },
+ {
+  "line": 25,
+  "start": 57.18,
+  "end": 58.49,
+  "te": "ఆమె కూతురు, ప్రియాంక.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 0.45,
+  "confidence": "high"
+ },
+ {
+  "line": 26,
+  "start": 58.876,
+  "end": 60.595,
+  "te": "అసలు కథ ఇక్కడే మొదలవుతుంది.",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.45,
+  "confidence": "high"
+ },
+ {
+  "line": 27,
+  "start": 60.906,
+  "end": 65.232,
+  "te": "సరే అన్న ఆ మనిషి, ఒక్క రాత్రి గడిచేసరికి, తన మాట వెనక్కి తీసుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.07,
+  "boundary_margin": 0.41,
+  "confidence": "high"
+ },
+ {
+  "line": 28,
+  "start": 65.493,
+  "end": 68.33,
+  "te": "దేశం మొత్తం చూస్తుండగా, ఆ పదవిని వద్దన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 0.41,
+  "confidence": "high"
+ },
+ {
+  "line": 29,
+  "start": 68.64,
+  "end": 70.371,
+  "te": "ఆ ఒక్క రాత్రిలో ఏం జరిగింది?",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 30,
+  "start": 70.692,
+  "end": 73.144,
+  "te": "కిటికీ బయట నిలబడిన ప్రియాంక ఏం చేసింది?",
+  "en": "",
+  "speech_vs_text": 1.13,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 31,
+  "start": 73.466,
+  "end": 74.039,
+  "te": "ఇంకో విషయం.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 1.284,
+  "confidence": "high"
+ },
+ {
+  "line": 32,
+  "start": 74.279,
+  "end": 80.34,
+  "te": "సరిగ్గా ట్వెంటీ ఇయర్స్ ముందు, ఇదే సోనియా, ఇదే పదవి గురించి, తన భర్తని చేతులు జోడించి వేడుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 1.284,
+  "confidence": "high"
+ },
+ {
+  "line": 33,
+  "start": 80.6,
+  "end": 81.039,
+  "te": "ఎందుకు?",
+  "en": "",
+  "speech_vs_text": 1.11,
+  "boundary_margin": 2.226,
+  "confidence": "high"
+ },
+ {
+  "line": 34,
+  "start": 81.337,
+  "end": 84.334,
+  "te": "ఈ మూడు ప్రశ్నలకీ సమాధానం ఆమె పుస్తకంలోనే ఉంది.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 0.836,
+  "confidence": "high"
+ },
+ {
+  "line": 35,
+  "start": 84.669,
+  "end": 87.319,
+  "te": "పుస్తకం పేరు, బిలాంగింగ్, ఎ జర్నీ ఆఫ్ లవ్.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.264,
+  "confidence": "high"
+ },
+ {
+  "line": 36,
+  "start": 87.656,
+  "end": 89.039,
+  "te": "ఫైవ్ హండ్రెడ్ ఫార్టీ ఫోర్ పేజీలు.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 0.264,
+  "confidence": "high"
+ },
+ {
+  "line": 37,
+  "start": 89.32,
+  "end": 91.266,
+  "te": "హార్పర్ కాలిన్స్ ఇండియా పబ్లిష్ చేసింది.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 0.787,
+  "confidence": "high"
+ },
+ {
+  "line": 38,
+  "start": 91.59,
+  "end": 94.422,
+  "te": "ఈరోజు, నవంబర్ టెన్త్, బుక్ షాప్స్ లోకి వచ్చింది.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.746,
+  "confidence": "high"
+ },
+ {
+  "line": 39,
+  "start": 95.396,
+  "end": 97.137,
+  "te": "ఒక్క విషయం ముందే క్లియర్ గా చెప్తాను.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 0.355,
+  "confidence": "high"
+ },
+ {
+  "line": 40,
+  "start": 97.595,
+  "end": 104.961,
+  "te": "ఈ వీడియోలో ప్రతి మాట, ఆమె పుస్తకం నుంచి పేపర్లు పబ్లిష్ చేసిన భాగాలు, ఆమె ఇంటర్వ్యూలు, వీటి నుంచి మాత్రమే.",
+  "en": "",
+  "speech_vs_text": 1.11,
+  "boundary_margin": 0.355,
+  "confidence": "high"
+ },
+ {
+  "line": 41,
+  "start": 105.341,
+  "end": 106.531,
+  "te": "ఇది ఆమె వైపు కథ.",
+  "en": "",
+  "speech_vs_text": 1.51,
+  "boundary_margin": 0.602,
+  "confidence": "check"
+ },
+ {
+  "line": 42,
+  "start": 107.015,
+  "end": 110.029,
+  "te": "ఆమెని విమర్శించే వాళ్ళు ఏమంటున్నారో కూడా, చివర్లో చెప్తాను.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 1.312,
+  "confidence": "high"
+ },
+ {
+  "line": 43,
+  "start": 110.535,
+  "end": 110.792,
+  "te": "సరే.",
+  "en": "",
+  "speech_vs_text": 1.3,
+  "boundary_margin": 1.312,
+  "confidence": "high"
+ },
+ {
+  "line": 44,
+  "start": 111.246,
+  "end": 112.669,
+  "te": "కథ ఇండియాలో మొదలవదు.",
+  "en": "",
+  "speech_vs_text": 1.27,
+  "boundary_margin": 0.603,
+  "confidence": "high"
+ },
+ {
+  "line": 45,
+  "start": 113.096,
+  "end": 115.151,
+  "te": "ఇంగ్లాండ్ లో, కేంబ్రిడ్జ్ లో మొదలవుతుంది.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 0.603,
+  "confidence": "high"
+ },
+ {
+  "line": 46,
+  "start": 115.462,
+  "end": 116.444,
+  "te": "నైన్టీన్ సిక్స్టీ ఫైవ్.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 1.454,
+  "confidence": "high"
+ },
+ {
+  "line": 47,
+  "start": 116.994,
+  "end": 119.322,
+  "te": "ఇటలీలోని ఒక చిన్న టౌన్ నుంచి వచ్చిన అమ్మాయి.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.2,
+  "confidence": "high"
+ },
+ {
+  "line": 48,
+  "start": 119.72,
+  "end": 120.889,
+  "te": "వయసు నైన్టీన్.",
+  "en": "",
+  "speech_vs_text": 1.23,
+  "boundary_margin": 0.2,
+  "confidence": "high"
+ },
+ {
+  "line": 49,
+  "start": 121.35,
+  "end": 122.794,
+  "te": "అక్కడ ఇంగ్లీష్ నేర్చుకుంటోంది.",
+  "en": "",
+  "speech_vs_text": 0.81,
+  "boundary_margin": 0.252,
+  "confidence": "high"
+ },
+ {
+  "line": 50,
+  "start": 123.271,
+  "end": 128.311,
+  "te": "ఒక రోజు, ది వర్సిటీ అనే ఒక చిన్న గ్రీక్ రెస్టారెంట్ లో, ఒక ఇండియన్ స్టూడెంట్ ని కలిసింది.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.347,
+  "confidence": "high"
+ },
+ {
+  "line": 51,
+  "start": 128.775,
+  "end": 130.337,
+  "te": "అతని పేరు, రాజీవ్ గాంధీ.",
+  "en": "",
+  "speech_vs_text": 1.06,
+  "boundary_margin": 0.347,
+  "confidence": "high"
+ },
+ {
+  "line": 52,
+  "start": 130.834,
+  "end": 134.392,
+  "te": "ఆమె మాటల్లో, చూసిన వెంటనే అనిపించిందట, ఇతనితోనే ఉండాలని.",
+  "en": "",
+  "speech_vs_text": 1.07,
+  "boundary_margin": 0.164,
+  "confidence": "high"
+ },
+ {
+  "line": 53,
+  "start": 134.864,
+  "end": 138.353,
+  "te": "తర్వాత తెలిసింది, అతనికి కూడా సేమ్ అలాగే అనిపించిందని.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.164,
+  "confidence": "high"
+ },
+ {
+  "line": 54,
+  "start": 138.828,
+  "end": 141.207,
+  "te": "కానీ ఈ స్టూడెంట్ మామూలు స్టూడెంట్ కాదు కదా.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 1.731,
+  "confidence": "high"
+ },
+ {
+  "line": 55,
+  "start": 141.644,
+  "end": 143.585,
+  "te": "అతని తాత, జవహర్లాల్ నెహ్రూ.",
+  "en": "",
+  "speech_vs_text": 1.34,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 56,
+  "start": 143.998,
+  "end": 145.494,
+  "te": "ఇండియా ఫస్ట్ ప్రైమ్ మినిస్టర్.",
+  "en": "",
+  "speech_vs_text": 0.87,
+  "boundary_margin": 0.521,
+  "confidence": "high"
+ },
+ {
+  "line": 57,
+  "start": 145.906,
+  "end": 147.443,
+  "te": "అతని అమ్మ, ఇందిరా గాంధీ.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.449,
+  "confidence": "high"
+ },
+ {
+  "line": 58,
+  "start": 147.902,
+  "end": 150.419,
+  "te": "నైన్టీన్ సిక్స్టీ సిక్స్ లో ఆమె ప్రైమ్ మినిస్టర్ అయ్యారు.",
+  "en": "",
+  "speech_vs_text": 0.78,
+  "boundary_margin": 0.449,
+  "confidence": "high"
+ },
+ {
+  "line": 59,
+  "start": 150.808,
+  "end": 153.147,
+  "te": "ఫిబ్రవరి ట్వెంటీ ఫిఫ్త్, నైన్టీన్ సిక్స్టీ ఎయిట్.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 60,
+  "start": 153.518,
+  "end": 154.288,
+  "te": "ఢిల్లీలో పెళ్ళి.",
+  "en": "",
+  "speech_vs_text": 0.84,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 61,
+  "start": 154.753,
+  "end": 157.962,
+  "te": "ఆ రోజు సోనియా కట్టుకున్న చీర నూలు, ఎవరు వడికారో తెలుసా?",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.934,
+  "confidence": "high"
+ },
+ {
+  "line": 62,
+  "start": 158.422,
+  "end": 162.631,
+  "te": "స్వాతంత్ర్య పోరాటంలో జైల్లో ఉన్నప్పుడు, నెహ్రూ స్వయంగా వడికిన నూలు అది.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.716,
+  "confidence": "high"
+ },
+ {
+  "line": 63,
+  "start": 163.126,
+  "end": 166.675,
+  "te": "ఆ తర్వాత ఒక ఇటాలియన్ అమ్మాయి, ఇండియన్ కోడలు అవ్వడం మొదలైంది.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.647,
+  "confidence": "high"
+ },
+ {
+  "line": 64,
+  "start": 167.131,
+  "end": 167.963,
+  "te": "హిందీ నేర్చుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.67,
+  "boundary_margin": 0.647,
+  "confidence": "check"
+ },
+ {
+  "line": 65,
+  "start": 168.273,
+  "end": 169.616,
+  "te": "చీర కట్టుకోవడం నేర్చుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.76,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 66,
+  "start": 170.009,
+  "end": 171.394,
+  "te": "మన ఫుడ్ కి అలవాటు పడ్డారు.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 0.541,
+  "confidence": "high"
+ },
+ {
+  "line": 67,
+  "start": 171.801,
+  "end": 173.902,
+  "te": "అత్తగారు, దేశానికే ప్రైమ్ మినిస్టర్.",
+  "en": "",
+  "speech_vs_text": 0.95,
+  "boundary_margin": 0.541,
+  "confidence": "high"
+ },
+ {
+  "line": 68,
+  "start": 174.353,
+  "end": 176.848,
+  "te": "ఆమె కోపం గురించి సోనియా ఓపెన్ గా రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.15,
+  "boundary_margin": 1.343,
+  "confidence": "high"
+ },
+ {
+  "line": 69,
+  "start": 177.247,
+  "end": 182.74,
+  "te": "ఒక స్టాఫ్ మెంబర్ ఒక అపాయింట్మెంట్ మళ్ళీ మళ్ళీ మర్చిపోతే, ఇందిర అతన్ని ఒక మూలన నిలబెట్టారట.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.432,
+  "confidence": "high"
+ },
+ {
+  "line": 70,
+  "start": 183.195,
+  "end": 188.153,
+  "te": "ఆమె సరిగ్గా అర్థమయ్యే వరకు, నేను నా కుర్చీలోనే వణికిపోయేదాన్ని, అని సోనియా రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.171,
+  "confidence": "high"
+ },
+ {
+  "line": 71,
+  "start": 188.53,
+  "end": 193.294,
+  "te": "కానీ అదే ఇందిర, ఇంట్లో మాత్రం, మిగతా అమ్మల్లాగే ఒక అమ్మ అని కూడా చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 1.16,
+  "boundary_margin": 0.171,
+  "confidence": "high"
+ },
+ {
+  "line": 72,
+  "start": 194.344,
+  "end": 196.268,
+  "te": "ఆ రోజుల్లో రాజీవ్ పాలిటిక్స్ లో లేరు.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 2.401,
+  "confidence": "high"
+ },
+ {
+  "line": 73,
+  "start": 196.683,
+  "end": 198.254,
+  "te": "ఒక కమర్షియల్ ఎయిర్ లైన్ పైలట్.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 74,
+  "start": 198.723,
+  "end": 200.001,
+  "te": "సోనియాకి అదే కావాలి.",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.586,
+  "confidence": "high"
+ },
+ {
+  "line": 75,
+  "start": 200.377,
+  "end": 202.957,
+  "te": "ఆమె మాటల్లో, నాకు పాలిటిక్స్ ఎప్పుడూ ఇష్టం లేదు.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 0.058,
+  "confidence": "high"
+ },
+ {
+  "line": 76,
+  "start": 203.341,
+  "end": 205.915,
+  "te": "కానీ నైన్టీన్ ఎయిటీ ఫోర్ అన్నీ మార్చేసింది.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 0.058,
+  "confidence": "high"
+ },
+ {
+  "line": 77,
+  "start": 206.445,
+  "end": 208.637,
+  "te": "అక్టోబర్ థర్టీ ఫస్ట్, నైన్టీన్ ఎయిటీ ఫోర్.",
+  "en": "",
+  "speech_vs_text": 0.95,
+  "boundary_margin": 0.127,
+  "confidence": "high"
+ },
+ {
+  "line": 78,
+  "start": 209.117,
+  "end": 211.01,
+  "te": "ఢిల్లీ, వన్ సఫ్దర్జంగ్ రోడ్.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 0.127,
+  "confidence": "high"
+ },
+ {
+  "line": 79,
+  "start": 211.475,
+  "end": 214.164,
+  "te": "ఇందిరా గాంధీని, ఆమె సొంత బాడీగార్డ్సే కాల్చారు.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 1.069,
+  "confidence": "high"
+ },
+ {
+  "line": 80,
+  "start": 214.58,
+  "end": 216.108,
+  "te": "సోనియా పరిగెత్తుకుంటూ వెళ్ళారు.",
+  "en": "",
+  "speech_vs_text": 0.83,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 81,
+  "start": 216.53,
+  "end": 219.744,
+  "te": "హాస్పిటల్ కి వెళ్ళే దారిలో, అత్తగారిని ఒడిలో పట్టుకుని కూర్చున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.83,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 82,
+  "start": 220.171,
+  "end": 221.636,
+  "te": "దారిలోనే ఆమెకి అర్థమైపోయింది.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 83,
+  "start": 222.053,
+  "end": 223.802,
+  "te": "అత్తగారు ఇక ఆన్సర్ చెప్పడం లేదు.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 84,
+  "start": 224.193,
+  "end": 227.792,
+  "te": "మధ్యాహ్నం టూ ఓ క్లాక్ కి, ఇందిరా గాంధీ చనిపోయారని డాక్టర్లు చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 85,
+  "start": 228.164,
+  "end": 230.879,
+  "te": "రాజీవ్ ఆ టైమ్ లో వెస్ట్ బెంగాల్ లో ఒక ర్యాలీలో ఉన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.92,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 86,
+  "start": 231.291,
+  "end": 234.103,
+  "te": "హడావిడిగా ఢిల్లీకి వచ్చి, నేరుగా హాస్పిటల్ కి వచ్చారు.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 87,
+  "start": 234.46,
+  "end": 236.762,
+  "te": "భార్యాభర్తలు ఇద్దరూ ఒకరినొకరు పట్టుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.87,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 88,
+  "start": 237.105,
+  "end": 238.68,
+  "te": "అప్పుడు రాజీవ్ ఒక మాట చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 0.92,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 89,
+  "start": 239.063,
+  "end": 241.213,
+  "te": "నన్ను ప్రైమ్ మినిస్టర్ గా ప్రమాణం చేయమంటున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.78,
+  "boundary_margin": 0.117,
+  "confidence": "high"
+ },
+ {
+  "line": 90,
+  "start": 241.611,
+  "end": 245.857,
+  "te": "సోనియా రాశారు, ఆ క్షణం ఎవరో నా గుండెలో కత్తి దించినట్టు అనిపించింది.",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.117,
+  "confidence": "high"
+ },
+ {
+  "line": 91,
+  "start": 246.277,
+  "end": 248.382,
+  "te": "ఏడుస్తూ, చేతులు జోడించి వేడుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 2.283,
+  "confidence": "high"
+ },
+ {
+  "line": 92,
+  "start": 248.821,
+  "end": 249.236,
+  "te": "వద్దు.",
+  "en": "",
+  "speech_vs_text": 1.26,
+  "boundary_margin": 0.912,
+  "confidence": "high"
+ },
+ {
+  "line": 93,
+  "start": 249.551,
+  "end": 251.822,
+  "te": "పిల్లల కోసం, నీ కోసం, నో చెప్పు.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.143,
+  "confidence": "high"
+ },
+ {
+  "line": 94,
+  "start": 252.237,
+  "end": 253.518,
+  "te": "వాళ్ళు నిన్ను కూడా చంపేస్తారు.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 0.143,
+  "confidence": "high"
+ },
+ {
+  "line": 95,
+  "start": 253.876,
+  "end": 255.53,
+  "te": "రాజీవ్ ఇచ్చిన సమాధానం ఒక్కటే.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 96,
+  "start": 256.036,
+  "end": 257.459,
+  "te": "ఎలాగైనా నన్ను చంపేస్తారు.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 97,
+  "start": 257.876,
+  "end": 258.926,
+  "te": "ఈ మాట గుర్తుపెట్టుకోండి.",
+  "en": "",
+  "speech_vs_text": 0.76,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 98,
+  "start": 259.303,
+  "end": 261.572,
+  "te": "ఈ కథ మొత్తం దీని చుట్టూనే తిరుగుతుంది.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 99,
+  "start": 262.557,
+  "end": 263.961,
+  "te": "రాజీవ్ ప్రైమ్ మినిస్టర్ అయ్యారు.",
+  "en": "",
+  "speech_vs_text": 0.76,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 100,
+  "start": 264.397,
+  "end": 267.662,
+  "te": "ఆ తర్వాత ఆ ఫ్యామిలీలో భయం ఒక మనిషిలా తిరిగింది.",
+  "en": "",
+  "speech_vs_text": 1.27,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 101,
+  "start": 268.271,
+  "end": 269.292,
+  "te": "నైన్టీన్ నైన్టీ వన్.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 1.449,
+  "confidence": "high"
+ },
+ {
+  "line": 102,
+  "start": 269.745,
+  "end": 273.283,
+  "te": "రాజీవ్ అప్పుడు ప్రైమ్ మినిస్టర్ కాదు, మళ్ళీ ఎలక్షన్ క్యాంపెయిన్ లో ఉన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 0.889,
+  "confidence": "high"
+ },
+ {
+  "line": 103,
+  "start": 273.771,
+  "end": 277.184,
+  "te": "రెండు నెలల ముందు, కొడుకు రాహుల్ తన అమ్మతో ఒక మాట అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.13,
+  "boundary_margin": 0.889,
+  "confidence": "high"
+ },
+ {
+  "line": 104,
+  "start": 277.712,
+  "end": 282.589,
+  "te": "పా సెక్యూరిటీ గురించి ఏమీ చేయకపోతే, త్వరలోనే నేను ఆయన ఫ్యూనరల్ కి రావాల్సి వస్తుంది.",
+  "en": "",
+  "speech_vs_text": 0.99,
+  "boundary_margin": 0.771,
+  "confidence": "high"
+ },
+ {
+  "line": 105,
+  "start": 283.129,
+  "end": 285.179,
+  "te": "మే ట్వెంటీ ఫస్ట్, నైన్టీన్ నైన్టీ వన్.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 0.635,
+  "confidence": "high"
+ },
+ {
+  "line": 106,
+  "start": 285.605,
+  "end": 289.28,
+  "te": "ఆ రోజు రాజీవ్ క్యాంపెయిన్ చేసిన ఊళ్ళలో, మన విశాఖపట్నం కూడా ఉంది.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 0.635,
+  "confidence": "high"
+ },
+ {
+  "line": 107,
+  "start": 289.703,
+  "end": 292.235,
+  "te": "అక్కడి నుంచి తమిళనాడు, శ్రీపెరంబుదూర్ వెళ్ళారు.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.146,
+  "confidence": "high"
+ },
+ {
+  "line": 108,
+  "start": 292.615,
+  "end": 296.41,
+  "te": "ఆ రాత్రి, అక్కడి ర్యాలీలో, రాజీవ్ గాంధీ హత్యకు గురయ్యారు.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.146,
+  "confidence": "high"
+ },
+ {
+  "line": 109,
+  "start": 296.831,
+  "end": 299.953,
+  "te": "ఆ వార్త సోనియాకి చెప్పింది, ఆమె కూతురు ప్రియాంక.",
+  "en": "",
+  "speech_vs_text": 1.07,
+  "boundary_margin": 0.422,
+  "confidence": "high"
+ },
+ {
+  "line": 110,
+  "start": 300.318,
+  "end": 304.073,
+  "te": "భర్త ఇక లేడన్న నిజాన్ని ఒప్పుకోవడానికి ఆమె మనసు ఒప్పుకోలేదు.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.256,
+  "confidence": "high"
+ },
+ {
+  "line": 111,
+  "start": 304.469,
+  "end": 311.923,
+  "te": "తర్వాత చాలా రోజులు, సోనియా చీకట్లో ఒంటరిగా కూర్చుని, మొజార్ట్ రెక్వియమ్ వింటూ ఉండేవారని, ప్రియాంక గుర్తుచేసుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 0.256,
+  "confidence": "high"
+ },
+ {
+  "line": 112,
+  "start": 312.353,
+  "end": 313.667,
+  "te": "ఇక్కడ మీకు ఒక డౌట్ రావచ్చు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 0.519,
+  "confidence": "high"
+ },
+ {
+  "line": 113,
+  "start": 314.045,
+  "end": 317.679,
+  "te": "ఇంత బాధ పడిన మనిషి, అదే పాలిటిక్స్ లోకి మళ్ళీ ఎందుకు వచ్చారు?",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.498,
+  "confidence": "high"
+ },
+ {
+  "line": 114,
+  "start": 318.051,
+  "end": 319.905,
+  "te": "ఆమె సమాధానం, ఆమె మాటల్లోనే.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.371,
+  "confidence": "high"
+ },
+ {
+  "line": 115,
+  "start": 320.375,
+  "end": 326.061,
+  "te": "ఆ ప్రపంచం ఎంత అందంగా ఉంటుందో, ఎంత అసహ్యంగా ఉంటుందో, రాజీవ్ ద్వారా నేను చూశాను.",
+  "en": "",
+  "speech_vs_text": 1.3,
+  "boundary_margin": 0.371,
+  "confidence": "high"
+ },
+ {
+  "line": 116,
+  "start": 326.431,
+  "end": 328.64,
+  "te": "అందులోకి వెళ్ళాలని ఎలా ఆలోచించగలను?",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.421,
+  "confidence": "high"
+ },
+ {
+  "line": 117,
+  "start": 329.059,
+  "end": 332.226,
+  "te": "నైన్టీన్ నైన్టీ సిక్స్ ఎలక్షన్స్ లో కాంగ్రెస్ బాగా దెబ్బతింది.",
+  "en": "",
+  "speech_vs_text": 0.89,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 118,
+  "start": 332.592,
+  "end": 335.591,
+  "te": "సీనియర్ లీడర్లు ఒక్కొక్కరుగా పార్టీ వదిలి వెళ్ళిపోతున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 0.116,
+  "confidence": "high"
+ },
+ {
+  "line": 119,
+  "start": 335.964,
+  "end": 340.305,
+  "te": "అర్ధరాత్రి లేచి, నేను ఏం చేయాలి అని తనని తానే అడుగుకునేవారట.",
+  "en": "",
+  "speech_vs_text": 1.22,
+  "boundary_margin": 0.116,
+  "confidence": "high"
+ },
+ {
+  "line": 120,
+  "start": 340.685,
+  "end": 344.709,
+  "te": "తన భర్తని లాగిన అదే డ్యూటీ, ఇప్పుడు తనని లాగుతోంది అనిపించిందట.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.486,
+  "confidence": "high"
+ },
+ {
+  "line": 121,
+  "start": 345.08,
+  "end": 346.131,
+  "te": "ఇంకో బాధ కూడా ఉంది.",
+  "en": "",
+  "speech_vs_text": 1.06,
+  "boundary_margin": 1.436,
+  "confidence": "high"
+ },
+ {
+  "line": 122,
+  "start": 346.503,
+  "end": 347.58,
+  "te": "నేను బయటి మనిషిని.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 2.761,
+  "confidence": "high"
+ },
+ {
+  "line": 123,
+  "start": 347.918,
+  "end": 350.898,
+  "te": "ఆ విషయం నాకు మళ్ళీ మళ్ళీ గుర్తుచేశారు, అని రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 0.083,
+  "confidence": "high"
+ },
+ {
+  "line": 124,
+  "start": 351.235,
+  "end": 354.943,
+  "te": "అయినా, నైన్టీన్ నైన్టీ సెవెన్ లో కోల్కతాలో, కాంగ్రెస్ మెంబర్ అయ్యారు.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 0.083,
+  "confidence": "high"
+ },
+ {
+  "line": 125,
+  "start": 355.308,
+  "end": 357.798,
+  "te": "నైన్టీన్ నైన్టీ ఎయిట్ లో పార్టీ ప్రెసిడెంట్ అయ్యారు.",
+  "en": "",
+  "speech_vs_text": 0.84,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 126,
+  "start": 358.801,
+  "end": 360.938,
+  "te": "ఇప్పుడు, మళ్ళీ ఆ కిటికీ దగ్గరికి వెళ్దాం.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 1.104,
+  "confidence": "high"
+ },
+ {
+  "line": 127,
+  "start": 361.386,
+  "end": 365.912,
+  "te": "టూ థౌజండ్ ఫోర్ ఎలక్షన్ కి కొన్ని నెలల ముందు, ఇంట్లో పిల్లలు ఆమెని స్ట్రెయిట్ గా అడిగారు.",
+  "en": "",
+  "speech_vs_text": 0.88,
+  "boundary_margin": 0.76,
+  "confidence": "high"
+ },
+ {
+  "line": 128,
+  "start": 366.403,
+  "end": 368.582,
+  "te": "మనం గెలిస్తే, నువ్వు ప్రైమ్ మినిస్టర్ అవుతావా?",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 0.76,
+  "confidence": "high"
+ },
+ {
+  "line": 129,
+  "start": 369.072,
+  "end": 370.755,
+  "te": "ఆమె దాదాపు కోపంగా అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.16,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 130,
+  "start": 371.113,
+  "end": 371.793,
+  "te": "అస్సలు కాను.",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.892,
+  "confidence": "high"
+ },
+ {
+  "line": 131,
+  "start": 372.288,
+  "end": 374.058,
+  "te": "ఆర్ యూ ష్యూర్, అని మళ్ళీ అడిగారు.",
+  "en": "",
+  "speech_vs_text": 0.9,
+  "boundary_margin": 0.799,
+  "confidence": "high"
+ },
+ {
+  "line": 132,
+  "start": 374.502,
+  "end": 376.598,
+  "te": "నాకు ఫుల్ క్లారిటీ ఉంది, అని చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 0.253,
+  "confidence": "high"
+ },
+ {
+  "line": 133,
+  "start": 376.955,
+  "end": 380.803,
+  "te": "ఎందుకంటే రాహుల్ కి, ప్రియాంకకి, ఆ కుర్చీ అంటే అధికారం కాదు.",
+  "en": "",
+  "speech_vs_text": 1.16,
+  "boundary_margin": 0.253,
+  "confidence": "high"
+ },
+ {
+  "line": 134,
+  "start": 381.176,
+  "end": 381.629,
+  "te": "ప్రమాదం.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 1.579,
+  "confidence": "high"
+ },
+ {
+  "line": 135,
+  "start": 381.991,
+  "end": 383.067,
+  "te": "నానమ్మని కోల్పోయారు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 136,
+  "start": 383.379,
+  "end": 384.392,
+  "te": "నాన్నని కోల్పోయారు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 1.054,
+  "confidence": "high"
+ },
+ {
+  "line": 137,
+  "start": 384.8,
+  "end": 388.334,
+  "te": "ఆ పదవి అంటేనే ప్రాణభయం, అని వాళ్ళ మనసులో ముద్ర పడిపోయింది.",
+  "en": "",
+  "speech_vs_text": 1.06,
+  "boundary_margin": 1.044,
+  "confidence": "high"
+ },
+ {
+  "line": 138,
+  "start": 388.632,
+  "end": 390.66,
+  "te": "ఈ మాట ఆమె ఇంకెవరికీ చెప్పలేదు.",
+  "en": "",
+  "speech_vs_text": 1.23,
+  "boundary_margin": 1.044,
+  "confidence": "high"
+ },
+ {
+  "line": 139,
+  "start": 390.977,
+  "end": 393.477,
+  "te": "క్యాంపెయిన్ లో ఎవరు అడిగినా, క్లియర్ ఆన్సర్ ఇవ్వలేదు.",
+  "en": "",
+  "speech_vs_text": 0.84,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 140,
+  "start": 393.895,
+  "end": 396.669,
+  "te": "పార్టీ కలిసి ఉండాలంటే, లీడర్షిప్ గొడవ రాకూడదు.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.023,
+  "confidence": "check"
+ },
+ {
+  "line": 141,
+  "start": 396.951,
+  "end": 397.979,
+  "te": "అందుకే మౌనం.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.023,
+  "confidence": "check"
+ },
+ {
+  "line": 142,
+  "start": 398.415,
+  "end": 399.711,
+  "te": "ఇప్పుడు ఆ రోజుకి వద్దాం.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.247,
+  "confidence": "high"
+ },
+ {
+  "line": 143,
+  "start": 400.071,
+  "end": 401.805,
+  "te": "లీడర్లు ఆమె చుట్టూ నిలబడ్డారు.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 144,
+  "start": 402.146,
+  "end": 403.148,
+  "te": "ఆమె సరే అన్నారు.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 145,
+  "start": 403.566,
+  "end": 405.615,
+  "te": "కిటికీ బయట ప్రియాంక అంతా చూసింది.",
+  "en": "",
+  "speech_vs_text": 1.11,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 146,
+  "start": 405.992,
+  "end": 408.837,
+  "te": "అమ్మని బలవంతంగా ఒప్పిస్తున్నారు అని ఆమెకి అర్థమైంది.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.676,
+  "confidence": "high"
+ },
+ {
+  "line": 147,
+  "start": 409.263,
+  "end": 413.48,
+  "te": "కళ్ళ నుంచి నీళ్ళు కారుతుండగా, ఇంట్లోకి పరిగెత్తి, రాహుల్ రూమ్ లోకి దూసుకెళ్ళింది.",
+  "en": "",
+  "speech_vs_text": 0.88,
+  "boundary_margin": 0.676,
+  "confidence": "high"
+ },
+ {
+  "line": 148,
+  "start": 413.939,
+  "end": 415.387,
+  "te": "అమ్మ వాళ్ళకి సరే అనేసింది.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 1.173,
+  "confidence": "high"
+ },
+ {
+  "line": 149,
+  "start": 415.761,
+  "end": 418.025,
+  "te": "అందరూ ఆమె చుట్టూ ఉన్నారు, సరే అనేసింది.",
+  "en": "",
+  "speech_vs_text": 0.99,
+  "boundary_margin": 0.436,
+  "confidence": "high"
+ },
+ {
+  "line": 150,
+  "start": 418.387,
+  "end": 420.085,
+  "te": "ఇద్దరూ కలిసి అమ్మ దగ్గరికి వచ్చారు.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 0.436,
+  "confidence": "high"
+ },
+ {
+  "line": 151,
+  "start": 420.399,
+  "end": 421.622,
+  "te": "రాహుల్ గట్టిగా అడిగారు.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 152,
+  "start": 421.938,
+  "end": 422.884,
+  "te": "నువ్వు సరే అన్నావా?",
+  "en": "",
+  "speech_vs_text": 0.9,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 153,
+  "start": 423.183,
+  "end": 424.33,
+  "te": "వాళ్ళు నా మాట వినలేదు.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 154,
+  "start": 424.622,
+  "end": 426.006,
+  "te": "నాకు ఇష్టం లేదని నీకు తెలుసు.",
+  "en": "",
+  "speech_vs_text": 0.88,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 155,
+  "start": 426.309,
+  "end": 427.413,
+  "te": "నా మీద ప్రెషర్ పెట్టారు.",
+  "en": "",
+  "speech_vs_text": 0.84,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 156,
+  "start": 427.82,
+  "end": 428.388,
+  "te": "ప్రెషరా?",
+  "en": "",
+  "speech_vs_text": 1.23,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 157,
+  "start": 428.585,
+  "end": 429.558,
+  "te": "నీ మీద ప్రెషరా?",
+  "en": "",
+  "speech_vs_text": 1.23,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 158,
+  "start": 429.842,
+  "end": 430.816,
+  "te": "మరి మా సంగతేంటి?",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.534,
+  "confidence": "high"
+ },
+ {
+  "line": 159,
+  "start": 431.089,
+  "end": 432.816,
+  "te": "అని చెప్పి, కోపంగా వెళ్ళిపోయారు.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 0.534,
+  "confidence": "high"
+ },
+ {
+  "line": 160,
+  "start": 433.223,
+  "end": 434.589,
+  "te": "ప్రియాంక మెల్లగా అన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.21,
+  "confidence": "high"
+ },
+ {
+  "line": 161,
+  "start": 434.952,
+  "end": 437.329,
+  "te": "మా, నువ్వు మొదటి నుంచీ క్లియర్ గా ఉన్నావు.",
+  "en": "",
+  "speech_vs_text": 0.92,
+  "boundary_margin": 0.21,
+  "confidence": "high"
+ },
+ {
+  "line": 162,
+  "start": 437.648,
+  "end": 438.781,
+  "te": "బలవంతానికి లొంగకు.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 2.757,
+  "confidence": "high"
+ },
+ {
+  "line": 163,
+  "start": 439.13,
+  "end": 440.113,
+  "te": "నువ్వు అనుకున్నదే చెయ్.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 164,
+  "start": 440.436,
+  "end": 441.501,
+  "te": "మేమిద్దరం నీతో ఉన్నాం.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 165,
+  "start": 442.476,
+  "end": 443.366,
+  "te": "ఇప్పుడు ఆలోచించండి.",
+  "en": "",
+  "speech_vs_text": 0.8,
+  "boundary_margin": 0.446,
+  "confidence": "high"
+ },
+ {
+  "line": 166,
+  "start": 443.794,
+  "end": 448.378,
+  "te": "ట్వెంటీ ఇయర్స్ ముందు, ఇదే కుర్చీ కోసం, భర్తని వద్దు అని వేడుకున్నది సోనియా.",
+  "en": "",
+  "speech_vs_text": 1.06,
+  "boundary_margin": 0.093,
+  "confidence": "high"
+ },
+ {
+  "line": 167,
+  "start": 448.891,
+  "end": 453.398,
+  "te": "ఇప్పుడు, ఇదే కుర్చీ కోసం, అమ్మని వద్దు అని వేడుకుంటున్నది ఆమె పిల్లలు.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.093,
+  "confidence": "high"
+ },
+ {
+  "line": 168,
+  "start": 453.924,
+  "end": 454.469,
+  "te": "అదే భయం.",
+  "en": "",
+  "speech_vs_text": 1.38,
+  "boundary_margin": 3.423,
+  "confidence": "high"
+ },
+ {
+  "line": 169,
+  "start": 454.979,
+  "end": 456.774,
+  "te": "ఒక తరం నుంచి ఇంకో తరానికి.",
+  "en": "",
+  "speech_vs_text": 1.3,
+  "boundary_margin": 0.874,
+  "confidence": "high"
+ },
+ {
+  "line": 170,
+  "start": 457.342,
+  "end": 466.347,
+  "te": "ఆసక్తికరమైన విషయం ఏంటంటే, సీనియర్ లీడర్ నట్వర్ సింగ్ కూడా తన ఆటోబయోగ్రఫీలో, అమ్మ పీఎమ్ అయితే సిక్స్ మంత్స్ లో చంపేస్తారని రాహుల్ భయపడ్డారని రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.02,
+  "boundary_margin": 0.332,
+  "confidence": "high"
+ },
+ {
+  "line": 171,
+  "start": 466.812,
+  "end": 469.753,
+  "te": "ఇప్పుడు ఆ భయం, సోనియా సొంత మాటల్లో బయటికి వచ్చింది.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.332,
+  "confidence": "high"
+ },
+ {
+  "line": 172,
+  "start": 470.146,
+  "end": 472.929,
+  "te": "కానీ ఆమె చెప్పిన కారణం పిల్లల భయం ఒక్కటే కాదు.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 0.596,
+  "confidence": "high"
+ },
+ {
+  "line": 173,
+  "start": 473.258,
+  "end": 474.218,
+  "te": "ఆమె రాసింది ఇది.",
+  "en": "",
+  "speech_vs_text": 1.12,
+  "boundary_margin": 1.024,
+  "confidence": "high"
+ },
+ {
+  "line": 174,
+  "start": 474.691,
+  "end": 479.625,
+  "te": "నేను ఒప్పుకుంటే, బీజేపీ, దాని అలయన్స్, నా ఫారిన్ ఆరిజిన్ ని పెద్ద ఇష్యూ చేస్తారు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 1.054,
+  "confidence": "high"
+ },
+ {
+  "line": 175,
+  "start": 479.936,
+  "end": 481.07,
+  "te": "ఎమోషన్స్ రెచ్చగొడతారు.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 1.054,
+  "confidence": "high"
+ },
+ {
+  "line": 176,
+  "start": 481.526,
+  "end": 485.044,
+  "te": "నేను ప్రేమించే దేశాన్ని గాయపరిచే పదవిని నేను ఎలా తీసుకోగలను?",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.517,
+  "confidence": "high"
+ },
+ {
+  "line": 177,
+  "start": 485.501,
+  "end": 489.115,
+  "te": "ఆ రాత్రి ఆమె పడుకున్నారు, ఎప్పటిలాగే తన భర్త పడుకునే వైపు.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.517,
+  "confidence": "high"
+ },
+ {
+  "line": 178,
+  "start": 489.572,
+  "end": 490.808,
+  "te": "లోపల రెండు గొంతులు.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 1.537,
+  "confidence": "high"
+ },
+ {
+  "line": 179,
+  "start": 491.254,
+  "end": 491.963,
+  "te": "ఒక గొంతు అంది.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.442,
+  "confidence": "high"
+ },
+ {
+  "line": 180,
+  "start": 492.452,
+  "end": 494.094,
+  "te": "సోనియా, ఇది ఎంత విచిత్రం.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 0.442,
+  "confidence": "high"
+ },
+ {
+  "line": 181,
+  "start": 494.548,
+  "end": 498.88,
+  "te": "ఇటలీలో పుట్టి పెరిగిన నువ్వు, బిలియన్ కంటే ఎక్కువ మంది ఉన్న దేశాన్ని నడిపించాలా?",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 0.686,
+  "confidence": "high"
+ },
+ {
+  "line": 182,
+  "start": 499.344,
+  "end": 500.088,
+  "te": "ఇంకో గొంతు అంది.",
+  "en": "",
+  "speech_vs_text": 0.87,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 183,
+  "start": 500.532,
+  "end": 501.359,
+  "te": "ఇది నీ దేశం.",
+  "en": "",
+  "speech_vs_text": 1.4,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 184,
+  "start": 501.759,
+  "end": 505.921,
+  "te": "నువ్వు నీ భర్తని కోల్పోయినప్పుడు, ఈ దేశమే నిన్ను తన మనిషిలా దగ్గరికి తీసుకుంది.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 185,
+  "start": 506.319,
+  "end": 507.713,
+  "te": "ఇప్పుడు నమ్మిన వాళ్ళని వదిలేస్తావా?",
+  "en": "",
+  "speech_vs_text": 0.68,
+  "boundary_margin": 0.221,
+  "confidence": "check"
+ },
+ {
+  "line": 186,
+  "start": 508.175,
+  "end": 511.034,
+  "te": "ఆ క్షణం, రాజీవ్ పక్కన ఉంటే బాగుండు అనిపించిందట.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.221,
+  "confidence": "high"
+ },
+ {
+  "line": 187,
+  "start": 511.425,
+  "end": 515.001,
+  "te": "అలసటతో నిద్రలోకి జారుతుంటే, మనసు ఒక్కసారిగా క్లియర్ అయిపోయింది.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.222,
+  "confidence": "high"
+ },
+ {
+  "line": 188,
+  "start": 515.426,
+  "end": 517.665,
+  "te": "సోనియా, నీకు నువ్వు నిజాయితీగా ఉండు.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.222,
+  "confidence": "high"
+ },
+ {
+  "line": 189,
+  "start": 518.01,
+  "end": 519.098,
+  "te": "నీకు మొదటి నుంచీ తెలుసు.",
+  "en": "",
+  "speech_vs_text": 0.83,
+  "boundary_margin": 1.776,
+  "confidence": "high"
+ },
+ {
+  "line": 190,
+  "start": 519.45,
+  "end": 519.736,
+  "te": "వదిలేయ్.",
+  "en": "",
+  "speech_vs_text": 0.62,
+  "boundary_margin": 9.9,
+  "confidence": "check"
+ },
+ {
+  "line": 191,
+  "start": 520.139,
+  "end": 521.455,
+  "te": "కొన్ని గంటల తర్వాత లేచారు.",
+  "en": "",
+  "speech_vs_text": 0.91,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 192,
+  "start": 521.799,
+  "end": 523.752,
+  "te": "నేరుగా కొడుకు రూమ్ కి వెళ్ళి తలుపు కొట్టారు.",
+  "en": "",
+  "speech_vs_text": 0.8,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 193,
+  "start": 524.139,
+  "end": 524.975,
+  "te": "నేను డిసైడ్ అయ్యాను.",
+  "en": "",
+  "speech_vs_text": 0.75,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 194,
+  "start": 525.187,
+  "end": 526.48,
+  "te": "నా మాట మీదే నిలబడతాను.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.837,
+  "confidence": "high"
+ },
+ {
+  "line": 195,
+  "start": 526.9,
+  "end": 530.021,
+  "te": "రాహుల్ దగ్గరికి వచ్చి, అమ్మని హత్తుకుని, ఒకే మాట అన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.89,
+  "boundary_margin": 0.649,
+  "confidence": "high"
+ },
+ {
+  "line": 196,
+  "start": 530.388,
+  "end": 531.434,
+  "te": "ఇది కరెక్ట్ డెసిషన్.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.649,
+  "confidence": "high"
+ },
+ {
+  "line": 197,
+  "start": 532.467,
+  "end": 534.243,
+  "te": "తర్వాత పార్లమెంట్ సెంట్రల్ హాల్.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.487,
+  "confidence": "high"
+ },
+ {
+  "line": 198,
+  "start": 534.689,
+  "end": 539.955,
+  "te": "ఆమె లోపలికి రాగానే, కాంగ్రెస్ ఎంపీలు లేచి నిలబడి, బెంచీల మీద చేతులతో కొడుతూ చప్పట్లు.",
+  "en": "",
+  "speech_vs_text": 1.09,
+  "boundary_margin": 0.214,
+  "confidence": "high"
+ },
+ {
+  "line": 199,
+  "start": 540.376,
+  "end": 544.092,
+  "te": "ఒకరి తర్వాత ఒకరు, మళ్ళీ మళ్ళీ, ఒప్పుకోండి అని స్పీచ్ లు.",
+  "en": "",
+  "speech_vs_text": 1.0,
+  "boundary_margin": 0.113,
+  "confidence": "high"
+ },
+ {
+  "line": 200,
+  "start": 544.492,
+  "end": 545.818,
+  "te": "ఆమె లెక్టర్న్ దగ్గరికి వెళ్ళారు.",
+  "en": "",
+  "speech_vs_text": 0.72,
+  "boundary_margin": 0.113,
+  "confidence": "high"
+ },
+ {
+  "line": 201,
+  "start": 546.146,
+  "end": 547.099,
+  "te": "కళ్ళజోడు పెట్టుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 0.66,
+  "boundary_margin": 0.338,
+  "confidence": "check"
+ },
+ {
+  "line": 202,
+  "start": 547.5,
+  "end": 548.66,
+  "te": "హాల్ మొత్తం నిశ్శబ్దం.",
+  "en": "",
+  "speech_vs_text": 0.8,
+  "boundary_margin": 0.338,
+  "confidence": "high"
+ },
+ {
+  "line": 203,
+  "start": 549.117,
+  "end": 552.461,
+  "te": "ఫ్యాన్ల శబ్దం కంటే, తన ఊపిరే గట్టిగా వినిపిస్తోందట.",
+  "en": "",
+  "speech_vs_text": 1.12,
+  "boundary_margin": 0.798,
+  "confidence": "high"
+ },
+ {
+  "line": 204,
+  "start": 552.924,
+  "end": 553.634,
+  "te": "ఆమె చదివారు.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.798,
+  "confidence": "high"
+ },
+ {
+  "line": 205,
+  "start": 553.974,
+  "end": 555.784,
+  "te": "ప్రైమ్ మినిస్టర్ పదవి నా లక్ష్యం కాదు.",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 2.793,
+  "confidence": "high"
+ },
+ {
+  "line": 206,
+  "start": 556.151,
+  "end": 559.728,
+  "te": "నా అంతరాత్మ ఏం చెప్తే అదే చేస్తానని నాకు ఎప్పుడూ తెలుసు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.171,
+  "confidence": "high"
+ },
+ {
+  "line": 207,
+  "start": 560.08,
+  "end": 563.852,
+  "te": "ఈరోజు ఆ గొంతు చెప్తోంది, ఈ పదవిని వినయంగా వద్దనుకోవాలని.",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.171,
+  "confidence": "high"
+ },
+ {
+  "line": 208,
+  "start": 564.317,
+  "end": 565.528,
+  "te": "హాల్ లో గందరగోళం.",
+  "en": "",
+  "speech_vs_text": 1.31,
+  "boundary_margin": 0.789,
+  "confidence": "high"
+ },
+ {
+  "line": 209,
+  "start": 565.806,
+  "end": 567.932,
+  "te": "నో, నో, నో అని అరుపులు.",
+  "en": "",
+  "speech_vs_text": 1.85,
+  "boundary_margin": 0.122,
+  "confidence": "check"
+ },
+ {
+  "line": 210,
+  "start": 568.289,
+  "end": 569.868,
+  "te": "కొంతమంది ఎంపీలు ఏడ్చేశారు.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.122,
+  "confidence": "high"
+ },
+ {
+  "line": 211,
+  "start": 570.243,
+  "end": 571.56,
+  "te": "ఆమెకి ఊపిరి ఆడలేదు.",
+  "en": "",
+  "speech_vs_text": 1.25,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 212,
+  "start": 571.891,
+  "end": 573.79,
+  "te": "ఒక కొలీగ్ ఆమెని బయటికి తీసుకెళ్ళారు.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 213,
+  "start": 574.128,
+  "end": 575.236,
+  "te": "పిల్లలు వెనకే వచ్చారు.",
+  "en": "",
+  "speech_vs_text": 0.89,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 214,
+  "start": 575.58,
+  "end": 578.63,
+  "te": "కాసేపటికి మళ్ళీ లోపలికి వచ్చి, స్పీచ్ పూర్తి చేశారు.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 0.91,
+  "confidence": "high"
+ },
+ {
+  "line": 215,
+  "start": 578.98,
+  "end": 580.978,
+  "te": "నా నిర్ణయం మారదు, అని చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 0.36,
+  "confidence": "high"
+ },
+ {
+  "line": 216,
+  "start": 581.36,
+  "end": 582.879,
+  "te": "ఆ తర్వాత ఒక పేరు చెప్పారు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.36,
+  "confidence": "high"
+ },
+ {
+  "line": 217,
+  "start": 583.205,
+  "end": 584.323,
+  "te": "డాక్టర్ మన్మోహన్ సింగ్.",
+  "en": "",
+  "speech_vs_text": 0.85,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 218,
+  "start": 584.763,
+  "end": 585.963,
+  "te": "మరి ఆయనే ఎందుకు?",
+  "en": "",
+  "speech_vs_text": 1.4,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 219,
+  "start": 586.28,
+  "end": 590.179,
+  "te": "చాలా మంది సీనియర్లు ఆ పదవికి రెడీగా ఉన్నారని ఆమే ఒప్పుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.162,
+  "confidence": "high"
+ },
+ {
+  "line": 220,
+  "start": 590.511,
+  "end": 594.054,
+  "te": "కానీ మన్మోహన్ సింగ్, పార్టీలో ఏ గ్రూప్ కీ చెందని మనిషి.",
+  "en": "",
+  "speech_vs_text": 1.03,
+  "boundary_margin": 0.162,
+  "confidence": "high"
+ },
+ {
+  "line": 221,
+  "start": 594.427,
+  "end": 599.196,
+  "te": "మన పీవీ నరసింహారావు గవర్నమెంట్ లో, ఫైనాన్స్ మినిస్టర్ గా ఎకానమిక్ రిఫార్మ్స్ తెచ్చిన మనిషి.",
+  "en": "",
+  "speech_vs_text": 0.9,
+  "boundary_margin": 0.208,
+  "confidence": "high"
+ },
+ {
+  "line": 222,
+  "start": 599.529,
+  "end": 605.718,
+  "te": "ఆయన నిజాయితీ మీద ప్రశ్నే లేదు, మన దేశం ఆయన చేతుల్లో సేఫ్ గా ఉంటుందని నాకు తెలుసు, అని రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.12,
+  "boundary_margin": 0.129,
+  "confidence": "high"
+ },
+ {
+  "line": 223,
+  "start": 606.064,
+  "end": 609.983,
+  "te": "ఆ తర్వాత టెన్ ఇయర్స్, విమర్శకులు ఆమెని బ్యాక్ సీట్ డ్రైవర్ అన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.129,
+  "confidence": "high"
+ },
+ {
+  "line": 224,
+  "start": 610.324,
+  "end": 613.115,
+  "te": "అంటే, కుర్చీ ఆయనది, కంట్రోల్ ఆమెది అని.",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.18,
+  "confidence": "high"
+ },
+ {
+  "line": 225,
+  "start": 613.502,
+  "end": 614.947,
+  "te": "ఆ మాటని ఆమె ఒప్పుకోలేదు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.712,
+  "confidence": "high"
+ },
+ {
+  "line": 226,
+  "start": 615.253,
+  "end": 620.478,
+  "te": "మా ఇద్దరి అభిప్రాయం కలవని విషయాల్లో కూడా, ప్రైమ్ మినిస్టర్ మాటకే నేను విలువ ఇచ్చాను, అని రాశారు.",
+  "en": "",
+  "speech_vs_text": 0.89,
+  "boundary_margin": 0.559,
+  "confidence": "high"
+ },
+ {
+  "line": 227,
+  "start": 621.468,
+  "end": 623.359,
+  "te": "ఈ పుస్తకంలో ఇంకా చాలా ఉన్నాయి.",
+  "en": "",
+  "speech_vs_text": 1.15,
+  "boundary_margin": 0.559,
+  "confidence": "high"
+ },
+ {
+  "line": 228,
+  "start": 623.736,
+  "end": 626.27,
+  "te": "ఎమర్జెన్సీ ఒక తప్పు అని ఆమె ఒప్పుకున్నారు.",
+  "en": "",
+  "speech_vs_text": 1.07,
+  "boundary_margin": 1.292,
+  "confidence": "high"
+ },
+ {
+  "line": 229,
+  "start": 626.729,
+  "end": 630.721,
+  "te": "సంజయ్ గాంధీని అప్పుడే కంట్రోల్ చేసుంటే, చాలా డ్యామేజ్ తప్పేదని రాశారు.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 0.706,
+  "confidence": "high"
+ },
+ {
+  "line": 230,
+  "start": 631.241,
+  "end": 634.985,
+  "te": "బాబ్రీ మసీదు కూల్చిన రోజు, టీవీలో చూస్తూ ఏడ్చేశానని రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.14,
+  "boundary_margin": 0.464,
+  "confidence": "high"
+ },
+ {
+  "line": 231,
+  "start": 635.387,
+  "end": 644.199,
+  "te": "ఇప్పటి ప్రైమ్ మినిస్టర్ నరేంద్ర మోదీతో, ట్వెల్వ్ ఇయర్స్ కి పైగా దాదాపు అసలు కాంటాక్టే లేదని, కలిసినప్పుడు ఆయన కళ్ళలోకి చూడకుండా పక్కకి చూస్తారని రాశారు.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.464,
+  "confidence": "high"
+ },
+ {
+  "line": 232,
+  "start": 644.513,
+  "end": 649.228,
+  "te": "అదే సమయంలో, ఆమె హాస్పిటల్ లో ఉన్నప్పుడు మోదీ ఆమె హెల్త్ గురించి అడిగారని కూడా రాశారు.",
+  "en": "",
+  "speech_vs_text": 1.01,
+  "boundary_margin": 0.192,
+  "confidence": "high"
+ },
+ {
+  "line": 233,
+  "start": 649.553,
+  "end": 651.953,
+  "te": "ఇప్పుడు, మాట ఇచ్చినట్టే, అవతలి వైపు.",
+  "en": "",
+  "speech_vs_text": 0.96,
+  "boundary_margin": 0.192,
+  "confidence": "high"
+ },
+ {
+  "line": 234,
+  "start": 652.336,
+  "end": 658.947,
+  "te": "బీజేపీ స్పోక్స్ పర్సన్ సి ఆర్ కేశవన్ అన్నారు, ఈ పుస్తకానికి బిలాంగింగ్ కాదు, వైట్ వాషింగ్ అని పేరు పెట్టాల్సింది అని.",
+  "en": "",
+  "speech_vs_text": 0.92,
+  "boundary_margin": 0.253,
+  "confidence": "high"
+ },
+ {
+  "line": 235,
+  "start": 659.304,
+  "end": 663.129,
+  "te": "అంటే, కాంగ్రెస్ చేసిన తప్పులకి రంగులు పూస్తున్నారని ఆయన ఆరోపణ.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 0.473,
+  "confidence": "high"
+ },
+ {
+  "line": 236,
+  "start": 663.452,
+  "end": 668.454,
+  "te": "నైన్టీన్ ఎయిటీ ఫోర్ సిక్కుల మీద జరిగిన హింస గురించి, ఎమర్జెన్సీ గురించి ఆయన ప్రశ్నలు వేశారు.",
+  "en": "",
+  "speech_vs_text": 0.94,
+  "boundary_margin": 0.514,
+  "confidence": "high"
+ },
+ {
+  "line": 237,
+  "start": 668.74,
+  "end": 676.646,
+  "te": "ఆపరేషన్ బ్లూ స్టార్ తర్వాత ఇందిర కళ్ళలో నీళ్ళు చూశానని సోనియా రాసిన దాన్ని, ఆమ్ ఆద్మీ పార్టీ, వినికిడి మాట అని కొట్టిపారేసింది.",
+  "en": "",
+  "speech_vs_text": 1.08,
+  "boundary_margin": 0.347,
+  "confidence": "high"
+ },
+ {
+  "line": 238,
+  "start": 676.986,
+  "end": 678.77,
+  "te": "ఇంకో గొడవ, పబ్లిషర్ గురించి.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.347,
+  "confidence": "high"
+ },
+ {
+  "line": 239,
+  "start": 679.099,
+  "end": 681.901,
+  "te": "మొదట పెంగ్విన్ ఇండియా ఈ పుస్తకం పబ్లిష్ చేయాల్సింది.",
+  "en": "",
+  "speech_vs_text": 0.95,
+  "boundary_margin": 0.521,
+  "confidence": "high"
+ },
+ {
+  "line": 240,
+  "start": 682.292,
+  "end": 685.235,
+  "te": "ఒక విషయంలో ఒప్పందం కుదరలేదని చెప్పి, వెనక్కి తగ్గింది.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 241,
+  "start": 685.579,
+  "end": 687.95,
+  "te": "బయటి ప్రెషర్ ఏమీ లేదని పెంగ్విన్ చెప్పింది.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 1.577,
+  "confidence": "high"
+ },
+ {
+  "line": 242,
+  "start": 688.229,
+  "end": 693.064,
+  "te": "కానీ గవర్నమెంట్ మీద విమర్శలు పెంగ్విన్ కి నచ్చలేదని, సోనియా ఒక ఇంటర్వ్యూలో అన్నారు.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 0.486,
+  "confidence": "high"
+ },
+ {
+  "line": 243,
+  "start": 693.414,
+  "end": 695.503,
+  "te": "చివరికి హార్పర్ కాలిన్స్ పబ్లిష్ చేసింది.",
+  "en": "",
+  "speech_vs_text": 0.88,
+  "boundary_margin": 0.486,
+  "confidence": "high"
+ },
+ {
+  "line": 244,
+  "start": 695.95,
+  "end": 696.657,
+  "te": "ఎవరిది నిజం?",
+  "en": "",
+  "speech_vs_text": 1.07,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 245,
+  "start": 696.981,
+  "end": 698.446,
+  "te": "అది మీరే చదివి నిర్ణయించాలి.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 246,
+  "start": 699.471,
+  "end": 703.1,
+  "te": "మన హైదరాబాద్ లో కూడా ఈరోజు ఈ పుస్తకం కోసం ఎంక్వైరీలు ఆగలేదు.",
+  "en": "",
+  "speech_vs_text": 1.1,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 247,
+  "start": 703.574,
+  "end": 706.933,
+  "te": "ఒక్క డిస్ట్రిబ్యూటర్ కే హైదరాబాద్ లో వన్ థౌజండ్ కాపీలు వచ్చాయి.",
+  "en": "",
+  "speech_vs_text": 0.95,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 248,
+  "start": 707.283,
+  "end": 709.683,
+  "te": "ఒక్క గంటలోనే వన్ ఫిఫ్టీ ఆర్డర్లు వచ్చాయి.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 249,
+  "start": 710.128,
+  "end": 713.027,
+  "te": "చివరిగా, నాకు ఈ పుస్తకంలో ఏం కనిపించిందో చెప్తాను.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 250,
+  "start": 713.53,
+  "end": 716.137,
+  "te": "పవర్ కోసం జరిగిన పోరాటాలు మనం చాలా చూశాం.",
+  "en": "",
+  "speech_vs_text": 1.17,
+  "boundary_margin": 0.237,
+  "confidence": "high"
+ },
+ {
+  "line": 251,
+  "start": 716.661,
+  "end": 720.321,
+  "te": "కానీ ఇది, ఒక ఫ్యామిలీ ఆ కుర్చీని చూసి భయపడిన కథ.",
+  "en": "",
+  "speech_vs_text": 1.32,
+  "boundary_margin": 0.237,
+  "confidence": "high"
+ },
+ {
+  "line": 252,
+  "start": 720.813,
+  "end": 723.485,
+  "te": "నైన్టీన్ ఎయిటీ ఫోర్ లో, భార్య భర్తని వేడుకుంది.",
+  "en": "",
+  "speech_vs_text": 1.04,
+  "boundary_margin": 0.588,
+  "confidence": "high"
+ },
+ {
+  "line": 253,
+  "start": 723.956,
+  "end": 726.828,
+  "te": "నైన్టీన్ నైన్టీ వన్ లో, కొడుకు అమ్మని హెచ్చరించాడు.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 0.511,
+  "confidence": "high"
+ },
+ {
+  "line": 254,
+  "start": 727.209,
+  "end": 729.652,
+  "te": "టూ థౌజండ్ ఫోర్ లో, పిల్లలు అమ్మని ఆపారు.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 0.511,
+  "confidence": "high"
+ },
+ {
+  "line": 255,
+  "start": 730.093,
+  "end": 730.736,
+  "te": "మీరేమంటారు?",
+  "en": "",
+  "speech_vs_text": 0.98,
+  "boundary_margin": 0.337,
+  "confidence": "high"
+ },
+ {
+  "line": 256,
+  "start": 731.149,
+  "end": 732.734,
+  "te": "ఆ నో, నిజమైన త్యాగమా?",
+  "en": "",
+  "speech_vs_text": 1.32,
+  "boundary_margin": 0.337,
+  "confidence": "high"
+ },
+ {
+  "line": 257,
+  "start": 733.129,
+  "end": 736.081,
+  "te": "ఫారిన్ ఆరిజిన్ గొడవని తప్పించుకున్న స్మార్ట్ పాలిటిక్స్ నా?",
+  "en": "",
+  "speech_vs_text": 0.86,
+  "boundary_margin": 0.453,
+  "confidence": "high"
+ },
+ {
+  "line": 258,
+  "start": 736.493,
+  "end": 740.39,
+  "te": "లేక బీజేపీ అన్నట్టు, ఈ పుస్తకం మొత్తం ఒక వైట్ వాషింగ్ నా?",
+  "en": "",
+  "speech_vs_text": 1.23,
+  "boundary_margin": 0.453,
+  "confidence": "high"
+ },
+ {
+  "line": 259,
+  "start": 740.797,
+  "end": 742.635,
+  "te": "కింద కామెంట్ లో ఒక్క మాటలో చెప్పండి.",
+  "en": "",
+  "speech_vs_text": 0.93,
+  "boundary_margin": 0.809,
+  "confidence": "high"
+ },
+ {
+  "line": 260,
+  "start": 743.056,
+  "end": 748.038,
+  "te": "ఇలాంటి కథలు, సోర్సులతో సహా, సింపుల్ గా తెలుసుకోవాలంటే, ఛానల్ ని సబ్స్క్రైబ్ చేసుకోండి.",
+  "en": "",
+  "speech_vs_text": 1.05,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 261,
+  "start": 748.407,
+  "end": 749.877,
+  "te": "బీ ప్రాక్టికల్ విత్ కిషోర్.",
+  "en": "",
+  "speech_vs_text": 0.97,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ },
+ {
+  "line": 262,
+  "start": 750.234,
+  "end": 750.837,
+  "te": "మళ్ళీ కలుద్దాం.",
+  "en": "",
+  "speech_vs_text": 0.71,
+  "boundary_margin": 9.9,
+  "confidence": "high"
+ }
+]
