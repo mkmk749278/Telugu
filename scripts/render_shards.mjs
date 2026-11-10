@@ -32,6 +32,8 @@ const crf = Number(opt('crf', 18));
 const concurrency = Number(opt('concurrency', 4));
 const audio = opt('audio', null);
 const maxrate = opt('maxrate', scale > 1 ? '30M' : '12M');
+const listArg = opt('list', '');
+const pick = listArg ? listArg.split(',').map(Number) : null; // --list a,b,c: render only the shards starting at these frames
 const only = opt('frames', null)?.split('-').map(Number);
 const final = opt('out', path.join(out, `${comp}.mp4`));
 
@@ -70,6 +72,7 @@ const flashes = (file) => {
 
 for (const [a, b] of rest.includes('--join-only') ? [] : shards) {
 	if (only && (a < only[0] || a > only[1])) continue;
+	if (pick && !pick.includes(a)) continue;
 	const name = `shard_${String(a).padStart(6, '0')}.mp4`;
 	const file = path.join(out, name);
 	if (fs.existsSync(file)) continue;
