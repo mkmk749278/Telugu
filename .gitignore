@@ -1,3 +1,4 @@
 .cache/
 assets/
 .remotion/
+__pycache__/
