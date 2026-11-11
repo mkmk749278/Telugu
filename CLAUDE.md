@@ -8,9 +8,14 @@ rules are in its `docs/archive/PLAYBOOK_2026-11-05.md` §4a, §4b) and `mkmk7492
 a Remotion reference). Owner, 2026-11-10: "Work on Telugu, don't edit anything in other repos."
 
 ## Current work (read first when the owner says "continue")
-- **Sonia film:** `projects/sonia-belonging/handoff.md` (v3 built with real pictures; next: 4K on GitHub, QA, upload).
+- **Sonia film:** released 11 Nov 2026 (https://youtu.be/OYa9YW5YwEI); `projects/sonia-belonging/handoff.md` has the open
+  release items (pinned comment, fresh-facts re-check, 24 h Studio read).
 - Renders run on GitHub Actions (`.github/workflows/remotion-render.yml`, needs the repo secret `GDRIVE_RCLONE_TOKEN`),
   not in the session.
+
+## Package (owner, 2026-11-11)
+- **Show the owner the title and the thumbnails in the chat and get the choice before anything goes public.**
+  `scripts/yt_upload.py` uploads private; `--only publish` runs only after the owner has chosen.
 
 ## Audio (owner, 2026-11-10)
 - **The owner generates the audio himself. Never call ElevenLabs or any TTS API from a session.**
