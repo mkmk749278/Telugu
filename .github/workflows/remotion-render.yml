@@ -1,0 +1,134 @@
+# A film's Remotion render on GitHub's runners (adapted from mkmk749278/Creator, 2026-11-11): each runner pulls the
+# film's public/ folder (media, fonts, textures, the master mix) as one tar from Drive
+# Creator/<drive>/render-media/public_media.tar, renders its block of shards, and uploads them as an artifact; one last
+# job joins them, lays the mix under the picture, checks the lengths and puts the film in Drive <drive>/renders/.
+# Needs the repo secret GDRIVE_RCLONE_TOKEN. At most 6 runners: the account's 20 are shared with the other channels.
+name: remotion-render
+on:
+  workflow_dispatch:
+    inputs:
+      film:
+        description: "projects/<film> (the film's slug)"
+        required: true
+      drive:
+        description: "the film's Drive folder inside Creator, e.g. Telugu/<slug>"
+        required: true
+      comp:
+        description: "composition id"
+        required: true
+      scale:
+        description: "2/3 = 720p, 1 = 1080p, 2 = 4K"
+        default: "2"
+      runners:
+        description: "parallel runners (max 6)"
+        default: "6"
+      crf:
+        description: "x264 CRF"
+        default: "18"
+      name:
+        description: "output file name in Drive <drive>/renders/"
+        required: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      blocks: ${{ steps.p.outputs.blocks }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Secret present
+        env:
+          T: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+        run: '[ -n "$T" ] || { echo "::error::repo secret GDRIVE_RCLONE_TOKEN is missing"; exit 1; }'
+      - id: p
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json
+          t = json.load(open("projects/${{ inputs.film }}/vo/timing.json"))
+          total, per = t["durationInFrames"] + 150, 10 * t["fps"]
+          starts = list(range(0, total, per))
+          n = max(1, min(6, int("${{ inputs.runners }}")))
+          size = -(-len(starts) // n)
+          blocks = [f"{s[0]}-{min(s[-1] + per, total) - 1}" for s in (starts[i:i + size] for i in range(0, len(starts), size))]
+          print("blocks=" + json.dumps(blocks))
+          EOF
+
+  render:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        block: ${{ fromJson(needs.plan.outputs.blocks) }}
+    env:
+      GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "22.11.0"
+      - name: Install
+        working-directory: projects/${{ inputs.film }}/remotion
+        run: npm ci --no-audit --no-fund && npx remotion browser ensure
+      - name: ffmpeg for the dark-flash check
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
+      - name: Media from Drive
+        run: |
+          scripts/gdrive_ls.sh ${{ inputs.drive }}/render-media --pull pull
+          tar -xf pull/public_media.tar -C projects/${{ inputs.film }}/remotion && rm -rf pull
+          du -sh projects/${{ inputs.film }}/remotion/public
+      - name: Render
+        shell: bash
+        run: |
+          node scripts/render_shards.mjs projects/${{ inputs.film }}/remotion ${{ inputs.comp }} out --seconds 10 \
+            --scale ${{ inputs.scale }} --crf ${{ inputs.crf }} --concurrency 4 --frames ${{ matrix.block }} --render-only \
+            2>&1 | grep --line-buffered -vE "differing memory|CGroup|MemAvailable|--memory flag|lower amount of memory"
+      - uses: actions/upload-artifact@v4.6.2
+        with:
+          name: shards_${{ matrix.block }}
+          path: out/shard_*.mp4
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: error
+
+  join:
+    needs: render
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      GDRIVE_RCLONE_TOKEN: ${{ secrets.GDRIVE_RCLONE_TOKEN }}
+    steps:
+      - name: Free disk; ffmpeg for the join
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null && ffmpeg -version | head -1
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "22.11.0"
+      - name: Install
+        working-directory: projects/${{ inputs.film }}/remotion
+        run: npm ci --no-audit --no-fund && npx remotion browser ensure
+      - uses: actions/download-artifact@v4.1.8
+        with:
+          pattern: shards_*
+          path: out
+          merge-multiple: true
+      - name: Media from Drive (the mix)
+        run: |
+          scripts/gdrive_ls.sh ${{ inputs.drive }}/render-media --pull pull
+          tar -xf pull/public_media.tar -C projects/${{ inputs.film }}/remotion && rm -rf pull
+      - name: Join, lay the sound, check
+        shell: bash
+        run: |
+          node scripts/render_shards.mjs projects/${{ inputs.film }}/remotion ${{ inputs.comp }} out --seconds 10 --scale ${{ inputs.scale }} --join-only \
+            --audio projects/${{ inputs.film }}/remotion/public/media/mix.wav --out "${{ inputs.name }}" 2>&1 | grep -vE "differing memory|CGroup|MemAvailable|--memory flag|lower amount of memory"
+          rm -rf out
+          ffprobe -v error -show_entries format=duration,bit_rate:stream=codec_name,width,height,r_frame_rate -of compact "${{ inputs.name }}"
+      - name: Film to Drive
+        run: scripts/upload_gdrive.sh --sub ${{ inputs.drive }}/renders "${{ inputs.name }}"

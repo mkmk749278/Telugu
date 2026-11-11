@@ -3,7 +3,11 @@
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 RCLONE="$ROOT/.cache/rclone/rclone-v1.71.1-linux-amd64/rclone"
-[[ -x $RCLONE ]] || { echo "run scripts/upload_gdrive.sh once to fetch rclone" >&2; exit 3; }
+if [[ ! -x $RCLONE ]]; then  # fresh machine (a GitHub runner): fetch the same pinned rclone upload_gdrive.sh uses
+  mkdir -p "$ROOT/.cache/rclone"
+  curl -sSL -m 300 -o "$ROOT/.cache/rclone/rclone.zip" "https://downloads.rclone.org/v1.71.1/rclone-v1.71.1-linux-amd64.zip"
+  (cd "$ROOT/.cache/rclone" && unzip -q -o rclone.zip && rm rclone.zip)
+fi
 TOKEN=$(sed -n '/^TOKEN=\$(python3/,/^)$/p' "$ROOT/scripts/upload_gdrive.sh" | sed '1s/^TOKEN=\$(//;$d' | bash)
 export RCLONE_CONFIG_GD_TYPE=drive RCLONE_CONFIG_GD_SCOPE=drive RCLONE_CONFIG_GD_TOKEN="$TOKEN"
 export RCLONE_CONFIG_GD_ROOT_FOLDER_ID="${GDRIVE_CREATOR_FOLDER_ID:-1NOCNjqPX5dOzKpp71oyEIIj0xoF-W68M}" RCLONE_CONFIG=/dev/null
