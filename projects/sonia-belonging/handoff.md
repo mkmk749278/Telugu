@@ -15,17 +15,24 @@
   sources), `youtube/sonia-belonging_te.srt`. Thumbnails (main + 2 challengers) built by `tools/thumbs.py`, in Drive
   `Creator/Telugu/sonia-belonging/youtube/`.
 
-## Next steps (in order)
-1. **4K master on GitHub** (the old session's local render dies with it). Needs the repo secret
-   `GDRIVE_RCLONE_TOKEN` (the owner is adding it). Run the workflow `remotion-render.yml` on `main` with:
-   film `sonia-belonging`, drive `Telugu/sonia-belonging`, comp `Sonia`, scale `2`, runners `6`, crf `18`,
-   name `sonia-belonging_4k_v3.mp4`. The film lands in Drive `Telugu/sonia-belonging/renders/`.
-   If `remotion/public` changes (new media), re-tar it (`tar -cf public_media.tar public` from `remotion/`) and upload
-   to `render-media/` first.
-2. **QA the 4K** (pull it from Drive): `freezedetect=n=0.002:d=1.5`, `blackdetect`, `ebur128` (expect −14.2 LUFS,
-   peak ≈ −1.4), picture and sound both 756.0 s, a contact sheet every 5 s.
-3. **YouTube upload** to *Be Practical with Kishore Telugu*: the token is the new environment secret
-   `YT_REFRESH_TOKEN_BEPRACTICALWITHKISHORETELUGU` (with `YT_CLIENT_ID`, `YT_CLIENT_SECRET`). First check the token
-   opens that channel. **Ask the owner for the publish time and public/scheduled before uploading.** Upload with
-   the metadata, the Telugu SRT, the main thumbnail; AI use = No.
-4. Within 24 h of upload: re-check the fresh-fact rows 39–44 in `claims.csv`.
+## Released (11 Nov 2026)
+- **Public on YouTube:** https://youtu.be/OYa9YW5YwEI (Be Practical with Kishore Telugu). Title as in
+  `youtube/metadata.json`; thumbnail = challenger B (owner's choice); Telugu SRT on; AI use = No.
+  It was public for about a minute with the first thumbnail before the owner asked to finalise the package; it went
+  back to private (0 views) and was published again after the owner chose.
+- **4K master:** Drive `Creator/Telugu/sonia-belonging/renders/sonia-belonging_4k_v3.mp4` (3840x2160, 30 fps,
+  756.0 s, 1.7 GB). Rendered on GitHub run 42983265541 (six runners, 37 to 91 minutes each); the runner's own Drive
+  upload failed with rclone's shared Google app rate limit (403 "Queries per minute", project 202264815644), so the
+  shards were pulled from the run's artifacts, joined in the session with the mix, and uploaded to Drive from there.
+- **QA:** -14.2 LUFS, true peak -1.4 dB; no black frames (the dark candle scene near 4:58 is intended); three quote
+  cards hold still 1.5 to 2 s (2:16, 11:14, 11:24), left as they are; contact sheet every 5 s looked at.
+
+## Next steps
+1. **Owner:** pin the source comment in YouTube Studio (text in `youtube/metadata.json` "pinned_comment"); add the two
+   other thumbnails to Test & Compare if wanted.
+2. **Within 24 h of upload:** re-check the fresh-fact rows 39-44 in `claims.csv`.
+3. **At 24 h:** read Studio (impressions, CTR).
+4. **Drive uploads from GitHub runners:** give rclone the owner's own Google OAuth client ID so uploads stop sharing
+   rclone's default quota; until then, if "Film to Drive" hangs, join from the artifacts as above.
+5. **Next film:** `scripts/yt_upload.py` uploads private; show the owner the title and thumbnails and get the choice
+   **before** the `publish` step (owner, 11 Nov 2026).
