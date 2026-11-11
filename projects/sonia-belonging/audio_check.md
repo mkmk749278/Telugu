@@ -27,3 +27,9 @@ normalised with music.
 Drive: `Creator/Telugu/sonia-belonging/sonia-belonging_vo_full.mp3`; originals in `.../vo_takes/`.
 
 **Owner approved the audio on 10 Nov 2026.**
+
+## Review cut v2 (11 Nov 2026)
+
+720p, 30 fps, 12:36. Checks on the joined file: picture and sound both 756.0 s; no freeze over 1.5 s
+(`freezedetect n=0.002`); no black or flash frames; loudness −14.2 LUFS, LRA 3.0 LU, true peak −1.4 dBFS. Contact
+sheet read every 5 s. Drive: `Creator/Telugu/sonia-belonging/sonia-belonging_review720_v2.mp4`.
