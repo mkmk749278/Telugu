@@ -13,7 +13,6 @@ KEYS = {  # key: Commons file title (exact)
     'sonia2006': 'Sonia Gandhi - India Economic Summit 2006.jpg',
     'birthplace': 'Sonia Gandhi birthplace.JPG',
     'sonia2013': 'Sonia Gandhi in 2013.jpg',
-    'reagan1985': 'President Ronald Reagan Nancy Reagan Rajiv Gandhi and Mrs Gandhi.jpg',
     'doon1997': 'Sonia Gandhi at The Doon School, 20 October 1997.png',
     'indira1966': 'Indira Gandhi 1966.jpg',
     'indira1977': 'Premier Indira Gandhi (Congrespartij), Bestanddeelnr 929-0811.jpg',

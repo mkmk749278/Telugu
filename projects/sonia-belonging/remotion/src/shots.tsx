@@ -21,7 +21,7 @@ export const SHOTS: Shot[] = [
 	// ---------------------------------------------------------------- cold open: the yes
 	{at: 0, render: (d, r) => <BookShot dur={d} te="ప్రైమ్ మినిస్టర్ పదవికి సరే" en="HER OWN MEMOIR · 10 NOV 2026" labelAt={r(w0(0, 'సరే'))} />},
 	{at: s0(1), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['I am shaken. I feel overpowered.', '“Theek hai,” (“All right,”),', 'I mumble almost inaudibly.']} hi={[[1, r(w0(2, 'పుస్తకంలో')), r(w0(2, 'రాశారు'))]]} />},
-	{at: s0(3), render: (d, r) => <StampShot dur={d} {...ph('parliament')} big="MAY 2004" sub="10 JANPATH · NEW DELHI" subAt={r(s0(4))} />},
+	{at: s0(3), render: (d, r) => <StampShot dur={d} big="MAY 2004" sub="10 JANPATH · NEW DELHI" subAt={r(s0(4))} />},
 	{at: s0(5), render: (d, r) => (
 		<>
 			<Dim dur={d} file={M.parliament.file} />
@@ -71,7 +71,7 @@ export const SHOTS: Shot[] = [
 	{at: s0(34), render: (d) => <BookShot dur={d} en="BELONGING: A JOURNEY OF LOVE" labelAt={6} />},
 	{at: s0(35), render: (d, r) => <CounterShot dur={d} value={544} land={r(w0(35, 'పేజీలు'))} unit="పేజీలు" />},
 	{at: s0(36), render: (d) => <BookShot dur={d} open en="HARPERCOLLINS INDIA" labelAt={6} />},
-	{at: s0(37), render: (d, r) => <StampShot dur={d} {...ph('hydBookstore')} grade="warm" big="10 NOV 2026" sub="IN BOOKSHOPS FROM 10 AM" subAt={r(w0(37, 'బుక్'))} />},
+	{at: s0(37), render: (d, r) => <StampShot dur={d} big="10 NOV 2026" sub="IN BOOKSHOPS FROM 10 AM" subAt={r(w0(37, 'బుక్'))} />},
 	// ---------------------------------------------------------------- the honesty promise
 	{at: s0(38), render: (d, r) => <SourcesShot dur={d} rows={['Her book’s published excerpts', 'Her interviews', 'News reports, every line sourced']} at={[r(w0(39, 'పుస్తకం')), r(w0(39, 'ఇంటర్వ్యూలు')), r(w0(39, 'మాత్రమే'))]} />},
 	{at: s0(40), render: (d, r) => (
@@ -92,7 +92,7 @@ export const SHOTS: Shot[] = [
 	)},
 	{at: s0(49), render: (d, r) => <ExcerptShot dur={d} source="SONIA GANDHI, ON X · VIA AFP" lines={['“In a small Greek restaurant', 'in Cambridge', 'my journey of love began.”']} hi={[[0, r(w0(49, 'గ్రీక్')), r(w0(49, 'రెస్టారెంట్')) + 10]]} te="ది వర్సిటీ" />},
 	{at: s0(50), render: (d) => <PrintShot dur={d} {...ph('rajiv1985')} caption="RAJIV GANDHI" grade="bw" width={640} />},
-	{at: s0(51), render: (d) => <QuoteShot dur={d} {...ph('reagan1985')} who="SONIA GANDHI" te="చూసిన వెంటనే అనిపించింది, ఇతనితోనే ఉండాలని." en="He was someone I would really love to be with. And of course, I learned that it was the same for him." source="VIDEO STATEMENT ON HER MEMOIR · VIA AFP" />},
+	{at: s0(51), render: (d) => <QuoteShot dur={d} {...ph('rajiv1985')} who="SONIA GANDHI" te="చూసిన వెంటనే అనిపించింది, ఇతనితోనే ఉండాలని." en="He was someone I would really love to be with. And of course, I learned that it was the same for him." source="VIDEO STATEMENT ON HER MEMOIR · VIA AFP" />},
 	{at: s0(53), render: (d, r) => <PrintShot dur={d} {...ph('family1949')} caption="NEHRU, INDIRA, RAJIV AND SANJAY · 1949" te="జవహర్లాల్ నెహ్రూ" en="INDIA'S FIRST PRIME MINISTER" labelAt={r(s0(54))} width={760} />},
 	{at: s0(56), render: (d, r) => <PhotoShot dur={d} {...ph('indira1966')} grade="bw" contain move="in" te="ఇందిరా గాంధీ" en="PRIME MINISTER FROM 1966" labelAt={4} />},
 	{at: s0(58), render: (d, r) => <StampShot dur={d} big="25 FEB 1968" sub="NEW DELHI · THE WEDDING" subAt={r(s0(59))} />},
@@ -168,8 +168,8 @@ export const SHOTS: Shot[] = [
 	{at: s0(116), render: (d, r) => <StampShot dur={d} {...ph('parliament')} big="1996" sub="CONGRESS DEFEATED · LEADERS LEAVE" subAt={r(s0(117))} />},
 	{at: s0(118), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I’d wake up in the middle of the night', 'wondering what I should do …', 'That pull was now getting hold of me.”']} hi={[[0, 6, 50], [2, r(s0(119)), r(s0(119)) + 60]]} />},
 	{at: s0(120), render: (d, r) => <ExcerptShot dur={d} source={HINDU} lines={['“I was after all the outsider.', 'I had been reminded of that status', 'again and again.”']} hi={[[0, r(s0(121)), r(s0(121)) + 30], [2, r(s0(122)) + 20, r(s0(122)) + 60]]} />},
-	{at: s0(123), render: (d) => <StampShot dur={d} {...ph('doon1997')} big="1997" sub="KOLKATA · SHE JOINS THE PARTY" />},
-	{at: s0(124), render: (d) => <PhotoShot dur={d} {...ph('doon1997')} grade="warm" contain move="in" te="పార్టీ ప్రెసిడెంట్" en="1998 · CONGRESS PRESIDENT" labelAt={6} />},
+	{at: s0(123), render: (d) => <StampShot dur={d} big="1997" sub="KOLKATA · SHE JOINS THE PARTY" />},
+	{at: s0(124), render: (d) => <PhotoShot dur={d} {...ph('doon1997')} grade="warm" contain move="in" te="1998లో పార్టీ ప్రెసిడెంట్" en="SONIA GANDHI, 1997" labelAt={6} />},
 	// ---------------------------------------------------------------- back to the window: 2004
 	{at: s0(125), render: (d) => <InkWindow dur={d} />},
 	{at: s0(126), render: (d, r) => (
@@ -210,7 +210,7 @@ export const SHOTS: Shot[] = [
 	{at: s0(158), render: (d) => <InkCorridor dur={d} walk={false} />},
 	{at: s0(159), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“Look, Ma, you’ve always been clear about this,”', '“Don’t get forced into it.', 'Do what you’ve decided to do.', 'We’re both here to help you handle it.”']} hi={[[1, r(s0(161)), r(s0(161)) + 30], [3, r(s0(163)), r(s0(163)) + 40]]} />},
 	{at: s0(164), render: (d, r) => <InkMirror dur={d} showRight={r(s0(166))} />},
-	{at: s0(169), render: (d) => <QuoteShot dur={d} {...ph('natwar')} who="K. NATWAR SINGH · HIS AUTOBIOGRAPHY" te="అమ్మ పీఎమ్ అయితే సిక్స్ మంత్స్ లో చంపేస్తారని రాహుల్ భయపడ్డారు." en="Rahul did not want her to become PM; he felt she would be assassinated in six months." source="HIS CLAIM, AS SUMMARISED BY THE INDIAN EXPRESS" plain />},
+	{at: s0(169), render: (d) => <QuoteShot dur={d} who="K. NATWAR SINGH · HIS AUTOBIOGRAPHY" te="అమ్మ పీఎమ్ అయితే సిక్స్ మంత్స్ లో చంపేస్తారని రాహుల్ భయపడ్డారు." en="Rahul did not want her to become PM; he felt she would be assassinated in six months." source="HIS CLAIM, AS SUMMARISED BY THE INDIAN EXPRESS" plain />},
 	{at: s0(171), render: (d, r) => (
 		<>
 			<Dim dur={d} file={M.sonia2007.file} />
@@ -221,7 +221,7 @@ export const SHOTS: Shot[] = [
 	// ---------------------------------------------------------------- the night
 	{at: s0(176), render: (d) => <InkBed dur={d} />},
 	{at: s0(179), render: (d, r) => <InkBed dur={d} lines={[{t: 'ఇటలీలో పుట్టి పెరిగిన నువ్వు, దేశాన్ని నడిపించాలా?', at: 4, side: 'l'}, {t: 'ఇది నీ దేశం.', at: r(s0(182)), side: 'r'}]} />},
-	{at: s0(185), render: (d) => <PhotoShot dur={d} {...ph('reagan1985')} grade="bw" move="in" focus="55% 40%" te="రాజీవ్ పక్కన ఉంటే బాగుండు" en="RAJIV AND SONIA GANDHI WITH THE REAGANS, 1985" labelAt={8} />},
+	{at: s0(185), render: (d) => <PhotoShot dur={d} {...ph('rajiv1987')} grade="bw" contain move="in" te="రాజీవ్ పక్కన ఉంటే బాగుండు" en="RAJIV GANDHI, 1987" labelAt={8} />},
 	{at: s0(187), render: (d, r) => <ExcerptShot dur={d} source={IE} lines={['“Sonia, be true to yourself,”', 'I could hear myself say.', '“You’ve always known it. Just leave it!”']} hi={[[0, 4, 40], [2, r(s0(189)) - 20, r(s0(189)) + 10]]}  under={<InkBed dur={d} />} />},
 	{at: s0(190), render: (d) => <InkDoor dur={d} />},
 	{at: s0(192), render: (d) => <ExcerptShot dur={d} source={IE} lines={['“I’ve made up my mind.', 'I’m going to stick to my stand.”']} hi={[[0, 4, 30], [1, 40, 80]]} />},
@@ -290,7 +290,7 @@ export const SHOTS: Shot[] = [
 		</>
 	)},
 	// ---------------------------------------------------------------- Hyderabad and the landing
-	{at: s0(245), render: (d) => <PhotoShot dur={d} {...ph('hydBookstore')} grade="warm" move="in" te="మన హైదరాబాద్ లో" en="HYDERABAD · LAUNCH DAY" labelAt={6} />},
+	{at: s0(245), render: (d) => <PhotoShot dur={d} {...ph('hydBookstore')} grade="warm" move="in" te="మన హైదరాబాద్ లో" en="A HYDERABAD BOOKSHOP (FILE PHOTO)" labelAt={6} />},
 	{at: s0(246), render: (d, r) => <CounterShot dur={d} {...ph('hydBookstore')} value={1000} land={r(w0(246, 'కాపీలు'))} unit="కాపీలు" sub="ONE DISTRIBUTOR, HYDERABAD · THE HINDU" />},
 	{at: s0(247), render: (d, r) => <CounterShot dur={d} value={150} land={r(w0(247, 'ఆర్డర్లు'))} unit="ఆర్డర్లు" sub="IN ONE HOUR" />},
 	{at: s0(248), render: (d, r) => (
