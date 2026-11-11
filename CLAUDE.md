@@ -7,6 +7,11 @@ This repo makes **Be Practical with Kishore Telugu**: films in spoken Telugu for
 rules are in its `docs/archive/PLAYBOOK_2026-11-05.md` §4a, §4b) and `mkmk749278/Built-on-Bharat` (the Tata film,
 a Remotion reference). Owner, 2026-11-10: "Work on Telugu, don't edit anything in other repos."
 
+## Current work (read first when the owner says "continue")
+- **Sonia film:** `projects/sonia-belonging/handoff.md` (v3 built with real pictures; next: 4K on GitHub, QA, upload).
+- Renders run on GitHub Actions (`.github/workflows/remotion-render.yml`, needs the repo secret `GDRIVE_RCLONE_TOKEN`),
+  not in the session.
+
 ## Audio (owner, 2026-11-10)
 - **The owner generates the audio himself. Never call ElevenLabs or any TTS API from a session.**
 - Give him recording blocks of **at most 1,500 characters each** (owner, 2026-11-10: 10,000-character blocks skipped
