@@ -276,7 +276,7 @@ export const Words: React.FC<{items: {t: string; at: number; red?: boolean; gold
 	const f = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	return (
-		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', transform: `translateY(${y}px)`}}>
+		<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', transform: `translateY(${y}px) scale(${1 + Math.min(f, 450) * 0.00012})`}}>
 			<div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center', maxWidth: 1600, textAlign: 'center'}}>
 				{items.map((w, i) => {
 					const p = spring1(f, w.at, fps, 0.4);
@@ -305,9 +305,11 @@ export const StampShot: React.FC<{dur: number; big: string; sub?: string; subAt?
 					<Img src={src(file)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: `${GR[grade]} brightness(0.55)`}} />
 				</AbsoluteFill>
 			) : (
-				<Desk lamp={0.6} />
+				<AbsoluteFill style={{transform: `scale(${tw(f, 0, dur, 1.2, 1.04)}) rotate(${tw(f, 0, dur, -1.2, 0.6)}deg)`}}>
+					<Desk lamp={0.8} />
+				</AbsoluteFill>
 			)}
-			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
+			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', transform: `scale(${tw(f, 0, dur, 1.0, 1.06)})`}}>
 				<div style={{fontFamily: F.label, fontWeight: 800, fontSize: 150, letterSpacing: '0.06em', color: C.cream, opacity: p, transform: `scale(${1.12 - 0.12 * p})`, textShadow: '0 8px 40px rgba(0,0,0,0.9)'}}>{big}</div>
 				<div style={{width: 900 * line, height: 3, background: C.gold, margin: '18px 0'}} />
 				{sub ? <div style={{fontFamily: F.label, fontWeight: 700, fontSize: 44, letterSpacing: '0.24em', color: C.gold, opacity: spring1(f, subAt, fps)}}>{sub}</div> : null}
@@ -358,9 +360,11 @@ export const CounterShot: React.FC<{dur: number; value: number; land: number; un
 					<Img src={src(file)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'contrast(1.05) brightness(0.42) blur(2px)'}} />
 				</AbsoluteFill>
 			) : (
-				<Desk />
+				<AbsoluteFill style={{transform: `scale(${tw(f, 0, dur, 1.18, 1.04)})`}}>
+					<Desk />
+				</AbsoluteFill>
 			)}
-			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
+			<AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', transform: `scale(${tw(f, 0, dur, 0.97, 1.04)})`}}>
 				<div style={{fontFamily: F.label, fontWeight: 800, fontSize: 230, color: C.gold, lineHeight: 1, textShadow: '0 10px 50px rgba(0,0,0,0.8)'}}>{n.toLocaleString('en-IN')}</div>
 				<div style={{fontFamily: F.te, fontWeight: 800, fontSize: 76, color: C.cream, marginTop: 10, opacity: spring1(f, land - 6, fps)}}>{unit}</div>
 				{sub ? <div style={{fontFamily: F.label, fontWeight: 700, fontSize: 30, letterSpacing: '0.2em', color: C.grey, marginTop: 14, opacity: spring1(f, land, fps)}}>{sub}</div> : null}
@@ -373,10 +377,12 @@ export const CounterShot: React.FC<{dur: number; value: number; land: number; un
 /** Background for type: dark paper with a faint ruled grid and a moving lamp. */
 export const Ground: React.FC<{tone?: 'dark' | 'red'}> = ({tone = 'dark'}) => {
 	const f = useCurrentFrame();
+	// visible motion, never a still plate: a steady push (about 4% every 5 s) and a slow drift
+	const k = 1.08 + Math.min(f, 900) * 0.00026;
 	return (
 		<AbsoluteFill style={{overflow: 'hidden', background: tone === 'red' ? '#1A0B09' : C.night}}>
-			<AbsoluteFill style={{transform: `scale(1.1) translate(${noise2D('gx', f / 500, 0) * 30}px, ${noise2D('gy', 0, f / 520) * 20}px)`}}>
-				<Desk lamp={tone === 'red' ? 0.5 : 0.8} />
+			<AbsoluteFill style={{transform: `scale(${k}) translate(${noise2D('gx', f / 260, 0) * 60}px, ${noise2D('gy', 0, f / 280) * 36}px) rotate(${noise2D('gr', f / 400, 1) * 0.8}deg)`}}>
+				<Desk lamp={tone === 'red' ? 0.5 : 0.9} />
 			</AbsoluteFill>
 			{tone === 'red' ? <AbsoluteFill style={{background: 'radial-gradient(ellipse 60% 55% at 50% 50%, rgba(200,55,45,0.22) 0%, rgba(0,0,0,0) 70%)'}} /> : null}
 		</AbsoluteFill>
@@ -393,7 +399,7 @@ export const Dim: React.FC<{file?: string; dur?: number; red?: boolean; children
 					<Img src={src(file)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: `${GR.bw} blur(3px) brightness(0.42)`}} />
 				</AbsoluteFill>
 			) : (
-				<AbsoluteFill style={{filter: 'brightness(0.42) blur(2.5px)'}}>{children}</AbsoluteFill>
+				<AbsoluteFill style={{filter: 'brightness(0.5) blur(1.5px)', transform: `scale(${1.04 + Math.min(f, 600) * 0.0003}) translateX(${noise2D('dimx', f / 240, 0) * 40}px)`}}>{children}</AbsoluteFill>
 			)}
 			<AbsoluteFill style={{background: red ? 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(120,20,15,0.45) 0%, rgba(0,0,0,0.5) 100%)' : 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)'}} />
 		</AbsoluteFill>
