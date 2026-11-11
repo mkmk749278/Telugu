@@ -1,6 +1,6 @@
 import {noise2D} from '@remotion/noise';
 import React from 'react';
-import {AbsoluteFill, Easing, Img, interpolate, random, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, Loop, OffthreadVideo, random, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, F} from './theme';
 
 // ------------------------------------------------------------------ motion helpers
@@ -293,14 +293,14 @@ export const Words: React.FC<{items: {t: string; at: number; red?: boolean; gold
 };
 
 /** A date/place stamp: big numerals with a ruled line, over a dark moving ground or a photo child. */
-export const StampShot: React.FC<{dur: number; big: string; sub?: string; subAt?: number; file?: string; grade?: Grade; credit?: string}> = ({dur, big, sub, subAt = 10, file, grade = 'night', credit}) => {
+export const StampShot: React.FC<{dur: number; big: string; sub?: string; subAt?: number; file?: string; grade?: Grade; credit?: string; under?: React.ReactNode}> = ({dur, big, sub, subAt = 10, file, grade = 'night', credit, under}) => {
 	const f = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const p = spring1(f, 2, fps, 0.6);
 	const line = tw(f, 4, 26, 0, 1);
 	return (
 		<AbsoluteFill style={{overflow: 'hidden', background: C.night}}>
-			{file ? (
+			{under ? <Dim>{under}</Dim> : file ? (
 				<AbsoluteFill style={{transform: `scale(${tw(f, 0, dur, 1.18, 1.04)})`}}>
 					<Img src={src(file)} style={{width: '100%', height: '100%', objectFit: 'cover', filter: `${GR[grade]} brightness(0.55)`}} />
 				</AbsoluteFill>
@@ -402,6 +402,42 @@ export const Dim: React.FC<{file?: string; dur?: number; red?: boolean; children
 				<AbsoluteFill style={{filter: 'brightness(0.5) blur(1.5px)', transform: `scale(${1.04 + Math.min(f, 600) * 0.0003}) translateX(${noise2D('dimx', f / 240, 0) * 40}px)`}}>{children}</AbsoluteFill>
 			)}
 			<AbsoluteFill style={{background: red ? 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(120,20,15,0.45) 0%, rgba(0,0,0,0.5) 100%)' : 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%)'}} />
+		</AbsoluteFill>
+	);
+};
+
+/** Real stock footage of the thing the sentence names (never a person who could pass for a real one). Slowed down to
+ * fill the shot where it can be (at most to half speed), looped only if it still runs short. Always labelled. */
+export const ClipShot: React.FC<{
+	file: string;
+	sec: number;
+	dur: number;
+	from?: number;
+	move?: Move;
+	grade?: Grade;
+	credit?: string;
+	tag?: string | null;
+	te?: string;
+	en?: string;
+	labelAt?: number;
+	focus?: string;
+}> = ({file, sec, dur, from = 0, move = 'in', grade = 'modern', credit, tag = 'ILLUSTRATIVE FOOTAGE', te, en, labelAt, focus = '50% 50%'}) => {
+	const f = useCurrentFrame();
+	const {fps} = useVideoConfig();
+	const avail = Math.max(1, sec - from - 0.2);
+	const rate = Math.max(0.5, Math.min(1, avail / (dur / fps)));
+	const loopFrames = Math.floor((avail / rate) * fps);
+	const p = tw(f, 0, dur, 0, 1, Easing.inOut(Easing.sin));
+	const vid = <OffthreadVideo src={src(file)} muted playbackRate={rate} startFrom={Math.round(from * fps)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: focus, filter: GR[grade]}} />;
+	return (
+		<AbsoluteFill style={{background: C.night, overflow: 'hidden'}}>
+			<AbsoluteFill style={{transform: camOf(move, p * 0.6), transformOrigin: focus}}>
+				{loopFrames >= dur ? vid : <Loop durationInFrames={loopFrames}>{vid}</Loop>}
+			</AbsoluteFill>
+			<Atmos dust={false} />
+			{te || en ? <Label te={te} en={en} at={labelAt} /> : null}
+			{tag ? <Tag text={tag} /> : null}
+			<Credit text={credit} />
 		</AbsoluteFill>
 	);
 };
