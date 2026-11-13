@@ -286,3 +286,24 @@ NOT CONFIRMED, then FIXED / DECLINED with the reason); a reviewer's rewrite neve
 
 **Polished only:** the owner never receives a draft, test or placeholder.
 **Drive:** `Creator/Telugu/<slug>/`, one folder per film; channel-level files in `Creator/Telugu/_Channel/`.
+
+## 12. Lessons log (newest last; each with its reason)
+- **2026-11-13, Medigadda narration v1.** An independent panel of eight (engineer, farmer, a supporter of each party,
+  advocate, young professional, elder, viewer abroad) found what our own reading missed. Rules that came out of it:
+  - *A reconstruction is never spoken as witnessed.* Start it with "రిపోర్ట్ ల ప్రకారం" and say nobody saw below the
+    ground. Why: the same film said the evidence was destroyed by grouting.
+  - *Never tease what a source did not do.* "The engineers looked below" is a claim; check it against the other
+    side's reply.
+  - *Answer each point of the other side one by one, or say it was not found.* One reply to three points reads as
+    closing the case, and the party's supporter leaves.
+  - *Name every government with its dates; do not use verbs with no subject* ("దింపారు", "తీసేశారు"), unless the
+    record does not say who, and then say that.
+  - *A court is not a "side".* State the operative order narrowly; read the order itself.
+  - *Never print a "likely to exceed" figure as a fact in a title.*
+  - *Do not name a junior official more than once, if at all.*
+  - *English number words lose elders and farmers* (open with the owner; recommended: Telugu words for counts and
+    money, English for years).
+  - *Speaking rate:* about 15 Telugu characters a second (Sonia film: 11,407 characters ran 12:37). A 16,500-character
+    narration is about 18 minutes.
+  - *When the primary document is not online, say so in the narration* and put its reading on the pre-publish
+    checklist; every claim from news about it is marked "secondary" in `claims.csv`.
