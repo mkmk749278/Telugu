@@ -2,10 +2,10 @@
 """Lint a Telugu vo.txt and split it into recording blocks for the owner.
 
 The owner generates the audio himself (owner, 2026-11-10): no TTS API from the session.
-Blocks break only at blank lines (paragraphs), each at most --max characters (default 1,500: the owner heard long blocks skip content, 2026-11-10), and are
+Blocks break only at blank lines (paragraphs), each at most --max characters (default 10,000: Eleven v4's limit, owner 2026-11-13), and are
 balanced so no block is tiny. Writes a Markdown file with one click-to-copy block each.
 
-Usage: python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>" [--max 1500]
+Usage: python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>" [--max 10000]
 """
 import argparse
 import math
@@ -77,7 +77,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("vo")
     ap.add_argument("--title", required=True)
-    ap.add_argument("--max", type=int, default=1500)
+    ap.add_argument("--max", type=int, default=10000)
     ap.add_argument("--out")
     a = ap.parse_args()
     vo = Path(a.vo)
