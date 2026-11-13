@@ -89,7 +89,7 @@ def main() -> int:
     paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
     blocks = split(paragraphs, a.max)
     out = Path(a.out) if a.out else vo.with_name("audio_blocks.md")
-    secs = len(text) / 40.0  # about 40 characters a second (the Sonia film: 30,075 characters ran 12:37)
+    secs = len(text) / 15.0  # about 15 characters a second (the Sonia film: 11,407 characters ran 12:37)
     lines = [
         f"# {a.title}: audio blocks",
         "",

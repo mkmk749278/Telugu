@@ -6,13 +6,14 @@
 **One sentence:** the dam-safety report says the sand under Medigadda's concrete was washed away and left an empty
 space; this film takes you under the raft and shows how, with the report's own pages and every side's answer.
 
-**Title (main):** `Medigadda ఎందుకు కుంగింది? ₹1.47 లక్షల కోట్ల ప్రాజెక్ట్, రాఫ్ట్ కింద ఖాళీ`
+**Title (main):** `మేడిగడ్డ ఎందుకు కుంగింది? రాఫ్ట్ కింద ఖాళీ | Medigadda Barrage`
 Alternatives, same promise:
-- `మేడిగడ్డ బ్యారేజ్ కింద అసలు ఏం జరిగింది? NDSA రిపోర్ట్ చెప్పింది ఇదే`
-- `85 బోర్లు వేయాల్సిన చోట 6 | Medigadda ఎందుకు కుంగింది?`
+- `85 బోర్లు వెయ్యాల్సిన చోట 6 | Medigadda ఎందుకు కుంగింది?`
+- `Medigadda ఎందుకు కుంగింది? ₹1.47 లక్షల కోట్లు దాటొచ్చన్న ప్రాజెక్ట్, రాఫ్ట్ కింద ఖాళీ`
 
-The ₹1.47 lakh crore is CAG's likely cost of the whole Kaleshwaram project, of which Medigadda is the source
-barrage. The title says "ప్రాజెక్ట్" for that reason and the film says so in the money chapter.
+The independent review's BRS-leaning viewer distrusted the film from a title that printed ₹1.47 lakh crore as fact
+(it is CAG's "likely to exceed" for the whole Kaleshwaram project). The main title therefore carries no figure; the
+rupee version is an alternative for the owner, worded as CAG worded it.
 
 **Thumbnail (main):** a bright cutaway of Block 7 on a drafting table: the raft and piers in concrete grey, pier 20
 sunk and glowing orange, a dark empty pocket under the raft with blue water arrows carrying sand through a gap in the
