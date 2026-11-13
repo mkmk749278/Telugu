@@ -169,8 +169,10 @@ a crowded topic needs a new angle (Hyderabad Metro).
 
 ## 7. Audio
 
-- **The owner generates the audio himself. Never call any TTS API from a session.** Blocks of at most 1,500 characters
-  from `scripts/vo_blocks.py`, in the chat as click-to-copy blocks and in `projects/<slug>/audio_blocks.md`.
+- **The owner generates the audio himself. Never call any TTS API from a session.** Blocks of **at most 10,000
+  characters** (owner, 2026-11-13: Eleven v4 takes 10,000 characters; this replaces the 1,500 limit of 2026-11-10),
+  split at paragraphs by `scripts/vo_blocks.py` (default `--max 10000`), in the chat as click-to-copy blocks and in
+  `projects/<slug>/audio_blocks.md`. Every take is checked against the script for skipped lines before it is used.
 - **Voice engine: open, the owner's decision.** The audit asks for an A/B before the pilot voice is locked: the same
   two technical Tenglish paragraphs on the current ElevenLabs voice and on Sarvam Bulbul v3, judged by ear for
   engineering words, numbers and names. When the owner asks, the session prepares the two test paragraphs; the owner
@@ -221,11 +223,16 @@ a crowded topic needs a new angle (Hyderabad Metro).
 
 - **Goal until monetisation: subscribers and watch hours** (1,000 subscribers and 4,000 public watch hours in 12
   months; reports say 8,000 hours for applications from 1 Feb 2027: check YouTube's own page before planning on it).
-- **Cadence (recommended, not yet the owner's decision):** one film a week, the state alternating. Never two films on
-  one project inside a fortnight.
-- **Shorts (recommended, not yet the owner's decision):** one 45–60 s vertical Short per film built from the hero
-  cutaway, linked to the film. *Why:* Shorts on these exact subjects reached 15 to 66 lakh views; they pay almost
-  nothing but are how a channel with one subscriber is found.
+- **Cadence (owner, 2026-11-13): two films a week**, the state alternating where the slate allows. Never two films on
+  one project inside a fortnight. Research runs ahead of the films in production; the fact and fairness gates and the
+  owner's approvals stay as they are.
+- **Shorts (owner, 2026-11-13): never a cut of the film; each Short has its own script**, the way Margin of Error
+  makes them (its PLAYBOOK §13.5, §13.5a). The form: "గుర్తుందా? మీరు విన్నది ఒకటి, రిపోర్ట్ చెప్పింది ఇంకొకటి":
+  set up the case, show the report's page, **keep back the film's answer**, end on the open question and the full
+  film. About 25–45 s, vertical, built from the film's cutaways and documents with its own narration (the owner
+  approves the script and generates the audio), frame 0 as the cover, clear of the Shorts UI, linked to the film.
+  Every spoken fact has a `claims.csv` row. *Why:* Shorts on these exact subjects reached 15 to 66 lakh views; they
+  pay almost nothing but are how a channel with one subscriber is found.
 - **Revenue:** the audit's blended RPM (₹210–313 per 1,000 views with 10–15% US viewers) is a calculator estimate.
   Plan from the real RPM and the real US share in Studio once the channel has them.
 - **After every film** (24 hours, 7 days, 28 days): impressions and CTR, still watching at 0:30, average view
@@ -255,6 +262,27 @@ The order is Creator's ("Promise first", "decide early, build once"); owner gate
 10. **720p review cut** after our own full review; **the owner approves the cut.**
 11. **4K master**, then the package; **the owner chooses the title and thumbnail**; upload private, publish on the
     owner's word; pin the source comment; the fresh-facts re-check.
+
+### 11.1 Independent reviews (owner, 2026-11-13; method from Margin of Error §14.5)
+Three reviews per film, each in **a new cloud session with no repository attached** (so it judges as a stranger, not
+against our rules), archived when done. Prompt: `prompts/audience_review_v1.md`.
+- **At the plan:** the edge sentence, the beat sheet and the strongest existing films. Would these viewers click and
+  stay? Which of their questions are missing? → `review/plan_review.md`.
+- **At the narration:** the full text; a lean-in map, explain-back, fairness, and the comparison with existing films
+  → `review/audience_vN.md`. Before the owner sees the narration.
+- **At the 720p cut:** did it give viewers what they came for, better than the others? → `review/viewer_cut_rN.md`.
+
+**The panel is chosen for the film, never reused blindly.** Seven viewers: the people who know the subject best, the
+people it touches, and the people most likely to object. Always include: (1) a working or retired engineer of that
+exact field; (2) someone whose life the project touches (the farmer in the command area, the worker, the resident);
+(3) a supporter of each party that governed the project, one each, listening for bias; (4) a lawyer or senior
+journalist listening for anything unfair to a named company or person; (5) a young professional who leaves at the
+first padding; (6) an elder watching on the family TV who needs simple Telugu; (7) a Telugu viewer abroad. Both
+states are on every panel. For Medigadda: a retired irrigation chief engineer from Warangal; a paddy farmer from
+Peddapalli; a BRS supporter from Siddipet and a Congress supporter from Nalgonda; a High Court advocate in Hyderabad;
+a software engineer in Gachibowli; a retired teacher in Vijayawada; a civil engineer in Dallas.
+Every review is a list of leads: each point is checked and answered in `review/<name>_check.md` (CONFIRMED / PARTLY /
+NOT CONFIRMED, then FIXED / DECLINED with the reason); a reviewer's rewrite never adds a fact.
 
 **Polished only:** the owner never receives a draft, test or placeholder.
 **Drive:** `Creator/Telugu/<slug>/`, one folder per film; channel-level files in `Creator/Telugu/_Channel/`.

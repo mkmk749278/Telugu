@@ -18,9 +18,10 @@ picture rules, tools; the old Telugu rules are in its `docs/archive/PLAYBOOK_202
 repos." Our films match their quality.
 
 ## Current work (read first when the owner says "continue")
-- **New direction, 2026-11-13:** regional infrastructure autopsies. The three pilots are in PLAYBOOK §4.1
-  (Medigadda barrage, SLBC tunnel, Pinnapuram pumped storage); none has a project folder yet. Open with the owner:
-  which pilot first, the cadence, Shorts, and the voice A/B (PLAYBOOK §7, §10).
+- **New direction, 2026-11-13:** regional infrastructure autopsies; **two films a week** (owner, 2026-11-13).
+- **Medigadda film (first pilot, in research):** `projects/medigadda/handoff.md` says what is collected and what is
+  next (finish research → plan → narration → independent review → 10,000-character audio blocks for the owner).
+  Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the owner: the voice A/B (PLAYBOOK §7).
 - **Sonia film:** released 11 Nov 2026 (https://youtu.be/OYa9YW5YwEI); `projects/sonia-belonging/handoff.md` has the
   open release items. It is the last film of the old kind (PLAYBOOK §1).
 - Renders run on GitHub Actions (`.github/workflows/remotion-render.yml`, needs the repo secret
@@ -74,8 +75,8 @@ from the viewer's own home, then used freely. **The owner approves the narration
 
 ## Audio (owner, 2026-11-10; PLAYBOOK §7)
 - **The owner generates the audio himself. Never call ElevenLabs or any TTS API from a session.**
-- Give him recording blocks of **at most 1,500 characters each** (owner, 2026-11-10: 10,000-character blocks skipped
-  content when generated), all in one file, as click-to-copy code blocks in the chat and in
+- Give him recording blocks of **at most 10,000 characters each** (owner, 2026-11-13: Eleven v4 takes 10,000; this
+  replaces the 1,500 limit of 2026-11-10), all in one file, as click-to-copy code blocks in the chat and in
   `projects/<slug>/audio_blocks.md`, built by `python3 scripts/vo_blocks.py projects/<slug>/vo.txt --title "<film>"`
   (it lints the text and splits at paragraphs).
 - Recording text: Telugu script only (English words written in Telugu, numbers as English number words in Telugu
@@ -106,6 +107,13 @@ from the viewer's own home, then used freely. **The owner approves the narration
 - Rows that can change are searched again within 24 hours of upload.
 - Deaths told with dignity; no victim images; never mock a region, dialect, religion, caste or community.
 
+## Shorts and reviews (owner, 2026-11-13; PLAYBOOK §10, §11.1)
+- **A Short is never a cut of the film:** its own script ("you heard one thing, the report says another"), sets up
+  the case, keeps back the film's answer, links to the film. Same fact and approval rules.
+- **Independent reviews at the plan, the narration and the 720p cut**, each in a new session with no repo, with a
+  panel of seven viewers chosen for that film (the field's engineer, the people it touches, a supporter of each
+  party, a lawyer, a young professional, an elder, a viewer abroad). `prompts/audience_review_v1.md`.
+
 ## Package (owner, 2026-11-11; PLAYBOOK §9)
 - Title: the project's name + the rupee figure or place + the question, in Telugu with the English name people type;
   no channel suffix. Thumbnail: one hero cutaway, at most 3 Telugu words, bright, no politician's face.
@@ -122,7 +130,7 @@ from the viewer's own home, then used freely. **The owner approves the narration
 - Ask before anything paid, anything outward-facing beyond our repos and Drive, and anything destructive.
 
 ## Layout
-- `docs/PLAYBOOK.md`; `docs/research/` (dated reports and scan data).
+- `docs/PLAYBOOK.md`; `docs/research/` (dated reports and scan data); `prompts/` (review prompts).
 - `projects/<slug>/`: brief, research, plan, claims, script and VO, picture plan, `remotion/`, `youtube/`.
 - `scripts/`: `yt_topic_scan.py` (topic demand and supply), `vo_blocks.py`, `align_script.py`, media fetchers, Drive
   and music tools, render shards, `yt_upload.py`.
