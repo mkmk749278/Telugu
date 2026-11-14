@@ -54,10 +54,10 @@
   "Lakshmi Pumphouse of KLIP video by MEIL.webm", H.264 30 fps, no audio), `public/media/mix.wav`.
 
 ## Still to do before the 720p cut goes to the owner
-1. **The 720p review cut r1** was sent to GitHub on 14 Nov (run 43618928493, `remotion-render.yml` on this branch;
-   output Drive `Telugu/Medigadda/renders/medigadda_review_720p_r1.mp4`). The media it used is Drive
-   `render-media/public_media.tar` (rebuilt 14 Nov night; rebuild and re-upload it after any media change). If the run
-   failed, read its log first (this workflow has not yet finished a film end to end).
+1. **The 720p review cut r1 is in Drive:** `Telugu/Medigadda/renders/medigadda_review_720p_r1.mp4` (GitHub run
+   43618928493, the workflow's first full film: 6 runners, about 10 minutes). Measured: 1114.1 s (33,424 frames),
+   1280×720, 30 fps, −14.3 LUFS, true peak −1.2 dB, no black frame ≥ 0.1 s, no freeze ≥ 1.5 s. Not yet watched end to
+   end, not yet sent to the owner. After any media change, rebuild and re-upload `render-media/public_media.tar`.
 2. **Our own review of r1** (`review-cut` checks: flash, freeze, loudness, the 15% text rule, no static plate over
    1.5 s) and a listen to the SFX and the mix. The whole-film contact sheet of 14 Nov found and fixed: the camera
    leaving its plate, the clipped 2016 label, highlights under captions, the thin s304 timeline, the empty s354.
