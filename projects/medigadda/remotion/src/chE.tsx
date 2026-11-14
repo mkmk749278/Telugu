@@ -41,12 +41,19 @@ export const ChE: React.FC = () => {
 				<Say text="గేట్లు దించారు" at={S(157)} until={S(158)} y={930} size={54} />
 				<Say text="నీళ్ళు నిలబడ్డాయి" at={S(158)} until={S(159)} y={930} size={54} />
 				<Say text="పంపులు తిరిగాయి" at={S(159)} until={S(160)} y={930} size={54} />
-				<Say text="బ్యారేజ్: నీళ్ళని మళ్ళించేది" at={W(160, 'మళ్ళించే') - 20} until={S(163)} x={520} y={270} size={46} />
-				<Say text="డ్యామ్: నీళ్ళు నిలవ చేసేది" at={W(161, 'నిలవ') - 10} until={S(163)} x={1400} y={270} size={46} />
-				<Say text="బ్యారేజీలని డ్యామ్ లాగా వాడారు" at={W(162, 'డ్యామ్')} until={S(163)} y={930} size={56} color={C.white} bg={C.orange} />
 				<Say text={`నిండు నీటి ఒత్తిడి · ${months} నెలలు`} at={W(163, 'నెలల') - 10} until={S(164)} y={930} size={56} color={C.yellow} />
-				<Source text="NDSA ఫైనల్ రిపోర్ట్ పై వార్తలు (Deccan Chronicle)" from={S(162)} to={S(164)} />
 				<Honesty text={RECON} from={S(151)} to={S(164)} />
+			</Shot>
+			{/* 160-162: the real river from space: the bed in 2019, the pond held full in 2022 */}
+			<Shot from={S(160)} to={S(163)} x={10} out={10} hold={0}>
+				<Plate layers={[{src: 'sat/s2_2019-02-18.jpg', at: S(160)}, {src: 'sat/s2_2022-11-19.jpg', at: W(162, 'డ్యామ్') - 20, fade: 36}]} cam={[{f: S(160), s: 1.15, x: 0.42, y: 0.4}, {f: S(163), s: 1.5, x: 0.38, y: 0.36}]}>
+					<Tag p={[0.4, 0.34]} text="మేడిగడ్డ బ్యారేజ్" at={S(160) + 6} until={S(163)} dx={150} dy={-110} size={44} />
+				</Plate>
+				<Say text="బ్యారేజ్: నీళ్ళని మళ్ళించేది" at={W(160, 'మళ్ళించే') - 20} until={S(162)} x={1380} y={760} size={46} />
+				<Say text="డ్యామ్: నీళ్ళు నిలవ చేసేది" at={W(161, 'నిలవ') - 10} until={S(162)} x={1380} y={850} size={46} />
+				<Say text="బ్యారేజీలని డ్యామ్ లాగా వాడారు" at={W(162, 'డ్యామ్')} until={S(163)} y={940} size={56} color={C.white} bg={C.orange} />
+				<Say text={f < W(162, 'డ్యామ్') - 4 ? 'ఫిబ్రవరి 2019' : 'నవంబర్ 2022'} at={S(160) + 4} until={S(163)} x={150} y={150} align="left" size={64} color={C.yellow} />
+				<Source text="శాటిలైట్: Copernicus Sentinel-2 · రిపోర్ట్ పై వార్తలు (Deccan Chronicle)" from={S(160) + 6} to={S(163)} />
 			</Shot>
 			{/* 164-173: downstream: the jet, the blocks gone, nobody inspected */}
 			<Shot from={S(164)} to={S(169)}>

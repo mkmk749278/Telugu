@@ -47,6 +47,8 @@ export const Paper: React.FC<{dark?: number; children?: React.ReactNode}> = ({da
 };
 
 export type Key = {f: number; s: number; x: number; y: number};
+/** The plate's zoom, so labels pinned to it keep their size on screen. */
+const Zoom = React.createContext(1);
 const camAt = (keys: Key[], f: number): {s: number; x: number; y: number} => {
 	if (keys.length === 1) return keys[0];
 	const fs = keys.map((k) => k.f);
@@ -73,7 +75,7 @@ export const Plate: React.FC<{layers: Layer[]; cam: Key[]; breathe?: number; chi
 					if (f < l.at - 1 || (next && f > next.at + (next.fade ?? 14) + 2)) return null;
 					return <Img key={l.src + i} src={staticFile(l.src)} style={{position: 'absolute', inset: 0, width: 1920, height: 1080, objectFit: 'cover', opacity: i === 0 ? 1 : ramp(f, l.at, l.fade ?? 14)}} />;
 				})}
-				<AbsoluteFill>{children}</AbsoluteFill>
+				<Zoom.Provider value={s}><AbsoluteFill>{children}</AbsoluteFill></Zoom.Provider>
 			</AbsoluteFill>
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at center, transparent 55%, rgba(20,10,0,0.45) 100%)', pointerEvents: 'none'}} />
 		</AbsoluteFill>
@@ -143,8 +145,10 @@ export const Grains: React.FC<{pts: P2[]; at: number; until?: number; n?: number
 };
 
 /** A label pinned to a point of the plate with a leader line; lands on its word. */
-export const Tag: React.FC<{p: P2; text: string; at: number; until?: number; dx?: number; dy?: number; size?: number; color?: string; bg?: string; sub?: string}> = ({p, text, at, until = 1e9, dx = 120, dy = -90, size = 46, color = C.ink, bg = C.yellow, sub}) => {
+export const Tag: React.FC<{p: P2; text: string; at: number; until?: number; dx?: number; dy?: number; size?: number; color?: string; bg?: string; sub?: string}> = ({p, text, at, until = 1e9, dx: dx0 = 120, dy: dy0 = -90, size: size0 = 46, color = C.ink, bg = C.yellow, sub}) => {
 	const f = useCurrentFrame();
+	const z = React.useContext(Zoom);
+	const dx = dx0 / z, dy = dy0 / z, size = Math.max(44, size0) / z; // what the voice points to: never under 44 px on screen
 	if (f < at - 1 || f > until + 8) return null;
 	const t = ramp(f, at, 9);
 	const o = t * (1 - ramp(f, until, 8));
@@ -153,11 +157,11 @@ export const Tag: React.FC<{p: P2; text: string; at: number; until?: number; dx?
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
 			<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, overflow: 'visible'}}>
-				<line x1={x} y1={y} x2={x + dx * t} y2={y + dy * t} stroke={C.night} strokeWidth={7} />
-				<line x1={x} y1={y} x2={x + dx * t} y2={y + dy * t} stroke={bg} strokeWidth={3.5} />
-				<circle cx={x} cy={y} r={9} fill={bg} stroke={C.night} strokeWidth={3} />
+				<line x1={x} y1={y} x2={x + dx * t} y2={y + dy * t} stroke={C.night} strokeWidth={7 / z} />
+				<line x1={x} y1={y} x2={x + dx * t} y2={y + dy * t} stroke={bg} strokeWidth={3.5 / z} />
+				<circle cx={x} cy={y} r={9 / z} fill={bg} stroke={C.night} strokeWidth={3 / z} />
 			</svg>
-			<div style={{position: 'absolute', left: right ? x + dx : undefined, right: right ? undefined : 1920 - (x + dx), top: y + dy, transform: `translateY(-50%) scale(${0.85 + 0.15 * t})`, transformOrigin: right ? 'left center' : 'right center', background: bg, color, fontFamily: F.te, fontWeight: 700, fontSize: size, lineHeight: 1.25, padding: '6px 20px 8px', borderRadius: 8, boxShadow: '0 6px 18px rgba(0,0,0,0.45)', whiteSpace: 'nowrap'}}>
+			<div style={{position: 'absolute', left: right ? x + dx : undefined, right: right ? undefined : 1920 - (x + dx), top: y + dy, transform: `translateY(-50%) scale(${0.85 + 0.15 * t})`, transformOrigin: right ? 'left center' : 'right center', background: bg, color, fontFamily: F.te, fontWeight: 700, fontSize: size, lineHeight: 1.25, padding: `${6 / z}px ${20 / z}px ${8 / z}px`, borderRadius: 8 / z, boxShadow: '0 6px 18px rgba(0,0,0,0.45)', whiteSpace: 'nowrap'}}>
 				{text}
 				{sub ? <div style={{fontSize: size * 0.62, fontWeight: 500, marginTop: -2}}>{sub}</div> : null}
 			</div>
@@ -166,15 +170,17 @@ export const Tag: React.FC<{p: P2; text: string; at: number; until?: number; dx?
 };
 
 /** A ring that locks onto a point on its word. */
-export const Ring: React.FC<{p: P2; at: number; until?: number; r?: number; color?: string}> = ({p, at, until = 1e9, r = 70, color = C.yellow}) => {
+export const Ring: React.FC<{p: P2; at: number; until?: number; r?: number; color?: string}> = ({p, at, until = 1e9, r: r0 = 70, color = C.yellow}) => {
 	const f = useCurrentFrame();
+	const z = React.useContext(Zoom);
+	const r = r0 / Math.sqrt(z);
 	if (f < at || f > until + 8) return null;
 	const t = ramp(f, at, 10);
 	const [x, y] = px(p);
 	return (
 		<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, overflow: 'visible', opacity: 1 - ramp(f, until, 8)}}>
-			<circle cx={x} cy={y} r={r * (1.8 - 0.8 * t)} fill="none" stroke={C.night} strokeWidth={11} opacity={t} />
-			<circle cx={x} cy={y} r={r * (1.8 - 0.8 * t)} fill="none" stroke={color} strokeWidth={6} opacity={t} strokeDasharray="22 10" strokeDashoffset={-f * 1.2} />
+			<circle cx={x} cy={y} r={r * (1.8 - 0.8 * t)} fill="none" stroke={C.night} strokeWidth={11 / z} opacity={t} />
+			<circle cx={x} cy={y} r={r * (1.8 - 0.8 * t)} fill="none" stroke={color} strokeWidth={6 / z} opacity={t} strokeDasharray={`${22 / z} ${10 / z}`} strokeDashoffset={(-f * 1.2) / z} />
 		</svg>
 	);
 };

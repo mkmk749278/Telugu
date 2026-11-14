@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {DocPage, Flow, Grains, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, ramp} from './kit';
+import {DocPage, Flow, Grains, Honesty, Line, Paper, Photo, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, ramp} from './kit';
 import {E, S, W, an, hero} from './t';
 import {C, F} from './theme';
 
@@ -160,6 +160,10 @@ export const ChB: React.FC = () => {
 					<Say text="నీళ్ళు కిందే ఉండిపోతాయి" at={W(39, 'కిందే')} until={S(40)} x={1300} y={930} size={50} />
 				</Paper>
 				<Honesty text="స్కెచ్ · స్కేల్ ప్రకారం కాదు" from={S(33)} to={S(40)} />
+			</Shot>
+			<Shot from={W(33, 'కన్నేపల్లి') - 4} to={S(34)} x={8} out={8} hold={0}>
+				<Photo src="photos/pump_pipes.jpg" from={W(33, 'కన్నేపల్లి') - 4} to={S(34) + 8} credit="Wikimedia Commons · CC BY-SA 4.0" pan={[40, 0, -40, -10]} />
+				<Say text="మేడిగడ్డ పంపింగ్ సిస్టమ్: నీళ్ళని పైకి ఎత్తిపోసే పైపులు" at={W(33, 'కన్నేపల్లి')} y={940} size={46} />
 			</Shot>
 			{/* 40-51: why here: Tummidihetti to Medigadda */}
 			<Shot from={S(40)} to={S(49)}>

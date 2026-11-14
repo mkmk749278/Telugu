@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {DocPage, Flow, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, lerp, ramp} from './kit';
+import {DocPage, Flow, Honesty, Line, Paper, Photo, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, lerp, ramp} from './kit';
 import {seep} from './chC';
 import {S, W, an, hero} from './t';
 import {C, F} from './theme';
@@ -96,9 +96,16 @@ export const ChD: React.FC = () => {
 					<Tag p={an('h2_piles', 'p0', 0, 0.05)} text="ఒక పైల్" at={W(115, 'పైల్')} until={S(117)} dx={-90} dy={-130} size={46} />
 				</Plate>
 				<Say text="ఒకే ముక్కగా పోసిన గోడ కాదు" at={W(113, 'ఒకే')} until={S(114)} y={930} size={54} />
-				<Say text="బోర్ వేసి · కాంక్రీట్ నింపి" at={W(114, 'బోర్')} until={S(116)} y={930} size={54} />
 				<Say text="పక్కదాని మీదకి ఎక్కేలా" at={W(116, 'ఎక్కేలా') - 8} until={S(117)} y={930} size={54} color={C.yellow} />
 				<Honesty text="ILLUSTRATION" from={S(113)} to={S(118)} />
+			</Shot>
+			<Shot from={W(114, 'బోర్') - 6} to={S(116)} x={8} out={8} hold={0}>
+				<Photo src="photos/pile_rig.jpg" from={W(114, 'బోర్') - 6} to={S(116) + 8} credit="MTA New York / Wikimedia Commons · CC BY 2.0" zoom={[1.05, 1.2]} pan={[0, 60, 0, -60]} label="వేరే ప్రాజెక్ట్ లో పైల్ రిగ్ · ILLUSTRATIVE" />
+				<Say text="బోర్ వేసి · కాంక్రీట్ నింపి: ఒక పైల్" at={W(114, 'బోర్')} y={940} size={54} />
+			</Shot>
+			<Shot from={W(117, 'అతుక్కుని') - 4} to={S(118)} x={8} out={8} hold={0}>
+				<Photo src="photos/pile_wall.jpg" from={W(117, 'అతుక్కుని') - 4} to={S(118) + 8} credit="Wikimedia Commons · CC BY-SA 4.0" zoom={[1.1, 1.3]} pan={[-60, 0, 20, 20]} label="వేరే ప్రాజెక్ట్ లో పైల్ గోడ (జర్మనీ) · ILLUSTRATIVE" />
+				<Say text="పైల్స్ ఒకదానికొకటి అతుక్కుని: ఒక గోడ" at={W(117, 'అతుక్కుని')} y={940} size={54} color={C.ink} bg={C.yellow} />
 			</Shot>
 			{/* 118-123: the pencils; one gap is a window; only the water sees it */}
 			<Shot from={S(118)} to={S(124)}>

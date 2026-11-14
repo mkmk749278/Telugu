@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {DocPage, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, inr, lerp, ramp} from './kit';
+import {DocPage, Honesty, Line, Paper, Photo, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, inr, lerp, ramp} from './kit';
 import {Stairs} from './chB';
 import {Quote} from './chD';
 import {S, W, an, hero} from './t';
@@ -73,16 +73,16 @@ export const ChG: React.FC = () => {
 			</Shot>
 			{/* 280-288: to the farmer's acre */}
 			<Shot from={S(280)} to={S(289)}>
-				<Paper>
+				<AbsoluteFill>
+					<Photo src="photos/paddy.jpg" from={S(280)} to={S(289)} credit="Wikimedia Commons · CC BY-SA 3.0" zoom={[1.05, 1.22]} pan={[30, -20, -40, 10]} />
+					<AbsoluteFill style={{background: 'linear-gradient(90deg, transparent 35%, rgba(23,17,10,0.72) 62%)'}} />
 					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
-						<g transform={`translate(260 ${330 - 0.02 * (f - S(280))}) scale(${1 + 0.0002 * (f - S(280))})`}>
-							<path d="M0 300 L260 0 L900 0 L760 300 Z" fill="#6FA83A" stroke={C.ink} strokeWidth={7} strokeLinejoin="round" />
-							{Array.from({length: 13}).map((_, i) => <path key={i} d={`M${40 + i * 55} 290 L${290 + i * 46} 10`} stroke="#3d6b22" strokeWidth={5} strokeDasharray="12 9" strokeDashoffset={-f * 0.2} />)}
+						<g transform={`translate(120 ${520 - 0.02 * (f - S(280))}) scale(${0.92 + 0.0002 * (f - S(280))})`}>
 							<path d="M0 300 L260 0 L900 0 L760 300 Z" fill="none" stroke={C.yellow} strokeWidth={9} strokeDasharray={2600} strokeDashoffset={2600 * (1 - ramp(f, W(281, 'ఎకరానికి') - 30, 30))} />
 							<path d="M-40 330 L60 330" stroke={C.blue} strokeWidth={16} strokeLinecap="round" strokeDasharray="20 12" strokeDashoffset={-f * 1.5} />
 						</g>
 					</svg>
-					<Say text="ఒక ఎకరం" at={W(281, 'ఎకరానికి') - 20} until={S(289)} x={700} y={720} size={46} color={C.ink} bg={C.yellow} />
+					<Say text="ఒక ఎకరం" at={W(281, 'ఎకరానికి') - 20} until={S(289)} x={520} y={900} size={46} color={C.ink} bg={C.yellow} />
 					<Roll to={46364} start={W(281, 'ఫార్టీ') - 20} land={W(281, 'రూపాయలు')} until={S(289)} x={1380} y={330} size={120} prefix="₹" color={C.ink} bg={C.yellow} />
 					<Say text="ప్రతి ఏడాది · ప్రతి ఎకరానికి" at={W(281, 'ప్రతి')} until={S(289)} x={1380} y={210} size={46} />
 					<Say text="కరెంట్ + మెయింటెనెన్స్" at={W(281, 'కరెంట్')} until={S(289)} x={1380} y={450} size={42} />
@@ -92,19 +92,20 @@ export const ChG: React.FC = () => {
 					<Say text="అంటే మన అందరి మీద" at={S(286)} until={S(287)} x={1380} y={690} size={56} color={C.white} bg={C.orange} />
 					<Say text="తేల్చేది: పొలానికి నీళ్ళు చేరిన రోజే" at={W(287, 'పంపులు') - 20} until={S(288)} x={1380} y={640} size={46} />
 					<Say text="ముందు మొదటి మెట్టు నిలబడాలి" at={W(288, 'మొదటి')} x={1380} y={640} size={52} color={C.ink} bg={C.yellow} />
-				</Paper>
+				</AbsoluteFill>
 				<Source text={`${CAG} · ₹46,364`} from={S(281)} to={S(289)} />
-				<Honesty text="ILLUSTRATION" from={S(280)} to={S(289)} />
 			</Shot>
 			{/* 289-303: today; can water be lifted meanwhile */}
 			<Shot from={S(289)} to={S(294)}>
-				<Plate layers={[{src: hero('h1_wide_settled'), at: S(289)}]} cam={[{f: S(289), s: 1.1, x: 0.5, y: 0.5}, {f: S(294), s: 1.4, x: 0.55, y: 0.48}]} />
+				<Plate layers={[{src: 'sat/s2_2022-11-19.jpg', at: S(289)}, {src: 'sat/s2_2025-02-21.jpg', at: S(291) - 6, fade: 40}]} cam={[{f: S(289), s: 1.15, x: 0.42, y: 0.4}, {f: S(294), s: 1.55, x: 0.36, y: 0.34}]}>
+					<Tag p={[0.4, 0.34]} text="మేడిగడ్డ బ్యారేజ్" at={S(289) + 6} until={S(294)} dx={150} dy={-110} size={44} />
+				</Plate>
+				<Say text={f < S(291) + 10 ? 'నవంబర్ 2022' : 'ఫిబ్రవరి 2025'} at={S(289) + 4} until={S(294)} x={1770} y={240} align="right" size={60} color={C.yellow} />
 				<Say text="ఈ రోజు మేడిగడ్డ ఎక్కడ ఉంది?" at={S(289)} until={S(290)} y={150} size={60} color={C.ink} bg={C.yellow} />
 				<Say text="కుంగి 3 ఏళ్ళు దాటింది" at={S(290)} until={S(294)} x={420} y={170} size={54} />
 				<Say text="నీళ్ళు నిలవ చెయ్యడం లేదు · గేట్లు ఎత్తే ఉంచారు" at={S(291)} until={S(293)} y={930} size={48} />
 				<Say text="కన్నేపల్లి పంప్ హౌస్: అక్టోబర్ 2023 నుంచి ఖాళీ" at={S(293)} until={S(294)} y={930} size={50} color={C.white} bg={C.orange} />
-				<Source text="Telangana Today" from={S(291)} to={S(294)} />
-				<Honesty text="ILLUSTRATION" from={S(289)} to={S(294)} />
+				<Source text="శాటిలైట్: Copernicus Sentinel-2 · Telangana Today" from={S(289) + 6} to={S(294)} />
 			</Shot>
 			<Shot from={S(294)} to={S(304)}>
 				<Paper>
