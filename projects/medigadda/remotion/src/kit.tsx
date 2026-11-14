@@ -281,11 +281,12 @@ export const Line: React.FC<{text: string; at: number; hl?: number; size?: numbe
 };
 
 /** The real page of a document in the desk pose, pulling from the letterhead to a highlighted box. `box` in page 0-1. */
-export const DocPage: React.FC<{src: string; from: number; to: number; box?: [number, number, number, number]; hl?: number; aspect?: number; zoom?: [number, number]}> = ({src, from, to, box, hl, aspect = 0.707, zoom = [0.92, 1.9]}) => {
+/** lift: how far (in page heights) to place the highlight above the screen's centre, to keep it clear of captions. */
+export const DocPage: React.FC<{src: string; from: number; to: number; box?: [number, number, number, number]; hl?: number; aspect?: number; zoom?: [number, number]; lift?: number}> = ({src, from, to, box, hl, aspect = 0.707, zoom = [0.92, 1.9], lift = 0}) => {
 	const f = useCurrentFrame();
 	const H = 1500, W = H * aspect;
 	const t = interpolate(f, [from, (hl ?? from) + 20], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
-	const cy = box ? box[1] + box[3] / 2 : 0.3;
+	const cy = (box ? box[1] + box[3] / 2 : 0.3) + lift;
 	const cx = box ? box[0] + box[2] / 2 : 0.5;
 	const s = lerp(zoom[0] * (1080 / H), zoom[1] * (1080 / H), t) * (1 + 0.0003 * (f - from));
 	const fx = lerp(0.5, cx, t), fy = lerp(0.22, cy, t);

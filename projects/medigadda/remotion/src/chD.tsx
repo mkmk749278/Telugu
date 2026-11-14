@@ -52,7 +52,7 @@ export const ChD: React.FC = () => {
 			</Shot>
 			{/* 97-105: floating on paper, rigid on the ground */}
 			<Shot from={S(97)} to={S(101)}>
-				<DocPage src="docs/ndsa-2.png" from={S(97)} to={S(101)} box={[0.2, 0.208, 0.69, 0.046]} hl={S(98) - 4} aspect={0.684} zoom={[0.95, 1.75]} />
+				<DocPage src="docs/ndsa-2.png" from={S(97)} to={S(101)} box={[0.2, 0.208, 0.69, 0.046]} hl={S(98) - 4} aspect={0.684} zoom={[0.95, 1.75]} lift={0.06} />
 				<Say text="ఫ్లోటింగ్ స్ట్రక్చర్ గా డిజైన్ చేశారు" at={S(98)} until={S(100)} y={830} size={52} />
 				<Say text="కానీ రిజిడ్ స్ట్రక్చర్ గా కట్టారు" at={W(99, 'రిజిడ్') - 6} until={S(100)} y={930} size={58} color={C.white} bg={C.orange} />
 				<Say text="అంటే ఏంటి?" at={S(100)} y={930} size={64} color={C.ink} bg={C.yellow} />

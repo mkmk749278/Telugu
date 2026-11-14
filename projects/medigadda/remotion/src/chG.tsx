@@ -29,6 +29,8 @@ const Box: React.FC<{x: number; text: string; at: number; done?: boolean}> = ({x
 /** s269-s358: the money, today, the saying, the close. */
 export const ChG: React.FC = () => {
 	const f = useCurrentFrame();
+	// s304-310: the head of the waiting line (Oct 2023 = 200 px, Dec 2026 = 1720 px); the month counter stops at Oct 2025, two years (s310)
+	const head = 200 + 1520 * interpolate(f, [S(304), S(305), S(306), W(309, 'టూ') - 4, S(311)], [0, 0.02, 0.48, 0.64, 1], clamp);
 	const paise = interpolate(f, [W(279, 'ఫిఫ్టీ') - 20, W(279, 'పైసలు')], [1.5, 0.52], clamp);
 	const cost = interpolate(f, [W(323, 'ట్వెంటీ', 1) - 20, W(323, 'కోట్లు'), W(324, 'ఫోర్') - 16, W(324, 'కోట్లకు')], [0, 2500, 2500, 4193], clamp);
 	const pinX = lerp(272, 468, ramp(f, W(331, 'డిసెంబర్') - 14, 18));
@@ -141,15 +143,31 @@ export const ChG: React.FC = () => {
 			{/* 304-310: why three years */}
 			<Shot from={S(304)} to={S(311)}>
 				<Paper>
-					<Say text="రిపేర్ మొదలవడానికి మూడేళ్ళు ఎందుకు?" at={S(304)} y={150} size={58} color={C.ink} bg={C.yellow} />
-					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
+					<Say text="రిపేర్ మొదలవడానికి మూడేళ్ళు ఎందుకు?" at={S(304)} until={S(306) - 8} y={150} size={58} color={C.ink} bg={C.yellow} />
+					{/* a month ruler, Oct 2023 (0) to Dec 2026 (38); the camera rides the head of the line */}
+					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, transform: `scale(1.08) translateX(${(960 - head) * 0.1}px)`, transformOrigin: '50% 50%'}}>
+						{[[8, 2024], [20, 2025], [32, 2026]].map(([m, y]) => (
+							<g key={y} opacity={ramp(f, S(304) + 10, 12)}>
+								<rect x={200 + (1520 * m) / 38} y={488} width={(1520 * 4) / 38} height={64} fill={C.blue} opacity={head >= 200 + (1520 * (m + 2)) / 38 ? 0.45 : 0.18} rx={6} />
+								<text x={200 + (1520 * (m + 2)) / 38} y={590} textAnchor="middle" fontFamily="Noto Sans Telugu" fontWeight={700} fontSize={30} fill={C.blue}>వర్షాకాలం</text>
+							</g>
+						))}
+						{Array.from({length: 39}, (_, m) => (
+							<line key={m} x1={200 + (1520 * m) / 38} y1={m % 12 === 3 ? 494 : 504} x2={200 + (1520 * m) / 38} y2={m % 12 === 3 ? 546 : 536} stroke={head >= 200 + (1520 * m) / 38 ? C.orange : C.inkSoft} strokeWidth={m % 12 === 3 ? 6 : 3} />
+						))}
 						<line x1={200} y1={520} x2={1720} y2={520} stroke={C.inkSoft} strokeWidth={10} strokeLinecap="round" />
-						<line x1={200} y1={520} x2={200 + 1520 * interpolate(f, [S(304), S(305), S(306), W(309, 'టూ') - 4, S(311)], [0, 0.02, 0.48, 0.64, 1], clamp)} y2={520} stroke={C.orange} strokeWidth={14} strokeLinecap="round" />
+						<line x1={200} y1={520} x2={head} y2={520} stroke={C.orange} strokeWidth={14} strokeLinecap="round" />
+						<g opacity={ramp(f, S(306), 8)} transform={`translate(${Math.min(head, 200 + (1520 * 24) / 38)} 520)`}>
+							<line x1={0} y1={-196} x2={0} y2={-136} stroke={C.ink} strokeWidth={3} strokeDasharray="8 8" />
+							<rect x={-100} y={-326} width={200} height={130} rx={12} fill={C.ink} />
+							<text x={0} y={-256} textAnchor="middle" fontFamily="Inter Tight" fontWeight={800} fontSize={60} fill={C.yellow}>{Math.min(24, Math.round(((head - 200) / 1520) * 38))}</text>
+							<text x={0} y={-212} textAnchor="middle" fontFamily="Noto Sans Telugu" fontWeight={700} fontSize={32} fill={C.white}>నెలలు</text>
+						</g>
 						{[[200, 'అక్టోబర్ 2023', 'కుంగింది', S(304)], [930, 'ఏప్రిల్ 2025', 'ఫైనల్ రిపోర్ట్', W(305, 'ఏడాదిన్నర') - 10], [1173, 'అక్టోబర్ 2025', 'కన్సల్టెంట్లని పిలిచారు', W(309, 'కన్సల్టెంట్లని') - 4], [1720, 'డిసెంబర్ 2026', 'పనుల టార్గెట్', S(310) + 20]].map(([x, d, n, at], i) => (
 							<g key={i} opacity={ramp(f, at as number, 8)}>
 								<circle cx={x as number} cy={520} r={18} fill={C.ink} />
-								<text x={x as number} y={i % 2 ? 620 : 460} textAnchor="middle" fontFamily="Noto Sans Telugu" fontWeight={700} fontSize={38} fill={C.ink}>{d}</text>
-								<text x={x as number} y={i % 2 ? 670 : 410} textAnchor="middle" fontFamily="Noto Sans Telugu" fontWeight={500} fontSize={32} fill={C.inkSoft}>{n}</text>
+								<text x={x as number} y={i % 2 ? 660 : 460} textAnchor={i === 0 ? 'start' : i === 3 ? 'end' : 'middle'} fontFamily="Noto Sans Telugu" fontWeight={700} fontSize={38} fill={C.ink}>{d}</text>
+								<text x={x as number} y={i % 2 ? 708 : 410} textAnchor={i === 0 ? 'start' : i === 3 ? 'end' : 'middle'} fontFamily="Noto Sans Telugu" fontWeight={500} fontSize={32} fill={C.inkSoft}>{n}</text>
 							</g>
 						))}
 					</svg>
