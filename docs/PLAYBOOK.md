@@ -177,7 +177,13 @@ a crowded topic needs a new angle (Hyderabad Metro).
   two technical Tenglish paragraphs on the current ElevenLabs voice and on Sarvam Bulbul v3, judged by ear for
   engineering words, numbers and names. When the owner asks, the session prepares the two test paragraphs; the owner
   generates both and chooses.
-- Timing comes from the approved audio and the script (`scripts/align_script.py`).
+- **Joining and timing:** `scripts/vo_rejoin.py` joins the takes (room tone in the gaps, a fade-in on each take, no
+  word touched); `scripts/vo_timing.py` matches takes to paragraphs by length, places every sentence on the take's
+  own pauses (`scripts/align_script.py`) and writes `vo/timing.json`. Timing never comes from speech recognition.
+- **The take check** (Medigadda, 14 Nov 2026): pace of each take and each sentence first; then a Whisper transcript
+  in windows of at most 6.5 s, only to confirm every sentence and number is there. *Why short windows:* on whole
+  takes the model dropped half the Telugu text and looked like missing audio; and it garbles English year words
+  ("టూ థౌజండ్ ట్వెంటీ …"), so a low match on a year is re-read in its own window before anyone is asked for a new take.
 
 ## 8. Picture
 

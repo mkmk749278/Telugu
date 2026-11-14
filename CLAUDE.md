@@ -19,10 +19,11 @@ repos." Our films match their quality.
 
 ## Current work (read first when the owner says "continue")
 - **New direction, 2026-11-13:** regional infrastructure autopsies; **two films a week** (owner, 2026-11-13).
-- **Medigadda film (first pilot):** plan, narration v2 (about 18 minutes, independently reviewed) and the two audio
-  blocks are with the owner for approval; state and the must-dos before publishing (read the dam-safety reports
-  themselves) in `projects/medigadda/handoff.md`. Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the
-  owner: number words in Telugu or English, and the voice A/B (PLAYBOOK §7).
+- **Medigadda film (first pilot):** the owner generated the audio (21 takes, 14 Nov 2026); checked, joined (18:22)
+  and timed; the joined audio is with the owner for approval, with one optional added sentence for block 13 and a
+  Cowork request for the reports and real pictures. The picture plan and word map are written; the picture build
+  is next. Start at `projects/medigadda/handoff.md`. Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the
+  owner: the voice A/B (PLAYBOOK §7).
 - **Sonia film:** released 11 Nov 2026 (https://youtu.be/OYa9YW5YwEI); `projects/sonia-belonging/handoff.md` has the
   open release items. It is the last film of the old kind (PLAYBOOK §1).
 - Renders run on GitHub Actions (`.github/workflows/remotion-render.yml`, needs the repo secret
