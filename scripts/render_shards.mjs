@@ -43,6 +43,8 @@ const {selectComposition, renderMedia} = req('@remotion/renderer');
 
 fs.mkdirSync(out, {recursive: true});
 const libModules = path.resolve(project, '../../../lib/remotion/node_modules');
+// the link is per film: one left by another film (or a dangling one from git) is replaced
+if (fs.lstatSync(libModules, {throwIfNoEntry: false})?.isSymbolicLink()) fs.unlinkSync(libModules);
 if (!fs.existsSync(libModules)) fs.symlinkSync(path.relative(path.dirname(libModules), path.resolve(project, 'node_modules')), libModules);
 const webpackOverride = (config) => ({...config, resolve: {...config.resolve, modules: [path.resolve(project, 'node_modules'), 'node_modules']}});
 const serveUrl = await bundle({entryPoint: path.resolve(project, 'src/index.ts'), publicDir: path.resolve(project, 'public'), webpackOverride});

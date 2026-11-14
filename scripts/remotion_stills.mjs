@@ -31,6 +31,8 @@ fs.mkdirSync(out, {recursive: true});
 // lib/remotion sits outside the project: give it the project's node_modules (a gitignored link), since the webpack
 // override alone did not reach its imports when bundling from Node.
 const libModules = path.resolve(project, '../../../lib/remotion/node_modules');
+// the link is per film: one left by another film (or a dangling one from git) is replaced
+if (fs.lstatSync(libModules, {throwIfNoEntry: false})?.isSymbolicLink()) fs.unlinkSync(libModules);
 if (!fs.existsSync(libModules)) fs.symlinkSync(path.relative(path.dirname(libModules), path.resolve(project, 'node_modules')), libModules);
 // Same override as the film's remotion.config.ts: lib/remotion resolves its imports from the project's node_modules.
 const webpackOverride = (config) => ({

@@ -8,7 +8,8 @@ Writes one PNG per plate (same camera inside a family, so Remotion can dissolve 
 and anchors.json: named points of every family projected to the frame (0-1, top-left origin), for the overlays
 (water paths, sand grains, labels) that Remotion draws on the word.
 
-Scale: 1 unit = 5 m. Sourced: pond level 100 m, river bed 89 m (11 m of head), 85 gates, the 1.256 m settlement.
+Scale: 1 unit = 5 m. Sourced (NDSA committee report, salient features): FRL 100 m, crest of the barrage bays 89 m
+(11 m of water on the gates), river bed 88 m, 1,632 m long, 85 gates; the 1.256 m settlement is from news of the final report.
 Everything else (raft thickness, pier shape, cutoff depth, rock depth) is NOT TO SCALE and labelled so on screen.
 """
 import argparse, json, math, sys
@@ -328,7 +329,9 @@ def h1():
              pier_top=(0, -1.9, RT + 3.3), pier_mid=(0, -1.9 - 0.42, RT + 1.6), deck=(1.9, YF, RT + 3.55), void=(1.7, YF, RB - 0.3), void_l=(-0.4, YF, RB - 0.1), void_r=(3.4, YF, RB - 0.1),
              apron_end=(7, YF, BED + 0.1), blocks_end=(12, YF, BED + 0.16), ext_end=(12, YF, BED + 0.1), sand_mid=(-8, YF, (ROCK + BED) / 2), rock_mid=(-8, YF, (RK + ROCK) / 2),
              in_up=(-7.5, YF, BED), out_dn=(6.0, YF, BED), under_mid=(0, YF, RB - 1.2), deep_mid=(0, YF, ROCK + 0.4), left=(X0, YF, BED), right=(X1, YF, BED), base_l=(X0, YF, BASE), base_r=(X1, YF, BASE),
-             unit=(1, YF, BED), origin=(0, YF, BED), scour=(9.5, YF, BED - 0.5))
+             unit=(1, YF, BED), origin=(0, YF, BED), scour=(9.5, YF, BED - 0.5),
+             deck_near=(1.9, YF, RT + 3.7), deck_far=(1.9, YB, RT + 3.7), gate_far=(-0.8, YB, RT + 2.45), pier_face=(0, -1.9 - 0.42, RT + 2.6), pier_far=(0, 9.5, RT + 3.3),
+             pond_far=(-9, YB, POND), tail_far=(10, YB, TAIL), raft_mid=(0, YF, (RB + RT) / 2), blocks_mid=(9.5, 0, BED + 0.2), gate_mid=(-0.8, 0, RT + 1.2), pump=(-11, YB, POND))
     for cam in (front, under, wide, thumb): anchors(s, "h1_" + cam.name, cam, P)
     A = ["table", "plinth", "rock", "scale", "pl1", "pl2", "roll"]
     built = A + ["raft", "pier0", "pier1", "pierhalf", "deck", "parapet0", "parapet1", "hoist", "apron_ds", "apron_us"]
@@ -401,7 +404,7 @@ def h2():
 
 # ------------------------------------------------------------------ H3: the 1.6 km plan and the borehole pins
 def h3():
-    s = reset(); table(s, 80)
+    s = reset(); table(s, 240)
     conc = mat("conc", (0.66, 0.66, 0.64), 0.8, noise=0.2, nscale=40); gate = mat("gate", (0.2, 0.32, 0.42), 0.4, 0.8); road = mat("road", (0.16, 0.16, 0.17), 0.9)
     water = mat("water", (0.25, 0.55, 0.85), 0.08, trans=0.8); sand = mat("sand", (0.78, 0.6, 0.32), 0.95, noise=0.5, nscale=55)
     pinr = mat("pinr", (0.9, 0.08, 0.05), 0.3); pinn = mat("pinn", (0.8, 0.8, 0.82), 0.25, 1.0); plinth = mat("plinth", (0.35, 0.24, 0.15), 0.5)
@@ -423,12 +426,12 @@ def h3():
         x = -L / 2 + (i + 0.5) * bay
         pts[f"b{i}"] = (x, -1.6, 0.56)
         nm = "pinK" if i in kept else "pinX"
-        add(cyl(f"{nm}n{i}", x, -1.6, 0.5, 1.5, 0.018, pinn, verts=8))
-        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.09, location=(x, -1.6, 1.55)); h = bpy.context.object; h.name = f"{nm}h{i}"; h.data.materials.append(pinr); bpy.ops.object.shade_smooth(); add(h)
+        add(cyl(f"{nm}n{i}", x, -1.6, 0.5, 1.7, 0.035, pinn, verts=8))
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.17, location=(x, -1.6, 1.8)); h = bpy.context.object; h.name = f"{nm}h{i}"; h.data.materials.append(pinr); bpy.ops.object.shade_smooth(); add(h)
     props(-L / 2, L / 2, -3.5)
     lights((0, 0, 0.6), key=1500)
-    full = camera(s, "plan", (0, -30, 24), (0, -0.6, 0.6), 45)
-    run_a = camera(s, "runa", (-L / 2 + 3.5, -9, 4.2), (-L / 2 + 5.5, -1.2, 0.8), 40); run_b = camera(s, "runb", (L / 2 - 6.5, -9, 4.2), (L / 2 - 4.5, -1.2, 0.8), 40)
+    full = camera(s, "plan", (0, -15, 31), (0, -0.4, 0.6), 34)
+    run_a = camera(s, "runa", (-L / 2 + 2.0, -10, 7.5), (-L / 2 + 6.5, -1.0, 0.8), 34); run_b = camera(s, "runb", (L / 2 - 2.0, -10, 7.5), (L / 2 - 6.5, -1.0, 0.8), 34)
     pts.update(left=(-L / 2, -0.45, 0.6), right=(L / 2, -0.45, 0.6), mid=(0, 0, 1.33))
     for c in (full, run_a, run_b): anchors(s, "h3_" + c.name, c, pts)
     allo = [o for o in s.collection.all_objects if o.type == "MESH"]
