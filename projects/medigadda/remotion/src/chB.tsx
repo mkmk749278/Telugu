@@ -176,8 +176,9 @@ export const ChB: React.FC = () => {
 					<div style={{position: 'absolute', inset: 0, transform: `translate(${(PL.med[0] - PL.tum[0]) * slide}px, ${(PL.med[1] - PL.tum[1]) * slide}px)`}}>
 						<Pin x={PL.tum[0]} y={PL.tum[1]} text={slide > 0.9 ? 'మేడిగడ్డ' : 'తుమ్మిడిహెట్టి'} at={W(44, 'తుమ్మిడిహెట్టి')} side="r" size={46} sub={slide > 0.9 ? 'నీళ్ళు తీసుకునే కొత్త చోటు' : 'నీళ్ళు తీసుకోవాల్సిన చోటు'} />
 					</div>
-					<Say text="2016: రీ డిజైన్" at={W(47, 'రీ')} until={S(49)} x={520} y={900} size={54} bg={C.yellow} color={C.ink} />
 				</SketchMap>
+				{/* in screen space: inside the map the camera carried it off the left edge */}
+				<Say text="2016: రీ డిజైన్" at={W(47, 'రీ')} until={S(49)} x={960} y={900} size={54} bg={C.yellow} color={C.ink} />
 				<Source text="CAG రిపోర్ట్, 2024" from={S(45)} to={S(49)} />
 			</Shot>
 			<Shot from={S(45)} to={S(47)} x={10} out={8}>

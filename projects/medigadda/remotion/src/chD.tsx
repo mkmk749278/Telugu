@@ -170,7 +170,7 @@ export const ChD: React.FC = () => {
 			<Shot from={S(137)} to={S(142)}>
 				<Plate layers={[{src: hero('h3_plan_none'), at: S(137)}, {src: hero('h3_plan_85'), at: W(139, 'ఎయిటీ') - 6, fade: 22}, {src: hero('h3_plan_6'), at: W(140, 'సిక్స్') - 6, fade: 20}]} cam={[{f: S(137), s: 1.4, x: 0.5, y: 0.52}, {f: S(139), s: 1.15, x: 0.5, y: 0.5}, {f: S(140), s: 1.15, x: 0.5, y: 0.5}, {f: S(141), s: 2.6, x: 0.16, y: 0.55}, {f: S(142), s: 2.6, x: 0.84, y: 0.55}]} />
 				<Roll to={85} start={W(139, 'ఎయిటీ') - 20} land={W(139, 'ఎయిటీ') + 8} until={S(141)} x={520} y={200} size={150} suffix=" వెయ్యాలి" />
-				<Roll from={85} to={6} start={W(140, 'సిక్స్') - 14} land={W(140, 'సిక్స్') + 6} until={S(142)} x={1400} y={200} size={170} suffix=" వేశారు" color={C.white} bg={C.orange} />
+				<Roll from={85} to={6} start={W(140, 'సిక్స్') - 14} land={W(140, 'సిక్స్') + 6} until={S(142)} x={1400} y={250} size={170} suffix=" వేశారు" color={C.white} bg={C.orange} />
 				<Say text="1.6 కి.మీ. కట్టడానికి: ఆరు చోట్ల మాత్రమే" at={W(141, 'ఆరు') - 10} until={S(142)} y={940} size={54} />
 				<Source text="NDSA ఫైనల్ రిపోర్ట్ పై వార్తలు (The South First) · CBIP గైడ్లైన్స్" from={S(139)} to={S(142)} />
 				<Honesty text="ILLUSTRATION · పిన్నుల చోట్లు ఊహ" from={S(137)} to={S(142)} />

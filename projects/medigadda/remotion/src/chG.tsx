@@ -289,12 +289,18 @@ export const ChG: React.FC = () => {
 					<Say text="నెక్స్ట్ వీడియో కూడా భూమి కిందే" at={S(351)} until={S(354)} y={160} size={56} />
 					<Say text="SLBC టన్నెల్ · దాదాపు 14 కి.మీ. లోపల" at={S(352)} until={S(354)} y={880} size={50} />
 					<Say text="కొండ లోపల ఏముంది?" at={S(353)} until={S(354)} y={980} size={60} color={C.ink} bg={C.yellow} />
-					<Say text="మీ ఊరి దగ్గర ఏ ప్రాజెక్ట్ కింద ఏం జరిగిందో మేం చూడాలి?" at={S(355)} until={S(357)} y={440} size={52} w={1400} />
-					<Say text="కింద కామెంట్ లో రాయండి" at={S(356)} until={S(357)} y={640} size={60} color={C.ink} bg={C.yellow} />
 					<Say text="Be Practical with Kishore" at={S(357)} y={440} size={110} font={F.num} color={C.ink} bg={null} weight={800} />
 					<Say text="తెలుగు" at={S(357) + 8} y={570} size={64} color={C.white} bg={C.ink} />
 					<Say text="ప్రాక్టికల్ గా ఉందాం" at={S(358)} y={720} size={72} color={C.ink} bg={C.yellow} />
 				</Paper>
+			</Shot>
+			{/* 354-356: the viewer's own region from orbit under the real question, not blank paper */}
+			<Shot from={S(354)} to={S(357)} x={10} out={10} hold={0}>
+				<Photo src="sat/s2_wide.jpg" from={S(354)} to={S(357) + 10} zoom={[1.05, 1.22]} pan={[0, 0, -40, 20]} credit="Copernicus Sentinel-2" />
+				<AbsoluteFill style={{background: 'rgba(20,12,4,0.35)'}} />
+				<Say text="ఈలోపు మీరు చెప్పండి" at={S(354)} until={S(355)} y={540} size={72} color={C.ink} bg={C.yellow} />
+				<Say text="మీ ఊరి దగ్గర ఏ ప్రాజెక్ట్ కింద ఏం జరిగిందో మేం చూడాలి?" at={S(355)} y={440} size={56} w={1400} />
+				<Say text="కింద కామెంట్ లో రాయండి" at={S(356)} y={640} size={64} color={C.ink} bg={C.yellow} />
 			</Shot>
 		</>
 	);

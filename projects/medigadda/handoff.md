@@ -1,6 +1,27 @@
-# Medigadda film: handoff (14 Nov 2026, evening)
+# Medigadda film: handoff (14 Nov 2026, night)
 
-## Where it stands (session closed by the owner on 14 Nov 2026, evening; a new session continues)
+## Done in the session of 14 Nov, night
+- **Fresh-machine rebuild in one command:** `projects/medigadda/tools/build_media.sh` pulls from Drive and builds
+  every gitignored file the Remotion project needs (docs pages, Sentinel views, photos and clips, the 21 takes joined
+  exactly as locked: 1108.1 s, the 14 library tracks, the SFX stem, the mix), then `./sync_hero.sh` for the plates.
+- **Real evidence from the NDSA committee report (pages 8–10, its own photos and drawings)** on the words they prove:
+  the real road deck, guarded, right after our drawing sinks (s9) and again under "ఇది కుట్ర" (s210–211); the
+  committee's crack map of pier 20 on "పగిలాయి" (s193); its photo of the structure at the water line on "ఫౌండేషన్
+  ఇంకా నీళ్ళ కిందే" (s232). `media_manifest.csv` row added.
+- **1.256 m is now primary:** the committee's survey of Block 7, 27 Oct 2023 6 PM (report p. 9): P-20 at 101.744
+  against 103.000 = 1.256 m (`claims.csv` row 25). The "by 24 October" date is still from the news report.
+- **Sound effects:** `tools/sfx_cues.py` reads every visual event from the code (documents, cards, rings, piles,
+  pins) into `vo/sfx_cues.json`; `tools/sfx.py` synthesises them (paper slide, pencil tap, three taps for pins, the
+  river under the raft s174–190); `tools/mix.py` mixes them 13–18 dB under the voice (measured). Still −14.3 LUFS.
+  **Nobody has listened to the mix yet**: the owner's ears are the check.
+- **s304–310 (the three-year wait)** is now a month ruler the camera rides: 38 ticks, the three monsoons that passed,
+  a month counter that stops at 24 on "రెండేళ్ళకి". Document highlights can sit above captions (`DocPage lift`).
+- **Credits:** the core store photo (MARUM, V. Diekamp, CC BY 4.0) and the pile wall (Falk Arnhold) from the files'
+  EXIF; both now on screen. Commons answered HTTP 429 all session: the rest is in `cowork_request.md` (second request,
+  with a High Court building photo for s254–261).
+
+
+## Where it stood on 14 Nov, evening
 - **Audio: locked.** The owner's take 13 (the police-case line) and take 7 (Anil Jain as "మెంబర్") are in. Joined
   narration 18:28 in Drive `Creator/Telugu/Medigadda/medigadda_vo_full.mp3`; `audio_check.md`; `vo.txt`,
   `audio_blocks.md` and `vo/timing.json` (359 sentences) all match it. In Drive `VO/`, take 7 is `b7_new.mp3` (the

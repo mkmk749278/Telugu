@@ -64,9 +64,13 @@ export type Layer = {src: string; at: number; fade?: number};
 export const Plate: React.FC<{layers: Layer[]; cam: Key[]; breathe?: number; children?: React.ReactNode}> = ({layers, cam, breathe = 0.012, children}) => {
 	const f = useCurrentFrame();
 	const k = camAt(cam, f);
-	const s = k.s * (1 + breathe * Math.sin(f / 97) + 0.0004 * Math.max(0, f - cam[0].f));
-	const tx = (0.5 - k.x) * 1920 * s + 5 * Math.sin(f / 61);
-	const ty = (0.5 - k.y) * 1080 * s + 3 * Math.cos(f / 83);
+	// the camera never leaves its plate: at least a little zoom, and the centre kept where the plate still covers the
+	// screen with the sway included (a keyframe near an edge once showed a black band on the left, s26 and s141)
+	const s = Math.max(1.015, k.s * (1 + breathe * Math.sin(f / 97) + 0.0004 * Math.max(0, f - cam[0].f)));
+	const hx = 0.5 / s + 6 / (1920 * s), hy = 0.5 / s + 4 / (1080 * s);
+	const cx = Math.min(1 - hx, Math.max(hx, k.x)), cy = Math.min(1 - hy, Math.max(hy, k.y));
+	const tx = (0.5 - cx) * 1920 * s + 5 * Math.sin(f / 61);
+	const ty = (0.5 - cy) * 1080 * s + 3 * Math.cos(f / 83);
 	return (
 		<AbsoluteFill style={{background: C.night, overflow: 'hidden'}}>
 			<AbsoluteFill style={{transform: `translate(${tx}px, ${ty}px) scale(${s})`, transformOrigin: '50% 50%'}}>
