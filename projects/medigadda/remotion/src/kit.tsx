@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Easing, Img, OffthreadVideo, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {C, F} from './theme';
 
 // Every helper is a pure function of the absolute film frame.
@@ -241,7 +241,13 @@ export const Photo: React.FC<{src: string; from: number; to: number; credit?: st
 	const st: React.CSSProperties = {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(zoom[0], zoom[1], t)}) translate(${lerp(pan[0], pan[2], t)}px, ${lerp(pan[1], pan[3], t)}px)`};
 	return (
 		<AbsoluteFill style={{background: C.night, overflow: 'hidden'}}>
-			{video ? <OffthreadVideo src={staticFile(src)} startFrom={startAt} playbackRate={rate} muted style={st} /> : <Img src={staticFile(src)} style={st} />}
+			{video ? (
+				<Sequence from={from} layout="none">
+					<OffthreadVideo src={staticFile(src)} startFrom={startAt} playbackRate={rate} muted style={st} />
+				</Sequence>
+			) : (
+				<Img src={staticFile(src)} style={st} />
+			)}
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at center, transparent 50%, rgba(20,10,0,0.5) 100%)'}} />
 			{credit ? <div style={{position: 'absolute', right: 40, bottom: 28, fontFamily: F.num, fontWeight: 500, fontSize: 26, color: 'rgba(255,249,236,0.92)', textShadow: '0 2px 6px #000'}}>{credit}</div> : null}
 			{label ? <Honesty text={label} from={from} to={to} /> : null}

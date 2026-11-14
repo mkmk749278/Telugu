@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {DocPage, Flow, Grains, Honesty, Paper, Plate, Ring, Roll, Say, Shot, Source, Tag, clamp, lerp, ramp} from './kit';
+import {DocPage, Flow, Grains, Honesty, Paper, Photo, Plate, Ring, Roll, Say, Shot, Source, Tag, clamp, lerp, ramp} from './kit';
 import {Quote} from './chD';
 import {S, W, an, hero} from './t';
 import {C, F} from './theme';
@@ -43,6 +43,10 @@ export const ChE: React.FC = () => {
 				<Say text="పంపులు తిరిగాయి" at={S(159)} until={S(160)} y={930} size={54} />
 				<Say text={`నిండు నీటి ఒత్తిడి · ${months} నెలలు`} at={W(163, 'నెలల') - 10} until={S(164)} y={930} size={56} color={C.yellow} />
 				<Honesty text={RECON} from={S(151)} to={S(164)} />
+			</Shot>
+			<Shot from={S(159)} to={S(160)} x={6} hold={0} out={6}>
+				<Photo video src="photos/v_pipes.mp4" from={S(159)} to={S(160) + 6} zoom={[1.02, 1.06]} pan={[0, 0, 0, 0]} credit="MEIL / Wikimedia Commons · CC BY 3.0" />
+				<Say text="పంపులు తిరిగాయి" at={S(159)} y={930} size={54} />
 			</Shot>
 			{/* 160-162: the real river from space: the bed in 2019, the pond held full in 2022 */}
 			<Shot from={S(160)} to={S(163)} x={10} out={10} hold={0}>

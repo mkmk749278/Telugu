@@ -131,7 +131,7 @@ export const ChF: React.FC = () => {
 				<Source text="ఒక పేపర్ లెక్క: Telangana Today" from={S(250)} to={S(254)} />
 			</Shot>
 			<Shot from={S(248)} to={S(250)} x={8} out={8} hold={0}>
-				<Photo src="photos/pump_pipes.jpg" from={S(248)} to={S(250) + 8} credit="Wikimedia Commons · CC BY-SA 4.0" zoom={[1.2, 1.08]} pan={[-40, -10, 30, 0]} />
+				<Photo video src="photos/v_pipes2.mp4" from={S(248)} to={S(250) + 8} zoom={[1.02, 1.06]} pan={[0, 0, 0, 0]} credit="MEIL / Wikimedia Commons · CC BY 3.0" />
 				<Say text="ఈ ప్రాజెక్ట్ పనిచేసింది" at={S(248)} y={840} size={60} />
 				<Say text="అందులో నిజం ఉంది" at={S(249)} y={950} size={52} color={C.ink} bg={C.yellow} />
 			</Shot>

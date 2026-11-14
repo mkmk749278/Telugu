@@ -107,6 +107,14 @@ export const ChG: React.FC = () => {
 				<Say text="కన్నేపల్లి పంప్ హౌస్: అక్టోబర్ 2023 నుంచి ఖాళీ" at={S(293)} until={S(294)} y={930} size={50} color={C.white} bg={C.orange} />
 				<Source text="శాటిలైట్: Copernicus Sentinel-2 · Telangana Today" from={S(289) + 6} to={S(294)} />
 			</Shot>
+			<Shot from={S(293)} to={S(294)} x={8} hold={0} out={8}>
+				<Photo video src="photos/v_pump.mp4" from={S(293)} to={S(294) + 8} rate={0.6} startAt={20} zoom={[1.02, 1.06]} pan={[0, 0, 0, 0]} credit="MEIL / Wikimedia Commons · CC BY 3.0" label="పాత ఫుటేజ్: పంపులు నడిచిన రోజుల్లో" />
+				<Say text="కన్నేపల్లి పంప్ హౌస్: అక్టోబర్ 2023 నుంచి ఖాళీ" at={S(293)} y={930} size={50} color={C.white} bg={C.orange} />
+			</Shot>
+			<Shot from={S(313)} to={S(314)} x={8} hold={0} out={8}>
+				<Photo src="photos/polavaram.jpg" from={S(313)} to={S(314) + 8} zoom={[1.08, 1.2]} pan={[30, 0, -30, 0]} credit="Wikimedia Commons" label="పోలవరం ప్రాజెక్ట్ (ఆంధ్రప్రదేశ్)" />
+				<Say text="పోలవరం వల్ల అందరికీ తెలిసిన మాట: డయాఫ్రమ్ వాల్" at={S(313)} y={940} size={48} />
+			</Shot>
 			<Shot from={S(294)} to={S(304)}>
 				<Paper>
 					<Say text="ఈలోపు నీళ్ళు ఎత్తలేరా?" at={S(295)} y={150} size={68} color={C.ink} bg={C.yellow} />

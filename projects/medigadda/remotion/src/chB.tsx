@@ -162,8 +162,8 @@ export const ChB: React.FC = () => {
 				<Honesty text="స్కెచ్ · స్కేల్ ప్రకారం కాదు" from={S(33)} to={S(40)} />
 			</Shot>
 			<Shot from={W(33, 'కన్నేపల్లి') - 4} to={S(34)} x={8} out={8} hold={0}>
-				<Photo src="photos/pump_pipes.jpg" from={W(33, 'కన్నేపల్లి') - 4} to={S(34) + 8} credit="Wikimedia Commons · CC BY-SA 4.0" pan={[40, 0, -40, -10]} />
-				<Say text="మేడిగడ్డ పంపింగ్ సిస్టమ్: నీళ్ళని పైకి ఎత్తిపోసే పైపులు" at={W(33, 'కన్నేపల్లి')} y={940} size={46} />
+				<Photo video src="photos/v_pump.mp4" from={W(33, 'కన్నేపల్లి') - 4} to={S(34) + 8} rate={0.8} zoom={[1.02, 1.08]} pan={[0, 0, 0, 0]} credit="MEIL / Wikimedia Commons · CC BY 3.0" />
+				<Say text="కన్నేపల్లి (లక్ష్మి) పంప్ హౌస్" at={W(33, 'కన్నేపల్లి')} y={940} size={52} />
 			</Shot>
 			{/* 40-51: why here: Tummidihetti to Medigadda */}
 			<Shot from={S(40)} to={S(49)}>

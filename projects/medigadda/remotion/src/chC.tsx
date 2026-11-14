@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {Flow, Grains, Honesty, Paper, Plate, Ring, Say, Shot, Tag, lerp, ramp} from './kit';
+import {Flow, Grains, Honesty, Paper, Photo, Plate, Ring, Say, Shot, Tag, lerp, ramp} from './kit';
 import {S, W, an, hero} from './t';
 import {C, F} from './theme';
 
@@ -123,6 +123,11 @@ export const ChC: React.FC = () => {
 				<Say text="బుంగ" at={W(81, 'బుంగ')} x={700} y={300} size={110} color={C.ink} bg={C.yellow} />
 				<Say text="= PIPING" at={W(82, 'పైపింగ్')} x={1180} y={300} size={96} font={F.num} />
 				<Honesty text="ILLUSTRATION" from={S(76)} to={S(83)} />
+			</Shot>
+			<Shot from={S(82)} to={S(83)} x={8} hold={0} out={8}>
+				<Photo src="photos/sandboil.jpg" from={S(82)} to={S(83) + 8} zoom={[1.1, 1.25]} pan={[0, 0, -20, 10]} credit="US Army Corps of Engineers / Wikimedia Commons · Public domain" label="అమెరికాలో ఒక కట్ట దగ్గర ఇసుక బుంగ · ILLUSTRATIVE" />
+				<Say text="బుంగ = PIPING" at={S(82)} y={920} size={84} color={C.ink} bg={C.yellow} />
+				<Say text="బుంగ చుట్టూ ఇసుక బస్తాలు" at={S(82) + 12} y={1010} size={38} />
 			</Shot>
 			{/* 83-91: cutoffs: the longer way round; the floating structure */}
 			<Shot from={S(83)} to={S(92)}>
