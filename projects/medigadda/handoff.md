@@ -54,21 +54,19 @@
   "Lakshmi Pumphouse of KLIP video by MEIL.webm", H.264 30 fps, no audio), `public/media/mix.wav`.
 
 ## Still to do before the 720p cut goes to the owner
-1. Render the 22 remaining plates; look at every plate (the `h2_*` and `h3_*` families have only been seen as
-   low-resolution stand-ins: check the cameras), upload them to Drive.
-2. A contact sheet of the whole film with the real plates; fix what is wrong. Known: captions over the document
-   pages sit on the text in places; the court shot's top label overlaps the page; the timeline at s304 is thin.
-3. Chapter F (the four voices, the court) is still mostly type on paper, against the "never a slide deck" rule.
-   Cowork found no High Court photo. Ideas: the NDSA report's own site photos and drawings as pages of the report
-   (crack mapping of pier 20, the settlement table) at s9 and s193–195; the state's reply and L&T's statement exist
-   only as news pages, so they stay as typed quotes with their source.
-4. The four TO CHECK rows of `media_manifest.csv`; the Sentinel dates (as Cowork saved them) in the Copernicus Browser.
-5. Sound effects on the visual events (pins, paper, water); only the two thuds are in. Nobody has listened to the
-   mix: only its loudness was measured.
-6. Our own full review (labels readable, nothing clipped, no static plate over 1.5 s, the 15% text rule).
-7. `public_media.tar` (public/hero, docs, sat, photos, media/mix.wav) to Drive `Telugu/Medigadda/render-media/`,
-   then the `remotion-render` workflow: film `medigadda`, drive `Telugu/Medigadda`, comp `Medigadda`, scale `2/3`.
-8. Independent viewer review of the cut (PLAYBOOK §11.1), fixes, then the owner.
+1. **The 720p review cut r1** was sent to GitHub on 14 Nov (run 43618928493, `remotion-render.yml` on this branch;
+   output Drive `Telugu/Medigadda/renders/medigadda_review_720p_r1.mp4`). The media it used is Drive
+   `render-media/public_media.tar` (rebuilt 14 Nov night; rebuild and re-upload it after any media change). If the run
+   failed, read its log first (this workflow has not yet finished a film end to end).
+2. **Our own review of r1** (`review-cut` checks: flash, freeze, loudness, the 15% text rule, no static plate over
+   1.5 s) and a listen to the SFX and the mix. The whole-film contact sheet of 14 Nov found and fixed: the camera
+   leaving its plate, the clipped 2016 label, highlights under captions, the thin s304 timeline, the empty s354.
+3. **Still type on paper:** the court passage (s254–261) and the four-voices cards (s216–228). A High Court building
+   photo is asked for in `cowork_request.md` (second request); with it, s254–260 can sit on the real building.
+4. **Licences:** pump_pipes, paddy, sandboil, polavaram and the MEIL clip still wait for their Commons page (Cowork
+   second request); the Sentinel dates in the Copernicus Browser. Drive `hero/hero_plates_22.tar` is superseded by
+   `hero_plates_44.tar` (the owner may delete it).
+5. Independent viewer review of the cut (PLAYBOOK §11.1), fixes, then the owner.
 
 ## Must happen before the film is published
 - The NDSA final report is not public: every line from it stays attributed to news reports of it, as narrated.
@@ -82,6 +80,8 @@ Takes are in `assets/vo/` (pull: `scripts/gdrive_ls.sh Telugu/Medigadda/VO --pul
 order b1 … b21 (`b16 (1).mp3`, `17.mp3`); gaps 0.8 s, and 1.1 s before takes 3, 7, 10, 13, 16, 17 and 20:
 `python3 scripts/vo_rejoin.py medigadda_vo_full.wav <takes> --gaps <20 gaps> --mp3 medigadda_vo_full.mp3`, then
 `python3 scripts/vo_timing.py projects/medigadda --takes <takes> --gaps <the same gaps>`.
-Plates: `pip install bpy==5.3.0 pillow`, then
+Media on a fresh machine: `projects/medigadda/tools/build_media.sh`, then untar Drive `hero/hero_plates_44.tar` into
+`assets/hero/` and run `./sync_hero.sh`. Sound effects after any picture change: `tools/sfx_cues.py`, `tools/sfx.py`,
+`tools/mix.py`. Plates (only if a plate changes): `pip install bpy==5.3.0 pillow`, then
 `python3 scripts/blender/medigadda_hero.py --out projects/medigadda/assets/hero --w 1920 --h 1080 --samples 40`
 (`--only h3_` for one family). Stills: `node scripts/remotion_stills.mjs projects/medigadda/remotion Medigadda OUT FRAMES`.

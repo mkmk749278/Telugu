@@ -20,8 +20,9 @@ repos." Our films match their quality.
 ## Current work (read first when the owner says "continue")
 - **New direction, 2026-11-13:** regional infrastructure autopsies; **two films a week** (owner, 2026-11-13).
 - **Medigadda film (first pilot):** audio locked (18:28, takes 7 and 13 made again); the whole film is built in
-  Remotion with the real NDSA, CAG and High Court pages, satellite views, pump-house clips and the mix. Open: 22 of
-  the 44 hero plates, our review, more real pictures for the four-voices chapter, then the 720p cut. Start at
+  Remotion with all 44 hero plates, the real NDSA (its site photos and pier 20 crack map), CAG and High Court pages,
+  satellite views, pump-house clips, sound effects and the mix. The 720p cut r1 went to GitHub on 14 Nov; open: our
+  review of it, a High Court photo for the court passage (Cowork), the viewer review, the owner. Start at
   `projects/medigadda/handoff.md`. Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the owner: the voice
   A/B (PLAYBOOK §7).
 - **Sonia film:** released 11 Nov 2026 (https://youtu.be/OYa9YW5YwEI); `projects/sonia-belonging/handoff.md` has the

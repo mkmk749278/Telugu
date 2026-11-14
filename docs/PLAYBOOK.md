@@ -195,6 +195,16 @@ a crowded topic needs a new angle (Hyderabad Metro).
   and photos first; labelled ILLUSTRATION; proportions that are not from a drawing say so.
 - **The document walk:** the real page (NDSA, CAG, court order) in one desk pose, pulling from the letterhead to the
   highlighted line, with the report's name, number and date. Never retyped as if it were the original.
+  **Read the whole report for pictures, not only text** (2026-11-14): the NDSA committee report of 2023 had its own
+  site photos (the guarded deck, the structure at the water line) and the crack map of pier 20, which ended "type on
+  paper" in two chapters and confirmed a number (1.256 m) that we had only from the news. Shown as the report's page,
+  with its name and year. Keep a highlight clear of the captions (`DocPage lift`).
+- **The camera never leaves its plate** (2026-11-14): a keyframe near a plate's edge showed a black band (s26, s141);
+  the shared `Plate` now clamps zoom and centre, so no keyframe can do it again. Check a plate family's cameras at full
+  resolution before building on low-resolution stand-ins: the measured anchors of `h3` moved up to 9% of the frame.
+- **Sound on every visual event, cued from the code** (2026-11-14): `tools/sfx_cues.py` reads each document, card,
+  ring, pile and pin from the chapters and `tools/sfx.py` synthesises the sound on its frame (nothing to license);
+  re-run both after any picture change, then the mix. Measured 13–18 dB under the voice; the owner's ears are the check.
 - **The place:** satellite and terrain plates, India's official boundary on every map, the town and district named.
 - **Real people at work in every chapter:** licensed photos and footage of the site, engineers, workers, farmers
   (Commons, GODL-India, PIB, agency releases with a licence, the owner's Cowork fetches). Every asset in
