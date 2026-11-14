@@ -1,6 +1,6 @@
-# Medigadda: why Block 7 sank: audio blocks
+# మేడిగడ్డ: audio blocks
 
-2 blocks, 16,576 characters in all, each at most 10,000. Estimated length about 18 minutes.
+2 blocks, 16,682 characters in all, each at most 10,000. Estimated length about 19 minutes.
 Paste each block whole, in order. Pauses come from the commas, full stops and blank lines.
 
 ## Block 1 of 2 (8,440 characters)
@@ -144,7 +144,7 @@ Paste each block whole, in order. Pauses come from the commas, full stops and bl
 పైన రోడ్ మీద బండ్లు తిరుగుతూనే ఉన్నాయి. గేట్లు పనిచేస్తూనే ఉన్నాయి. పైకి ఏమీ కనిపించలేదు.
 ```
 
-## Block 2 of 2 (8,134 characters)
+## Block 2 of 2 (8,240 characters)
 
 ```text
 రిపోర్ట్ ల లెక్కలో, అక్టోబర్ ట్వెంటీ ఫస్ట్ సాయంత్రం, ఆ ఖాళీ మీద ఉన్న రాఫ్ట్ కిందికి దిగింది.
@@ -174,7 +174,8 @@ Paste each block whole, in order. Pauses come from the commas, full stops and bl
 అందుకే స్పెషల్ ఇన్వెస్టిగేషన్ టీమ్ వెయ్యాలని అడుగుతున్నారు.
 వరద లేదు అన్న పాయింట్ కి, రిపోర్ట్ ల సమాధానం మీరు చూశారు. పైపింగ్ కి పెద్ద వరద అక్కర్లేదు.
 ఒక్క బ్లాకే అన్న పాయింట్ కి, రిపోర్ట్ మాట ఇది. ఇలాంటి ఖాళీలు మిగతా బ్లాక్స్ కింద కూడా ఉండొచ్చు.
-శబ్దం సంగతి మాత్రం అలాగే ఉంది. పేలుడు కోణంలో జరిగిన దర్యాప్తు రిపోర్ట్ ఏదీ, నాకు పబ్లిక్ గా దొరకలేదు.
+శబ్దం సంగతి మాత్రం అలాగే ఉంది. బీఆర్ఎస్ చెప్తున్న ప్రకారం, పోలీసులు ఆ కేసుని టూ థౌజండ్ ట్వెంటీ ఫైవ్ లో, ఎవరినీ గుర్తించకుండానే మూసేశారు.
+పేలుడు కోణంలో జరిగిన దర్యాప్తు రిపోర్ట్ ఏదీ, నాకు పబ్లిక్ గా దొరకలేదు.
 
 రెండో మాట. అప్పటి ఇరిగేషన్ డిపార్ట్మెంట్ ది.
 మొదటి రిపోర్ట్ వచ్చిన మూడు రోజులకే, స్టేట్ రిప్లై ఇచ్చింది.
