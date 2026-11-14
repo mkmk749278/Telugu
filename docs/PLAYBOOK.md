@@ -313,3 +313,18 @@ NOT CONFIRMED, then FIXED / DECLINED with the reason); a reviewer's rewrite neve
     narration is about 18 minutes.
   - *When the primary document is not online, say so in the narration* and put its reading on the pre-publish
     checklist; every claim from news about it is marked "secondary" in `claims.csv`.
+- **2026-11-14, Medigadda audio and picture.**
+  - *Ask Cowork for the documents before the narration goes to audio, not after.* The committee's own letter
+    arrived after the takes were made and showed one wrong title (a member called the chairman): a take had to be
+    made again. Why: a news report's description of who someone is can be loose; the letterhead is not.
+  - *Hero shots as plates, motion in Remotion.* The cutaway is rendered in Blender as stills of each state from a
+    few fixed cameras, with the named points of the model projected into `anchors.json`; Remotion dissolves between
+    states, moves the camera and draws water, sand and labels on those points. Why: 18 minutes of animated Cycles is
+    days of rendering; forty plates are an hour, and every overlay still lands on the model.
+  - *Labels pinned to a plate keep their screen size* (they divide by the camera zoom). Why: at 2x zoom a 46 px
+    label became 92 px and ran off the frame.
+  - *A cut is the next shot fading in over the last one, which stays underneath for the fade.* Why: ending a shot
+    on the frame the next begins dipped every cut to black.
+  - *Check every word cue before rendering* (`scripts/cue_check.py`). Why: one cue on a word that is not in its
+    sentence stops a whole render shard.
+

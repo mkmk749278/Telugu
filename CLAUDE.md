@@ -19,11 +19,10 @@ repos." Our films match their quality.
 
 ## Current work (read first when the owner says "continue")
 - **New direction, 2026-11-13:** regional infrastructure autopsies; **two films a week** (owner, 2026-11-13).
-- **Medigadda film (first pilot):** the owner generated the audio (21 takes, 14 Nov 2026); checked, joined (18:22)
-  and timed; the joined audio is with the owner for approval, with one optional added sentence for block 13 and a
-  Cowork request for the reports and real pictures. The picture plan and word map are written; the picture build
-  is next. Start at `projects/medigadda/handoff.md`. Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the
-  owner: the voice A/B (PLAYBOOK §7).
+- **Medigadda film (first pilot):** audio approved (18:28); the whole film is built in Remotion with the hero
+  plates, the real NDSA, CAG and High Court pages and the mix. Open: the owner re-records block 7 (one wrong word),
+  Cowork's photos, the plate render, our review, then the 720p cut. Start at `projects/medigadda/handoff.md`.
+  Then SLBC and Pinnapuram (PLAYBOOK §4.1). Still open with the owner: the voice A/B (PLAYBOOK §7).
 - **Sonia film:** released 11 Nov 2026 (https://youtu.be/OYa9YW5YwEI); `projects/sonia-belonging/handoff.md` has the
   open release items. It is the last film of the old kind (PLAYBOOK §1).
 - Renders run on GitHub Actions (`.github/workflows/remotion-render.yml`, needs the repo secret
