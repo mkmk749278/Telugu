@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {Flow, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, ramp} from './kit';
+import {DocPage, Flow, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, ramp} from './kit';
 import {E, S, W, an, hero} from './t';
 import {C, F} from './theme';
 
@@ -71,6 +71,12 @@ export const ChA: React.FC = () => {
 				<Say text="పెద్ద శబ్దం" at={thud} until={S(8)} y={900} size={72} color={C.yellow} />
 				<Say text="కిందికి దిగిపోయాయి" at={sunk} until={S(10)} y={930} size={60} color={C.white} bg={C.orange} />
 				<Honesty text="ILLUSTRATION" from={S(3)} to={S(10)} />
+			</Shot>
+			{/* the real deck, right after our drawing has sunk: the committee's photo (the plan's "P" on దిగిపోయి) */}
+			<Shot from={sunk + 22} to={S(10) + 4} x={6} out={8} hold={0}>
+				<DocPage src="docs/ndsa-8.png" from={sunk + 22} to={S(10) + 12} box={[0, 0.58, 0.98, 0.42]} aspect={0.981} zoom={[1.9, 2.05]} />
+				<Say text="అసలు రోడ్ · ఆ తర్వాతి రోజుల్లో" at={sunk + 24} x={1320} y={150} size={50} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={sunk + 24} to={S(10) + 4} />
 			</Shot>
 			{/* 10-15: the paradox: the 2022 flood it survived */}
 			<Shot from={S(10)} to={S(16)}>

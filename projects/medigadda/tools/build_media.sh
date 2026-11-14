@@ -67,5 +67,6 @@ print(" ".join(sorted(set(re.findall(r"\('((?:bp|fx|pr)\d\d_[a-z_]+)'", open(sys
 EOF
 )
 "$ROOT/scripts/music_pull.sh" "$P/assets/music" $ids
+python3 "$P/tools/sfx_cues.py"; python3 "$P/tools/sfx.py"
 [ -f "$PUB/media/mix.wav" ] || python3 "$P/tools/mix.py"
 echo "media ready"; du -sh "$PUB"/*
