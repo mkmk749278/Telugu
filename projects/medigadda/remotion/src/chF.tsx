@@ -76,6 +76,13 @@ export const ChF: React.FC = () => {
 				</Paper>
 				<Source text="The South First · Telangana Today (22 అక్టోబర్ 2026)" from={S(212)} to={S(229)} />
 			</Shot>
+			{/* "first voice: sabotage" over the real deck, guarded, from the committee's report: what the argument is about */}
+			<Shot from={S(210) - 4} to={S(212)} x={6} out={8} hold={0}>
+				<DocPage src="docs/ndsa-8.png" from={S(210) - 4} to={S(212)} box={[0, 0.58, 0.98, 0.42]} aspect={0.981} zoom={[1.85, 2.05]} />
+				<Say text="మొదటి మాట" at={S(210)} x={1320} y={150} size={58} />
+				<Say text="ఇది కుట్ర" at={S(211)} x={1320} y={262} size={72} color={C.ink} bg={C.yellow} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={S(210)} to={S(212)} />
+			</Shot>
 			{/* voice 2: the department of that time */}
 			<Shot from={S(229)} to={S(236)}>
 				<Paper>
@@ -88,6 +95,12 @@ export const ChF: React.FC = () => {
 						<Line text="2023 వర్షాకాలానికి ముందు చెయ్యాల్సిన తనిఖీ జరగలేదు" at={S(235)} hl={S(235) + 8} size={50} weight={700} />
 					</Sheet>
 				</Paper>
+			</Shot>
+			{/* "the foundation is still under water": the committee's own photo of the structure at the water line */}
+			<Shot from={S(232) - 4} to={S(233) + 10} x={6} out={8} hold={0}>
+				<DocPage src="docs/ndsa-9.png" from={S(232) - 4} to={S(233) + 20} box={[0, 0, 1, 0.42]} aspect={0.691} zoom={[1.9, 2.15]} />
+				<Say text="ఫౌండేషన్ ఇంకా నీళ్ళ కిందే" at={S(232)} y={950} size={56} color={C.ink} bg={C.yellow} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={S(232)} to={S(233) + 10} />
 			</Shot>
 			{/* voice 3: L&T */}
 			<Shot from={S(236)} to={S(246)}>

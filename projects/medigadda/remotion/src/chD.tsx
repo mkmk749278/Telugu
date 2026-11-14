@@ -104,7 +104,7 @@ export const ChD: React.FC = () => {
 				<Say text="బోర్ వేసి · కాంక్రీట్ నింపి: ఒక పైల్" at={W(114, 'బోర్')} y={940} size={54} />
 			</Shot>
 			<Shot from={W(117, 'అతుక్కుని') - 4} to={S(118)} x={8} out={8} hold={0}>
-				<Photo src="photos/pile_wall.jpg" from={W(117, 'అతుక్కుని') - 4} to={S(118) + 8} credit="Wikimedia Commons · CC BY-SA 4.0" zoom={[1.1, 1.3]} pan={[-60, 0, 20, 20]} label="వేరే ప్రాజెక్ట్ లో పైల్ గోడ (జర్మనీ) · ILLUSTRATIVE" />
+				<Photo src="photos/pile_wall.jpg" from={W(117, 'అతుక్కుని') - 4} to={S(118) + 8} credit="Falk Arnhold / Wikimedia Commons · CC BY-SA 4.0" zoom={[1.1, 1.3]} pan={[-60, 0, 20, 20]} label="వేరే ప్రాజెక్ట్ లో పైల్ గోడ (జర్మనీ) · ILLUSTRATIVE" />
 				<Say text="పైల్స్ ఒకదానికొకటి అతుక్కుని: ఒక గోడ" at={W(117, 'అతుక్కుని')} y={940} size={54} color={C.ink} bg={C.yellow} />
 			</Shot>
 			{/* 118-123: the pencils; one gap is a window; only the water sees it */}
@@ -176,7 +176,7 @@ export const ChD: React.FC = () => {
 				<Honesty text="ILLUSTRATION · పిన్నుల చోట్లు ఊహ" from={S(137)} to={S(142)} />
 			</Shot>
 			<Shot from={S(138)} to={W(139, 'ఎయిటీ') - 26} x={8} hold={0} out={8}>
-				<Photo src="photos/cores.jpg" from={S(138)} to={W(139, 'ఎయిటీ') - 18} zoom={[1.05, 1.2]} pan={[30, 0, -30, 0]} credit="Wikimedia Commons" label="బోర్ల నుంచి తీసిన నమూనాల గది (వేరే చోట) · ILLUSTRATIVE" />
+				<Photo src="photos/cores.jpg" from={S(138)} to={W(139, 'ఎయిటీ') - 18} zoom={[1.05, 1.2]} pan={[30, 0, -30, 0]} credit="MARUM, V. Diekamp / Wikimedia Commons · CC BY 4.0" label="బోర్ల నుంచి తీసిన నమూనాల గది (వేరే చోట) · ILLUSTRATIVE" />
 				<Say text="బోర్లు వేసి, కింద నేల నమూనాలు తీసి చూస్తారు" at={W(138, 'బోర్లు') - 20} y={940} size={50} />
 			</Shot>
 			{/* 142-144: the project report: a year needed, four months taken */}
