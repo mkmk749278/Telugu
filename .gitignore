@@ -2,3 +2,4 @@
 assets/
 .remotion/
 __pycache__/
+lib/remotion/node_modules
