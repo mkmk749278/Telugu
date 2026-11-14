@@ -1,6 +1,27 @@
-# Medigadda film: handoff (14 Nov 2026, evening)
+# Medigadda film: handoff (14 Nov 2026, night)
 
-## Where it stands (session closed by the owner on 14 Nov 2026, evening; a new session continues)
+## Done in the session of 14 Nov, night
+- **Fresh-machine rebuild in one command:** `projects/medigadda/tools/build_media.sh` pulls from Drive and builds
+  every gitignored file the Remotion project needs (docs pages, Sentinel views, photos and clips, the 21 takes joined
+  exactly as locked: 1108.1 s, the 14 library tracks, the SFX stem, the mix), then `./sync_hero.sh` for the plates.
+- **Real evidence from the NDSA committee report (pages 8–10, its own photos and drawings)** on the words they prove:
+  the real road deck, guarded, right after our drawing sinks (s9) and again under "ఇది కుట్ర" (s210–211); the
+  committee's crack map of pier 20 on "పగిలాయి" (s193); its photo of the structure at the water line on "ఫౌండేషన్
+  ఇంకా నీళ్ళ కిందే" (s232). `media_manifest.csv` row added.
+- **1.256 m is now primary:** the committee's survey of Block 7, 27 Oct 2023 6 PM (report p. 9): P-20 at 101.744
+  against 103.000 = 1.256 m (`claims.csv` row 25). The "by 24 October" date is still from the news report.
+- **Sound effects:** `tools/sfx_cues.py` reads every visual event from the code (documents, cards, rings, piles,
+  pins) into `vo/sfx_cues.json`; `tools/sfx.py` synthesises them (paper slide, pencil tap, three taps for pins, the
+  river under the raft s174–190); `tools/mix.py` mixes them 13–18 dB under the voice (measured). Still −14.3 LUFS.
+  **Nobody has listened to the mix yet**: the owner's ears are the check.
+- **s304–310 (the three-year wait)** is now a month ruler the camera rides: 38 ticks, the three monsoons that passed,
+  a month counter that stops at 24 on "రెండేళ్ళకి". Document highlights can sit above captions (`DocPage lift`).
+- **Credits:** the core store photo (MARUM, V. Diekamp, CC BY 4.0) and the pile wall (Falk Arnhold) from the files'
+  EXIF; both now on screen. Commons answered HTTP 429 all session: the rest is in `cowork_request.md` (second request,
+  with a High Court building photo for s254–261).
+
+
+## Where it stood on 14 Nov, evening
 - **Audio: locked.** The owner's take 13 (the police-case line) and take 7 (Anil Jain as "మెంబర్") are in. Joined
   narration 18:28 in Drive `Creator/Telugu/Medigadda/medigadda_vo_full.mp3`; `audio_check.md`; `vo.txt`,
   `audio_blocks.md` and `vo/timing.json` (359 sentences) all match it. In Drive `VO/`, take 7 is `b7_new.mp3` (the
@@ -33,21 +54,19 @@
   "Lakshmi Pumphouse of KLIP video by MEIL.webm", H.264 30 fps, no audio), `public/media/mix.wav`.
 
 ## Still to do before the 720p cut goes to the owner
-1. Render the 22 remaining plates; look at every plate (the `h2_*` and `h3_*` families have only been seen as
-   low-resolution stand-ins: check the cameras), upload them to Drive.
-2. A contact sheet of the whole film with the real plates; fix what is wrong. Known: captions over the document
-   pages sit on the text in places; the court shot's top label overlaps the page; the timeline at s304 is thin.
-3. Chapter F (the four voices, the court) is still mostly type on paper, against the "never a slide deck" rule.
-   Cowork found no High Court photo. Ideas: the NDSA report's own site photos and drawings as pages of the report
-   (crack mapping of pier 20, the settlement table) at s9 and s193–195; the state's reply and L&T's statement exist
-   only as news pages, so they stay as typed quotes with their source.
-4. The four TO CHECK rows of `media_manifest.csv`; the Sentinel dates (as Cowork saved them) in the Copernicus Browser.
-5. Sound effects on the visual events (pins, paper, water); only the two thuds are in. Nobody has listened to the
-   mix: only its loudness was measured.
-6. Our own full review (labels readable, nothing clipped, no static plate over 1.5 s, the 15% text rule).
-7. `public_media.tar` (public/hero, docs, sat, photos, media/mix.wav) to Drive `Telugu/Medigadda/render-media/`,
-   then the `remotion-render` workflow: film `medigadda`, drive `Telugu/Medigadda`, comp `Medigadda`, scale `2/3`.
-8. Independent viewer review of the cut (PLAYBOOK §11.1), fixes, then the owner.
+1. **The 720p review cut r1** was sent to GitHub on 14 Nov (run 43618928493, `remotion-render.yml` on this branch;
+   output Drive `Telugu/Medigadda/renders/medigadda_review_720p_r1.mp4`). The media it used is Drive
+   `render-media/public_media.tar` (rebuilt 14 Nov night; rebuild and re-upload it after any media change). If the run
+   failed, read its log first (this workflow has not yet finished a film end to end).
+2. **Our own review of r1** (`review-cut` checks: flash, freeze, loudness, the 15% text rule, no static plate over
+   1.5 s) and a listen to the SFX and the mix. The whole-film contact sheet of 14 Nov found and fixed: the camera
+   leaving its plate, the clipped 2016 label, highlights under captions, the thin s304 timeline, the empty s354.
+3. **Still type on paper:** the court passage (s254–261) and the four-voices cards (s216–228). A High Court building
+   photo is asked for in `cowork_request.md` (second request); with it, s254–260 can sit on the real building.
+4. **Licences:** pump_pipes, paddy, sandboil, polavaram and the MEIL clip still wait for their Commons page (Cowork
+   second request); the Sentinel dates in the Copernicus Browser. Drive `hero/hero_plates_22.tar` is superseded by
+   `hero_plates_44.tar` (the owner may delete it).
+5. Independent viewer review of the cut (PLAYBOOK §11.1), fixes, then the owner.
 
 ## Must happen before the film is published
 - The NDSA final report is not public: every line from it stays attributed to news reports of it, as narrated.
@@ -61,6 +80,8 @@ Takes are in `assets/vo/` (pull: `scripts/gdrive_ls.sh Telugu/Medigadda/VO --pul
 order b1 … b21 (`b16 (1).mp3`, `17.mp3`); gaps 0.8 s, and 1.1 s before takes 3, 7, 10, 13, 16, 17 and 20:
 `python3 scripts/vo_rejoin.py medigadda_vo_full.wav <takes> --gaps <20 gaps> --mp3 medigadda_vo_full.mp3`, then
 `python3 scripts/vo_timing.py projects/medigadda --takes <takes> --gaps <the same gaps>`.
-Plates: `pip install bpy==5.3.0 pillow`, then
+Media on a fresh machine: `projects/medigadda/tools/build_media.sh`, then untar Drive `hero/hero_plates_44.tar` into
+`assets/hero/` and run `./sync_hero.sh`. Sound effects after any picture change: `tools/sfx_cues.py`, `tools/sfx.py`,
+`tools/mix.py`. Plates (only if a plate changes): `pip install bpy==5.3.0 pillow`, then
 `python3 scripts/blender/medigadda_hero.py --out projects/medigadda/assets/hero --w 1920 --h 1080 --samples 40`
 (`--only h3_` for one family). Stills: `node scripts/remotion_stills.mjs projects/medigadda/remotion Medigadda OUT FRAMES`.

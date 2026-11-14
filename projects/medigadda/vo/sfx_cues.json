@@ -1,0 +1,263 @@
+[
+{
+"frame": 107,
+"t": 3.567,
+"kind": "tap"
+},
+{
+"frame": 192,
+"t": 6.4,
+"kind": "paper"
+},
+{
+"frame": 949,
+"t": 31.633,
+"kind": "tap"
+},
+{
+"frame": 1079,
+"t": 35.967,
+"kind": "paper"
+},
+{
+"frame": 1860,
+"t": 62.0,
+"kind": "paper"
+},
+{
+"frame": 2142,
+"t": 71.4,
+"kind": "tap"
+},
+{
+"frame": 4431,
+"t": 147.7,
+"kind": "paper"
+},
+{
+"frame": 4893,
+"t": 163.1,
+"kind": "paper"
+},
+{
+"frame": 6712,
+"t": 223.733,
+"kind": "tap"
+},
+{
+"frame": 8186,
+"t": 272.867,
+"kind": "tap"
+},
+{
+"frame": 8643,
+"t": 288.1,
+"kind": "paper"
+},
+{
+"frame": 8755,
+"t": 291.833,
+"kind": "paper"
+},
+{
+"frame": 9192,
+"t": 306.4,
+"kind": "tap"
+},
+{
+"frame": 9891,
+"t": 329.7,
+"kind": "tap"
+},
+{
+"frame": 10038,
+"t": 334.6,
+"kind": "tap"
+},
+{
+"frame": 10370,
+"t": 345.667,
+"kind": "tap"
+},
+{
+"frame": 10410,
+"t": 347.0,
+"kind": "tap"
+},
+{
+"frame": 10459,
+"t": 348.633,
+"kind": "tap"
+},
+{
+"frame": 10768,
+"t": 358.933,
+"kind": "tap"
+},
+{
+"frame": 10986,
+"t": 366.2,
+"kind": "paper"
+},
+{
+"frame": 12470,
+"t": 415.667,
+"kind": "pins"
+},
+{
+"frame": 12541,
+"t": 418.033,
+"kind": "pins"
+},
+{
+"frame": 13167,
+"t": 438.9,
+"kind": "paper"
+},
+{
+"frame": 14917,
+"t": 497.233,
+"kind": "tap"
+},
+{
+"frame": 15445,
+"t": 514.833,
+"kind": "paper"
+},
+{
+"frame": 17313,
+"t": 577.1,
+"kind": "paper"
+},
+{
+"frame": 17615,
+"t": 587.167,
+"kind": "paper"
+},
+{
+"frame": 19091,
+"t": 636.367,
+"kind": "paper"
+},
+{
+"frame": 19164,
+"t": 638.8,
+"kind": "paper"
+},
+{
+"frame": 19699,
+"t": 656.633,
+"kind": "tap"
+},
+{
+"frame": 19752,
+"t": 658.4,
+"kind": "tap"
+},
+{
+"frame": 19820,
+"t": 660.667,
+"kind": "tap"
+},
+{
+"frame": 21028,
+"t": 700.933,
+"kind": "paper"
+},
+{
+"frame": 21242,
+"t": 708.067,
+"kind": "paper"
+},
+{
+"frame": 21564,
+"t": 718.8,
+"kind": "paper"
+},
+{
+"frame": 22039,
+"t": 734.633,
+"kind": "paper"
+},
+{
+"frame": 22155,
+"t": 738.5,
+"kind": "paper"
+},
+{
+"frame": 23703,
+"t": 790.1,
+"kind": "paper"
+},
+{
+"frame": 24361,
+"t": 812.033,
+"kind": "paper"
+},
+{
+"frame": 24426,
+"t": 814.2,
+"kind": "paper"
+},
+{
+"frame": 24735,
+"t": 824.5,
+"kind": "paper"
+},
+{
+"frame": 25343,
+"t": 844.767,
+"kind": "paper"
+},
+{
+"frame": 27079,
+"t": 902.633,
+"kind": "paper"
+},
+{
+"frame": 27386,
+"t": 912.867,
+"kind": "paper"
+},
+{
+"frame": 27635,
+"t": 921.167,
+"kind": "paper"
+},
+{
+"frame": 28571,
+"t": 952.367,
+"kind": "tap"
+},
+{
+"frame": 29173,
+"t": 972.433,
+"kind": "tap"
+},
+{
+"frame": 29299,
+"t": 976.633,
+"kind": "tap"
+},
+{
+"frame": 30071,
+"t": 1002.367,
+"kind": "paper"
+},
+{
+"frame": 30133,
+"t": 1004.433,
+"kind": "paper"
+},
+{
+"frame": 31759,
+"t": 1058.633,
+"kind": "pins"
+},
+{
+"frame": 15619,
+"t": 520.633,
+"kind": "water",
+"until": 566.1
+}
+]

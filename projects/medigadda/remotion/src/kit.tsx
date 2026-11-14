@@ -64,9 +64,13 @@ export type Layer = {src: string; at: number; fade?: number};
 export const Plate: React.FC<{layers: Layer[]; cam: Key[]; breathe?: number; children?: React.ReactNode}> = ({layers, cam, breathe = 0.012, children}) => {
 	const f = useCurrentFrame();
 	const k = camAt(cam, f);
-	const s = k.s * (1 + breathe * Math.sin(f / 97) + 0.0004 * Math.max(0, f - cam[0].f));
-	const tx = (0.5 - k.x) * 1920 * s + 5 * Math.sin(f / 61);
-	const ty = (0.5 - k.y) * 1080 * s + 3 * Math.cos(f / 83);
+	// the camera never leaves its plate: at least a little zoom, and the centre kept where the plate still covers the
+	// screen with the sway included (a keyframe near an edge once showed a black band on the left, s26 and s141)
+	const s = Math.max(1.015, k.s * (1 + breathe * Math.sin(f / 97) + 0.0004 * Math.max(0, f - cam[0].f)));
+	const hx = 0.5 / s + 6 / (1920 * s), hy = 0.5 / s + 4 / (1080 * s);
+	const cx = Math.min(1 - hx, Math.max(hx, k.x)), cy = Math.min(1 - hy, Math.max(hy, k.y));
+	const tx = (0.5 - cx) * 1920 * s + 5 * Math.sin(f / 61);
+	const ty = (0.5 - cy) * 1080 * s + 3 * Math.cos(f / 83);
 	return (
 		<AbsoluteFill style={{background: C.night, overflow: 'hidden'}}>
 			<AbsoluteFill style={{transform: `translate(${tx}px, ${ty}px) scale(${s})`, transformOrigin: '50% 50%'}}>
@@ -281,11 +285,12 @@ export const Line: React.FC<{text: string; at: number; hl?: number; size?: numbe
 };
 
 /** The real page of a document in the desk pose, pulling from the letterhead to a highlighted box. `box` in page 0-1. */
-export const DocPage: React.FC<{src: string; from: number; to: number; box?: [number, number, number, number]; hl?: number; aspect?: number; zoom?: [number, number]}> = ({src, from, to, box, hl, aspect = 0.707, zoom = [0.92, 1.9]}) => {
+/** lift: how far (in page heights) to place the highlight above the screen's centre, to keep it clear of captions. */
+export const DocPage: React.FC<{src: string; from: number; to: number; box?: [number, number, number, number]; hl?: number; aspect?: number; zoom?: [number, number]; lift?: number}> = ({src, from, to, box, hl, aspect = 0.707, zoom = [0.92, 1.9], lift = 0}) => {
 	const f = useCurrentFrame();
 	const H = 1500, W = H * aspect;
 	const t = interpolate(f, [from, (hl ?? from) + 20], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
-	const cy = box ? box[1] + box[3] / 2 : 0.3;
+	const cy = (box ? box[1] + box[3] / 2 : 0.3) + lift;
 	const cx = box ? box[0] + box[2] / 2 : 0.5;
 	const s = lerp(zoom[0] * (1080 / H), zoom[1] * (1080 / H), t) * (1 + 0.0003 * (f - from));
 	const fx = lerp(0.5, cx, t), fy = lerp(0.22, cy, t);

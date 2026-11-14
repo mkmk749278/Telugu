@@ -2,6 +2,7 @@
 """Music bed, the two thuds and the final mix for the Medigadda film (picture_plan.md, Sound and music): library tracks
 placed by chapter from vo/timing.json, crossfaded, near silence under the set piece, silenced before three key
 moments, ducked under the voice, then the whole mix normalised to -14 LUFS, true peak -1.5 dB.
+Sound effects: tools/sfx_cues.py then tools/sfx.py write assets/sfx_stem.wav, mixed in under the voice.
 Writes remotion/public/media/mix.wav (the film's only audio) and prints loudness.
 
   scripts/music_pull.sh projects/medigadda/assets/music <ids>   then   python3 projects/medigadda/tools/mix.py
@@ -12,6 +13,7 @@ from pathlib import Path
 P = Path(__file__).resolve().parents[1]
 MUS = P / 'assets/music'
 VO = P / 'assets/vo/medigadda_vo_full.wav'
+SFX = P / 'assets/sfx_stem.wav'   # tools/sfx_cues.py, then tools/sfx.py
 OUT = P / 'remotion/public/media/mix.wav'
 T = json.loads((P / 'vo/timing.json').read_text('utf-8'))
 S = lambda i: T['sentences'][i]['start']
@@ -59,8 +61,9 @@ for k, (t0, g) in enumerate(THUD):
            f"[b{k}][k{k}]amix=inputs=2:normalize=0,aformat=channel_layouts=stereo,volume={g - 3}dB,adelay={int(t0 * 1000)}|{int(t0 * 1000)},apad=whole_dur={END}[t{k}];")
     th.append(f'[t{k}]')
 fc += f'[{n}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={END}[vo];[vo]asplit=2[vo1][vokey];'
+fc += f'[{n + 1}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={END}[fx];'
 fc += '[bed][vokey]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=450:makeup=1[duck];'
-fc += f"[vo1][duck]{''.join(th)}amix=inputs={2 + len(th)}:normalize=0,atrim=0:{END},loudnorm=I=-14:TP=-1.5:LRA=11[out]"
-subprocess.run(['ffmpeg', '-y', '-v', 'error', *inputs, '-i', str(VO), '-filter_complex', fc, '-map', '[out]', '-ar', '48000', '-c:a', 'pcm_s16le', str(OUT)], check=True)
+fc += f"[vo1][duck][fx]{''.join(th)}amix=inputs={3 + len(th)}:normalize=0,atrim=0:{END},loudnorm=I=-14:TP=-1.5:LRA=11[out]"
+subprocess.run(['ffmpeg', '-y', '-v', 'error', *inputs, '-i', str(VO), '-i', str(SFX), '-filter_complex', fc, '-map', '[out]', '-ar', '48000', '-c:a', 'pcm_s16le', str(OUT)], check=True)
 r = subprocess.run(['ffmpeg', '-i', str(OUT), '-af', 'ebur128=peak=true', '-f', 'null', '-'], capture_output=True, text=True).stderr
 print([l.strip() for l in r.splitlines() if 'I:' in l or 'Peak:' in l or 'LRA:' in l][-3:], f'{END:.1f} s')
