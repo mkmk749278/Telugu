@@ -189,6 +189,7 @@ def anchors(s, fam, cam, pts):
 
 def render(s, name, cam, show, allobjs):
     if a.only and not name.startswith(a.only): return
+    if (a.out / name).exists(): return   # a stopped run resumes: plates already on disk are kept
     for o in allobjs: o.hide_render = o.name.split(".")[0] not in show and o.name not in show
     s.camera = cam; s.render.filepath = str((a.out / name).resolve())
     bpy.ops.render.render(write_still=True)

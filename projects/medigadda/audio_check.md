@@ -55,3 +55,12 @@ Drive: `Creator/Telugu/Medigadda/medigadda_vo_full.mp3`
 **Timing:** `vo/timing.json` (358 sentences, 2,364 words, 30 fps), `vo/script.tsv`, `vo/timing.md`.
 
 **Waiting for the owner's approval of the joined audio.**
+
+## Later takes (14 Nov 2026)
+- **Take 13** made again by the owner with one added sentence (the BRS's statement that the police case was closed
+  in 2025): 63.6 s, every sentence found, the new line spoken as written.
+- **Take 7** made again with one word corrected (Anil Jain as "మెంబర్", not "చైర్మన్", after the committee's own
+  letter): 44.0 s, pace 1.01 of the film's, every sentence found, "మెంబర్" spoken. In Drive as `b7_new.mp3` beside
+  the first `b7.mp3`.
+- The joined narration is now **18:28** (1,108.1 s), 359 sentences; `vo.txt`, `audio_blocks.md` and `vo/timing.json`
+  match it. The table above is the first set of takes.

@@ -1,9 +1,9 @@
 # మేడిగడ్డ: audio blocks
 
-2 blocks, 16,682 characters in all, each at most 10,000. Estimated length about 19 minutes.
+2 blocks, 16,681 characters in all, each at most 10,000. Estimated length about 19 minutes.
 Paste each block whole, in order. Pauses come from the commas, full stops and blank lines.
 
-## Block 1 of 2 (8,440 characters)
+## Block 1 of 2 (8,439 characters)
 
 ```text
 మేడిగడ్డ బ్యారేజ్ కింద, కాంక్రీట్ కి ఇసుకకి మధ్య, ఖాళీ ఏర్పడింది.
@@ -75,7 +75,7 @@ Paste each block whole, in order. Pauses come from the commas, full stops and bl
 
 ఇప్పుడు మేడిగడ్డలో ఏం వేరుగా జరిగిందో చూద్దాం.
 కుంగిన మరుసటి రోజే, సెంట్రల్ గవర్నమెంట్ ఆరుగురు సభ్యుల కమిటీని వేసింది.
-హెడ్, నేషనల్ డ్యామ్ సేఫ్టీ అథారిటీ చైర్మన్ అనిల్ జైన్.
+హెడ్, నేషనల్ డ్యామ్ సేఫ్టీ అథారిటీ మెంబర్ అనిల్ జైన్.
 వాళ్ళు సైట్ కి వచ్చి చూశారు. నవంబర్ ఫస్ట్ న రిపోర్ట్ ఇచ్చారు.
 
 ఆ రిపోర్ట్ లో ఒక వాక్యం, తర్వాత ప్రతి చోటా వినిపించింది.
