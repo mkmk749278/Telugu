@@ -30,6 +30,11 @@
 "kind": "tap"
 },
 {
+"frame": 2347,
+"t": 78.233,
+"kind": "paper"
+},
+{
 "frame": 4431,
 "t": 147.7,
 "kind": "paper"
@@ -135,6 +140,11 @@
 "kind": "paper"
 },
 {
+"frame": 18894,
+"t": 629.8,
+"kind": "paper"
+},
+{
 "frame": 19091,
 "t": 636.367,
 "kind": "paper"
@@ -160,6 +170,11 @@
 "kind": "tap"
 },
 {
+"frame": 20825,
+"t": 694.167,
+"kind": "paper"
+},
+{
 "frame": 21028,
 "t": 700.933,
 "kind": "paper"
@@ -175,6 +190,11 @@
 "kind": "paper"
 },
 {
+"frame": 21892,
+"t": 729.733,
+"kind": "paper"
+},
+{
 "frame": 22039,
 "t": 734.633,
 "kind": "paper"
@@ -187,6 +207,11 @@
 {
 "frame": 23703,
 "t": 790.1,
+"kind": "paper"
+},
+{
+"frame": 24184,
+"t": 806.133,
 "kind": "paper"
 },
 {
@@ -250,9 +275,19 @@
 "kind": "paper"
 },
 {
+"frame": 30920,
+"t": 1030.667,
+"kind": "paper"
+},
+{
 "frame": 31759,
 "t": 1058.633,
 "kind": "pins"
+},
+{
+"frame": 32392,
+"t": 1079.733,
+"kind": "paper"
 },
 {
 "frame": 15619,

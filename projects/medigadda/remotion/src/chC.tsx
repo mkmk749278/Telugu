@@ -125,7 +125,7 @@ export const ChC: React.FC = () => {
 				<Honesty text="ILLUSTRATION" from={S(76)} to={S(83)} />
 			</Shot>
 			<Shot from={S(82)} to={S(83)} x={8} hold={0} out={8}>
-				<Photo src="photos/sandboil.jpg" from={S(82)} to={S(83) + 8} zoom={[1.1, 1.25]} pan={[0, 0, -20, 10]} credit="US Army Corps of Engineers / Wikimedia Commons · Public domain" label="అమెరికాలో ఒక కట్ట దగ్గర ఇసుక బుంగ · ILLUSTRATIVE" />
+				<Photo src="photos/sandboil.jpg" from={S(82)} to={S(83) + 8} zoom={[1.1, 1.25]} pan={[0, 0, -20, 10]} credit="US Army Corps of Engineers / Wikimedia Commons · CC BY 2.0" label="అమెరికాలో ఒక కట్ట దగ్గర ఇసుక బుంగ · ILLUSTRATIVE" />
 				<Say text="బుంగ = PIPING" at={S(82)} y={920} size={84} color={C.ink} bg={C.yellow} />
 				<Say text="బుంగ చుట్టూ ఇసుక బస్తాలు" at={S(82) + 12} y={1010} size={38} />
 			</Shot>

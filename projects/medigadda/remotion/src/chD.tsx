@@ -104,7 +104,7 @@ export const ChD: React.FC = () => {
 				<Say text="బోర్ వేసి · కాంక్రీట్ నింపి: ఒక పైల్" at={W(114, 'బోర్')} y={940} size={54} />
 			</Shot>
 			<Shot from={W(117, 'అతుక్కుని') - 4} to={S(118)} x={8} out={8} hold={0}>
-				<Photo src="photos/pile_wall.jpg" from={W(117, 'అతుక్కుని') - 4} to={S(118) + 8} credit="Falk Arnhold / Wikimedia Commons · CC BY-SA 4.0" zoom={[1.1, 1.3]} pan={[-60, 0, 20, 20]} label="వేరే ప్రాజెక్ట్ లో పైల్ గోడ (జర్మనీ) · ILLUSTRATIVE" />
+				<Photo src="photos/pile_wall.jpg" from={W(117, 'అతుక్కుని') - 4} to={S(118) + 8} credit="Falk2 / Wikimedia Commons · CC BY-SA 4.0" zoom={[1.1, 1.3]} pan={[-60, 0, 20, 20]} label="వేరే ప్రాజెక్ట్ లో పైల్ గోడ (జర్మనీ) · ILLUSTRATIVE" />
 				<Say text="పైల్స్ ఒకదానికొకటి అతుక్కుని: ఒక గోడ" at={W(117, 'అతుక్కుని')} y={940} size={54} color={C.ink} bg={C.yellow} />
 			</Shot>
 			{/* 118-123: the pencils; one gap is a window; only the water sees it */}
@@ -144,10 +144,10 @@ export const ChD: React.FC = () => {
 				</Paper>
 				<Source text="NDSA కమిటీ రిపోర్ట్ · 1 నవంబర్ 2023" from={S(126)} to={S(130)} />
 			</Shot>
-			<Shot from={S(124)} to={S(126)} out={8}>
-				<DocPage src="docs/ndsa-2.png" from={S(124)} to={S(126)} box={[0.2, 0.074, 0.69, 0.052]} hl={S(125) + 6} aspect={0.684} zoom={[1.0, 1.75]} />
+			<Shot from={S(124)} to={W(127, 'ట్వెంటీ') - 12} out={8}>
+				<DocPage src="docs/ndsa-2.png" from={S(124)} to={W(127, 'ట్వెంటీ') - 12} box={[0.2, 0.074, 0.69, 0.052]} hl={S(125) + 6} aspect={0.684} zoom={[1.0, 1.75]} />
 				<Say text="గట్టి క్వాలిటీ కంట్రోల్ జరగలేదు" at={W(125, 'క్వాలిటీ') - 6} y={930} size={56} color={C.white} bg={C.orange} />
-				<Source text="NDSA కమిటీ రిపోర్ట్ · 1 నవంబర్ 2023 · అసలు పేజీ" from={S(124) + 6} to={S(126)} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ · 1 నవంబర్ 2023 · అసలు పేజీ" from={S(124) + 6} to={W(127, 'ట్వెంటీ') - 12} />
 			</Shot>
 			{/* 130-136: the final report, and honestly: only what the papers carried */}
 			<Shot from={S(130)} to={S(137)}>

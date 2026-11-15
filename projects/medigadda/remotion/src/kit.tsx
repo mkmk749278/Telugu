@@ -49,6 +49,8 @@ export const Paper: React.FC<{dark?: number; children?: React.ReactNode}> = ({da
 export type Key = {f: number; s: number; x: number; y: number};
 /** The plate's zoom, so labels pinned to it keep their size on screen. */
 const Zoom = React.createContext(1);
+/** The plate's whole camera (zoom and shift), so a label can keep itself on screen. */
+const Cam = React.createContext({s: 1, tx: 0, ty: 0});
 const camAt = (keys: Key[], f: number): {s: number; x: number; y: number} => {
 	if (keys.length === 1) return keys[0];
 	const fs = keys.map((k) => k.f);
@@ -79,7 +81,7 @@ export const Plate: React.FC<{layers: Layer[]; cam: Key[]; breathe?: number; chi
 					if (f < l.at - 1 || (next && f > next.at + (next.fade ?? 14) + 2)) return null;
 					return <Img key={l.src + i} src={staticFile(l.src)} style={{position: 'absolute', inset: 0, width: 1920, height: 1080, objectFit: 'cover', opacity: i === 0 ? 1 : ramp(f, l.at, l.fade ?? 14)}} />;
 				})}
-				<Zoom.Provider value={s}><AbsoluteFill>{children}</AbsoluteFill></Zoom.Provider>
+				<Zoom.Provider value={s}><Cam.Provider value={{s, tx, ty}}><AbsoluteFill>{children}</AbsoluteFill></Cam.Provider></Zoom.Provider>
 			</AbsoluteFill>
 			<AbsoluteFill style={{background: 'radial-gradient(ellipse at center, transparent 55%, rgba(20,10,0,0.45) 100%)', pointerEvents: 'none'}} />
 		</AbsoluteFill>
@@ -152,12 +154,30 @@ export const Grains: React.FC<{pts: P2[]; at: number; until?: number; n?: number
 export const Tag: React.FC<{p: P2; text: string; at: number; until?: number; dx?: number; dy?: number; size?: number; color?: string; bg?: string; sub?: string}> = ({p, text, at, until = 1e9, dx: dx0 = 120, dy: dy0 = -90, size: size0 = 46, color = C.ink, bg = C.yellow, sub}) => {
 	const f = useCurrentFrame();
 	const z = React.useContext(Zoom);
-	const dx = dx0 / z, dy = dy0 / z, size = Math.max(44, size0) / z; // what the voice points to: never under 44 px on screen
+	const dy = dy0 / z, size = Math.max(44, size0) / z; // what the voice points to: never under 44 px on screen
 	if (f < at - 1 || f > until + 8) return null;
 	const t = ramp(f, at, 9);
 	const o = t * (1 - ramp(f, until, 8));
 	const [x, y] = px(p);
-	const right = dx >= 0;
+	// the label never leaves the screen (r1: "గట్టి రాయి చా..." and "గోడలు రాయి ద..." ran off the right edge as the
+	// camera moved): estimate its width on screen, flip it to the other side of its point if it would overflow, then
+	// keep its outer edge 40 px inside the frame
+	const cam = React.useContext(Cam);
+	const scr = (v: number): number => (v - 960) * cam.s + 960 + cam.tx;
+	// width: a Telugu letter about 0.8 em, a space 0.3, Latin 0.55; vowel signs and the letter after a virama add none
+	let em = 0;
+	[...text].forEach((ch, i, a) => {
+		if (/[\u0C3E-\u0C4D\u0C55\u0C56\u0C01-\u0C03]/.test(ch) || a[i - 1] === '\u0C4D') return;
+		em += ch === ' ' ? 0.3 : /[\u0C00-\u0C7F]/.test(ch) ? 0.8 : 0.55;
+	});
+	const wid = Math.max(44, size0) * em + 44;
+	let dxs = dx0;
+	const fits = (d: number): boolean => (d >= 0 ? scr(x) + d + wid <= 1880 : scr(x) + d - wid >= 40);
+	if (!fits(dxs) && fits(-dxs)) dxs = -dxs;
+	let edge = scr(x) + dxs; // screen x of the label's inner edge
+	edge = dxs >= 0 ? Math.max(40, Math.min(edge, 1880 - wid)) : Math.min(1880, Math.max(edge, 40 + wid));
+	const dx = (edge - scr(x)) / cam.s;
+	const right = dxs >= 0;
 	return (
 		<div style={{position: 'absolute', inset: 0, opacity: o}}>
 			<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, overflow: 'visible'}}>
@@ -235,6 +255,33 @@ export const Source: React.FC<{text: string; from: number; to: number}> = ({text
 	if (f < from || f > to) return null;
 	return (
 		<div style={{position: 'absolute', left: 56, bottom: 44, opacity: win(f, from, to, 8), fontFamily: F.te, fontWeight: 500, fontSize: 32, color: C.white, background: 'rgba(23,17,10,0.82)', borderLeft: `8px solid ${C.yellow}`, padding: '6px 18px 8px', borderRadius: 4, transform: `translateX(${(1 - ramp(f, from, 10)) * -30}px)`}}>{text}</div>
+	);
+};
+
+/**
+ * Real pages (or a satellite print) laid on the table under a caption, sliding in one by one, so a beat on paper is
+ * never one line on an empty sheet (r1 review: 5-7 s of caption-only paper at 10:30, 11:34, 13:26, 17:10, 18:00).
+ * `dim` lays the paper's colour over them from `dimAt`, so the caption leads when the voice moves on.
+ */
+export const Evidence: React.FC<{pages: {src: string; aspect?: number}[]; from: number; to: number; x?: number; y?: number; h?: number; spread?: number; tilt?: number; dim?: number; dimAt?: number}> = ({pages, from, to, x = 960, y = 640, h = 620, spread = 330, tilt = 5, dim = 0, dimAt = -1e9}) => {
+	const f = useCurrentFrame();
+	if (f < from - 1 || f > to + 12) return null;
+	const n = pages.length;
+	const d = dim * ramp(f, dimAt, 12);
+	return (
+		<AbsoluteFill style={{opacity: 1 - ramp(f, to, 10)}}>
+			{pages.map((p, i) => {
+				const k = i - (n - 1) / 2;
+				const t = ramp(f, from + i * 5, 14);
+				const w = h * (p.aspect ?? 0.707);
+				return (
+					<div key={p.src + i} style={{position: 'absolute', left: x + k * spread, top: y, width: w, height: h, opacity: t, background: '#fff', boxShadow: '0 24px 50px rgba(40,20,0,0.45)', transform: `translate(-50%,-50%) translateY(${(1 - t) * 160}px) rotate(${k * tilt - 1 + 0.4 * Math.sin(f / 120 + i)}deg) scale(${1 + 0.0004 * (f - from)})`}}>
+						<Img src={staticFile(p.src)} style={{width: w, height: h, objectFit: 'cover'}} />
+					</div>
+				);
+			})}
+			{d > 0 ? <AbsoluteFill style={{background: `rgba(233,219,190,${d})`}} /> : null}
+		</AbsoluteFill>
 	);
 };
 

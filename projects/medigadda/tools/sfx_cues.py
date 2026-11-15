@@ -2,7 +2,7 @@
 """Sound on every visual event (picture_plan.md, Sound and music): read the film's code and list when each event
 happens, so the mix puts its sound on the same frame. Writes vo/sfx_cues.json; tools/mix.py synthesises the sounds.
 
-  paper  a document or card arrives: <DocPage from=…>, <Sheet at=…>, <Quote at=…>
+  paper  a document or card arrives: <DocPage from=…>, <Evidence from=…>, <Sheet at=…>, <Quote at=…>
   tap    a pencil tap: <Ring at=…>, <Point at=…>, a pile placed (h2_piles_build*), the gap (h2_*_gap), the pins (h3_*_85 / _6)
   water  the set piece under the raft (s174 to s191): river under the raft
 
@@ -31,12 +31,12 @@ def ev(expr):
     except Exception: return None
 
 
-TAG = {'DocPage': ('from', 'paper'), 'Sheet': ('at', 'paper'), 'Quote': ('at', 'paper'), 'Ring': ('at', 'tap'), 'Point': ('at', 'tap')}
+TAG = {'DocPage': ('from', 'paper'), 'Evidence': ('from', 'paper'), 'Sheet': ('at', 'paper'), 'Quote': ('at', 'paper'), 'Ring': ('at', 'tap'), 'Point': ('at', 'tap')}
 PLATE_TAP = re.compile(r"hero\('(h2_piles_build\d+|h2_\w+_gap|h3_\w+_(?:85|6))'\),\s*at:\s*([SW]\([^)]*\)(?:\s*[+-]\s*\d+)?)")
 cues, skipped = [], []
 for src in sorted((P / 'remotion/src').glob('ch*.tsx')):
     code = src.read_text('utf-8').replace('sunk + ', "W(9, 'దిగిపోయి') + ")   # chA's named frame
-    for m in re.finditer(r'<(DocPage|Sheet|Quote|Ring|Point)\b([^>]*)', code):
+    for m in re.finditer(r'<(DocPage|Evidence|Sheet|Quote|Ring|Point)\b([^>]*)', code):
         attr, kind = TAG[m.group(1)]
         a = re.search(attr + r'=\{((?:[^{}]|\{[^{}]*\})*)\}', m.group(2))
         v = ev(a.group(1)) if a else None

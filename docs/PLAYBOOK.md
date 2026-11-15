@@ -337,4 +337,19 @@ NOT CONFIRMED, then FIXED / DECLINED with the reason); a reviewer's rewrite neve
     on the frame the next begins dipped every cut to black.
   - *Check every word cue before rendering* (`scripts/cue_check.py`). Why: one cue on a word that is not in its
     sentence stops a whole render shard.
+  - *A pinned label keeps itself on screen* (2026-11-15): `Tag` knows the plate's camera, flips to the other side of
+    its point when it would overflow and keeps its outer edge 40 px inside the frame. Why: r1 had "గట్టి రాయి చా…"
+    and "గోడలు రాయి ద…" cut by the right edge while the camera moved.
+  - *No beat is one caption on empty paper* (2026-11-15): the 5–7 s turns between voices, the cost, the three things
+    to watch and the subscribe line read as slides in r1. `Evidence` lays the film's own pages (or the satellite
+    print) on the table under the caption. Find them by measuring, not by eye: frames that are mostly paper colour
+    for over 1.5 s, then look at each.
+  - *Bottom captions stay above the source strip* (y ≤ about 930 at size 56). Why: two captions sat on the source
+    label in r1.
+  - *Commons metadata through the Wikipedia API* (2026-11-15): when commons.wikimedia.org answers 429,
+    `en.wikipedia.org/w/api.php?action=query&prop=imageinfo&iiprop=extmetadata&titles=File:A|File:B` returns the
+    author and licence of Commons files (one batched call; it rate-limits too). Downloads from upload.wikimedia.org
+    still need Cowork. It found that our sand-boil credit said "Public domain" where the page says CC BY 2.0.
+  - *A contact sheet's timecode box hides the top-left corner*: check a clipped-looking label there on a clean frame
+    before fixing it.
 

@@ -161,7 +161,7 @@ export const ChE: React.FC = () => {
 			{/* "cracked": the committee's own crack map of pier 20, on its word, then back to the cutaway for the number */}
 			<Shot from={W(193, 'పగిలాయి') - 4} to={W(194, 'అక్టోబర్') - 6} x={6} out={8} hold={0}>
 				<DocPage src="docs/ndsa-10.png" from={W(193, 'పగిలాయి') - 4} to={W(194, 'అక్టోబర్')} box={[0.02, 0.445, 0.62, 0.25]} aspect={0.752} zoom={[2.3, 3.0]} />
-				<Say text="పిల్లర్ 20 · పగుళ్ళ మ్యాప్" at={W(193, 'పగిలాయి') - 2} y={985} size={54} color={C.white} bg={C.orange} />
+				<Say text="పిల్లర్ 20 · పగుళ్ళ మ్యాప్" at={W(193, 'పగిలాయి') - 2} y={905} size={54} color={C.white} bg={C.orange} />
 				<Source text="NDSA కమిటీ రిపోర్ట్ · 1 నవంబర్ 2023 · అసలు పేజీ" from={W(193, 'పగిలాయి')} to={W(194, 'అక్టోబర్')} />
 			</Shot>
 			{/* 196-200: the cause as reported; maybe under other blocks; Annaram and Sundilla */}

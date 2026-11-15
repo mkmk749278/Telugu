@@ -1,4 +1,16 @@
-# Medigadda film: handoff (14 Nov 2026, night)
+# Medigadda film: handoff (15 Nov 2026)
+
+## Done in the session of 15 Nov
+- **Our review of r1** (`review/cut_r1_own_review.md`): all 223 frames at 5 s, then every suspect window at 1 s, and
+  a measurement of mostly-paper frames. Fixed in the code: labels cut by the frame edge (`Tag` now keeps itself on
+  screen), two captions on the source strip, small pale answer text on the BRS cards, and seven 5–7 s beats of one
+  caption on empty paper (`Evidence`: the film's own pages or the satellite print under the caption; the staircase
+  under the cost). Every fix seen on a local still.
+- **Licences closed** through the Wikipedia API (Commons itself still answers 429): all seven pending files are
+  CC BY / CC BY-SA; the sand-boil credit said "Public domain" and is now CC BY 2.0; credits name each author.
+- **Cowork request replaced:** only two named High Court photos (CC BY-SA 4.0) are left for the laptop.
+- SFX cues read `Evidence`; stem and mix rebuilt.
+
 
 ## Done in the session of 14 Nov, night
 - **Fresh-machine rebuild in one command:** `projects/medigadda/tools/build_media.sh` pulls from Drive and builds

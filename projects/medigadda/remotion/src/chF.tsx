@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {DocPage, Line, Paper, Photo, Roll, Say, Sheet, Shot, Source, ramp} from './kit';
+import {DocPage, Evidence, Line, Paper, Photo, Roll, Say, Sheet, Shot, Source, ramp} from './kit';
 import {Quote} from './chD';
 import {S, W} from './t';
 import {C, F} from './theme';
@@ -29,7 +29,7 @@ const Point: React.FC<{x: number; y: number; n: string; text: string; at: number
 		<div style={{position: 'absolute', left: x, top: y, width: w, minHeight: 330, background: '#FBF6E9', borderRadius: 8, boxShadow: '0 18px 36px rgba(40,20,0,0.35)', padding: '26px 30px', boxSizing: 'border-box', opacity: t, transform: `translateY(${(1 - t) * 40}px) rotate(${(Number(n) - 2) * 1.2 + 0.2 * Math.sin(f / 100 + Number(n))}deg)`, fontFamily: F.te, color: C.ink}}>
 			<div style={{fontFamily: F.num, fontWeight: 800, fontSize: 54, color: C.inkSoft}}>{n}</div>
 			<div style={{fontWeight: 700, fontSize: 42, lineHeight: 1.35}}>{text}</div>
-			{ans && f >= ansAt ? <div style={{marginTop: 16, fontSize: 32, fontWeight: 500, lineHeight: 1.4, borderTop: `3px solid ${C.blue}`, paddingTop: 10, color: C.blue, opacity: ramp(f, ansAt, 10)}}>{ans}</div> : null}
+			{ans && f >= ansAt ? <div style={{marginTop: 16, fontSize: 34, fontWeight: 600, lineHeight: 1.4, borderTop: `3px solid ${C.blue}`, paddingTop: 10, color: '#0F3F80', opacity: ramp(f, ansAt, 10)}}>{ans}</div> : null}
 			{f >= open ? <div style={{marginTop: 16, fontSize: 34, fontWeight: 700, color: C.white, background: C.orange, padding: '4px 14px 6px', borderRadius: 6, display: 'inline-block', opacity: ramp(f, open, 10)}}>జవాబు దొరకలేదు</div> : null}
 		</div>
 	);
@@ -43,6 +43,7 @@ export const ChF: React.FC = () => {
 		<>
 			<Shot from={S(207)} to={S(210)}>
 				<Paper>
+					<Evidence pages={[{src: 'docs/ndsa-1.png', aspect: 0.698}, {src: 'docs/ndsa-2.png', aspect: 0.684}, {src: 'docs/cag-1.png'}]} from={S(207)} to={S(210)} y={700} h={640} spread={360} dim={0.5} dimAt={S(208)} />
 					<Say text="ఇక్కడితో ఆపేస్తే: ఒక వైపు కథ" at={S(207)} until={S(208)} y={440} size={64} color={C.ink} bg={C.yellow} />
 					<Say text="ఈ రిపోర్ట్ లని ఒప్పుకోని వాళ్ళు ఉన్నారు" at={S(208)} y={440} size={60} />
 					<Say text="వాళ్ళ మాట కూడా వినాలి" at={S(209)} y={580} size={60} color={C.ink} bg={C.yellow} />
@@ -87,6 +88,8 @@ export const ChF: React.FC = () => {
 			<Shot from={S(229)} to={S(236)}>
 				<Paper>
 					<Tabs on={1} from={S(229)} to={S(236)} />
+					<Evidence pages={[{src: 'docs/ndsa-1.png', aspect: 0.698}]} from={S(229)} to={S(232) - 4} x={760} y={680} h={700} />
+					<Say text="1 నవంబర్ 2023 · NDSA రిపోర్ట్" at={S(231)} until={S(232)} x={1420} y={560} size={44} color={C.ink} bg={C.yellow} />
 					<Say text="రెండో మాట: అప్పటి ఇరిగేషన్ డిపార్ట్మెంట్ ది" at={S(229)} until={S(231)} y={440} size={56} color={C.ink} bg={C.yellow} />
 					<Say text="1 నవంబర్: రిపోర్ట్ → 4 నవంబర్ 2023: స్టేట్ రిప్లై" at={S(231)} until={S(233)} y={190} size={48} />
 					<Quote at={S(232)} until={S(234)} en="either unsubstantiated or made without a full appreciation of the facts" hl={S(233)} te="ఫౌండేషన్ నీళ్ళ కిందే ఉంది. చూడకుండానే కారణాలు తేల్చేశారు." teAt={S(232) + 8} src="తెలంగాణ ఇరిగేషన్ డిపార్ట్మెంట్ రిప్లై · 4 నవంబర్ 2023 (SANDRP)" y={600} h={520} />
@@ -109,6 +112,11 @@ export const ChF: React.FC = () => {
 					<Say text="మూడో మాట: కట్టిన కంపెనీ, L&T ది" at={S(236)} until={S(238)} y={440} size={60} color={C.ink} bg={C.yellow} />
 					<Quote at={S(238)} until={S(242)} en="as per the design provided by the authorities … handed over in 2019 … having withstood the last five flood seasons" hl={S(239)} te="ఇచ్చిన డిజైన్ ప్రకారమే కట్టాం · 2019 లో అప్పగించాం · ఐదు వరద సీజన్లు తట్టుకుంది" teAt={S(239)} src="L&T స్టేట్మెంట్ · 4 నవంబర్ 2023 (Deccan Chronicle)" y={560} h={600} />
 					<Say text="మే 2025: L&T లెటర్" at={S(242)} until={S(246)} y={190} size={52} color={C.ink} bg={C.yellow} />
+					<Sheet at={S(242) + 8} until={S(243)} x={960} y={600} w={1000} h={440} rot={-1.2}>
+						<Line text="L&T → ఇరిగేషన్ డిపార్ట్మెంట్" at={S(242) + 12} size={50} weight={700} />
+						<Line text="NDSA ఫైనల్ రిపోర్ట్ మీద" at={S(242) + 20} size={42} color={C.inkSoft} />
+						<Line text="మా బొమ్మ · అసలు లెటర్ కాదు" at={S(242) + 24} size={30} color={C.inkSoft} />
+					</Sheet>
 					<Sheet at={S(243)} until={S(246)} x={560} y={560} w={760} h={380} rot={-2.5}>
 						<Line text="రిపోర్ట్ లో ఒక చోట" at={S(243) + 4} size={36} color={C.inkSoft} />
 						<Line text="గోడల క్వాలిటీ కంట్రోల్ జరగలేదు" at={S(243) + 10} hl={S(243) + 16} size={44} weight={700} />
@@ -139,7 +147,7 @@ export const ChF: React.FC = () => {
 					<Roll to={162} start={W(250, 'వన్') - 20} land={W(250, 'టీఎంసీల')} until={S(254)} x={650} y={230} size={84} suffix=" TMC ఎత్తిపోశారు" bg={null} color={C.ink} />
 					<Roll to={63} start={W(252, 'సిక్స్టీ') - 20} land={W(252, 'టీఎంసీలని')} until={S(254)} x={1270} y={230} size={84} suffix=" TMC మళ్ళీ కిందికి" bg={null} color={C.ink} />
 					<Say text="5 సీజన్లలో · మేడిగడ్డ నుంచి" at={S(250)} until={S(254)} x={650} y={930} size={38} />
-					<Say text="ఈ నంబర్ల మీద రెండు పక్షాల మధ్య ఒప్పందం లేదు" at={S(253)} until={S(254)} y={1000} size={44} color={C.ink} bg={C.yellow} />
+					<Say text="ఈ నంబర్ల మీద రెండు పక్షాల మధ్య ఒప్పందం లేదు" at={S(253)} until={S(254)} x={1250} y={1000} size={44} color={C.ink} bg={C.yellow} />
 				</Paper>
 				<Source text="ఒక పేపర్ లెక్క: Telangana Today" from={S(250)} to={S(254)} />
 			</Shot>
@@ -159,6 +167,7 @@ export const ChF: React.FC = () => {
 					<Say text="బాధ్యులుగా చెప్పింది: అప్పటి ముఖ్యమంత్రి కేసీఆర్, అప్పటి ఇరిగేషన్ మినిస్టర్ హరీష్ రావు" at={S(259)} until={S(261)} y={560} size={40} w={1500} />
 					<Say text="వాళ్ళు హైకోర్ట్ లో ఛాలెంజ్ చేశారు" at={S(260)} until={S(261)} y={720} size={48} />
 
+					<Evidence pages={[{src: 'docs/hc-109.png', aspect: 0.709}]} from={S(266)} to={S(267) - 6} y={680} h={720} dim={0.25} />
 					{f >= S(266) ? (
 						<>
 							<Sheet at={S(267) - 4} x={560} y={600} w={700} h={420} rot={-2} tint="#E7F0FA">

@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {DocPage, Honesty, Line, Paper, Photo, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, inr, lerp, ramp} from './kit';
+import {DocPage, Evidence, Honesty, Line, Paper, Photo, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, clamp, inr, lerp, ramp} from './kit';
 import {Stairs} from './chB';
 import {Quote} from './chD';
 import {S, W, an, hero} from './t';
@@ -76,12 +76,12 @@ export const ChG: React.FC = () => {
 			{/* 280-288: to the farmer's acre */}
 			<Shot from={S(280)} to={S(289)}>
 				<AbsoluteFill>
-					<Photo src="photos/paddy.jpg" from={S(280)} to={S(289)} credit="Wikimedia Commons · CC BY-SA 3.0" zoom={[1.05, 1.22]} pan={[30, -20, -40, 10]} />
+					<Photo src="photos/paddy.jpg" from={S(280)} to={S(289)} credit="Dhananjaya.karre / Wikimedia Commons · CC BY-SA 3.0" zoom={[1.05, 1.22]} pan={[30, -20, -40, 10]} />
 					<AbsoluteFill style={{background: 'linear-gradient(90deg, transparent 35%, rgba(23,17,10,0.72) 62%)'}} />
 					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
 						<g transform={`translate(120 ${520 - 0.02 * (f - S(280))}) scale(${0.92 + 0.0002 * (f - S(280))})`}>
 							<path d="M0 300 L260 0 L900 0 L760 300 Z" fill="none" stroke={C.yellow} strokeWidth={9} strokeDasharray={2600} strokeDashoffset={2600 * (1 - ramp(f, W(281, 'ఎకరానికి') - 30, 30))} />
-							<path d="M-40 330 L60 330" stroke={C.blue} strokeWidth={16} strokeLinecap="round" strokeDasharray="20 12" strokeDashoffset={-f * 1.5} />
+							<path d="M-260 330 L60 330" stroke={C.blue} strokeWidth={16} strokeLinecap="round" strokeDasharray="20 12" strokeDashoffset={-f * 1.5} />
 						</g>
 					</svg>
 					<Say text="ఒక ఎకరం" at={W(281, 'ఎకరానికి') - 20} until={S(289)} x={520} y={900} size={46} color={C.ink} bg={C.yellow} />
@@ -114,7 +114,7 @@ export const ChG: React.FC = () => {
 				<Say text="కన్నేపల్లి పంప్ హౌస్: అక్టోబర్ 2023 నుంచి ఖాళీ" at={S(293)} y={930} size={50} color={C.white} bg={C.orange} />
 			</Shot>
 			<Shot from={S(313)} to={S(314)} x={8} hold={0} out={8}>
-				<Photo src="photos/polavaram.jpg" from={S(313)} to={S(314) + 8} zoom={[1.08, 1.2]} pan={[30, 0, -30, 0]} credit="Wikimedia Commons" label="పోలవరం ప్రాజెక్ట్ (ఆంధ్రప్రదేశ్)" />
+				<Photo src="photos/polavaram.jpg" from={S(313)} to={S(314) + 8} zoom={[1.08, 1.2]} pan={[30, 0, -30, 0]} credit="Chaduvari / Wikimedia Commons · CC BY-SA 4.0" label="పోలవరం ప్రాజెక్ట్ (ఆంధ్రప్రదేశ్)" />
 				<Say text="పోలవరం వల్ల అందరికీ తెలిసిన మాట: డయాఫ్రమ్ వాల్" at={S(313)} y={940} size={48} />
 			</Shot>
 			<Shot from={S(294)} to={S(304)}>
@@ -207,6 +207,9 @@ export const ChG: React.FC = () => {
 			{/* 322-334: cost, who pays, the dates */}
 			<Shot from={S(322)} to={S(330)}>
 				<Paper>
+					<AbsoluteFill style={{opacity: 1 - ramp(f, S(325) - 6, 8)}}>
+						<Stairs from={S(322)} lit={[S(322) + 6, S(322) + 12, S(322) + 18, 1e9]} x={1000} y={1060} k={0.62} />
+					</AbsoluteFill>
 					<Say text="ఖర్చు? (మూడు బ్యారేజీలకి కలిపి)" at={S(322)} until={S(325)} y={170} size={54} />
 					<div style={{position: 'absolute', left: 960, top: 420, transform: 'translate(-50%,-50%)', fontFamily: F.num, fontWeight: 800, fontSize: 170, color: C.ink, opacity: ramp(f, W(323, 'ట్వెంటీ', 1) - 20, 8) * (1 - ramp(f, S(325) - 6, 8)), fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap'}}>
 						₹{inr(cost)} <span style={{fontFamily: F.te, fontSize: 80}}>కోట్లు</span>
@@ -255,6 +258,9 @@ export const ChG: React.FC = () => {
 			{/* 335-339: three things to watch */}
 			<Shot from={S(335)} to={S(340)}>
 				<Paper>
+					<Evidence pages={[{src: 'sat/s2_2025-02-21.jpg', aspect: 1}]} from={S(335)} to={S(336) - 4} y={640} h={640} tilt={0} />
+					<Say text="మేడిగడ్డ · ఫిబ్రవరి 2025" at={S(335) + 10} until={S(336) - 4} x={1420} y={420} size={44} />
+					<Source text="శాటిలైట్: Copernicus Sentinel-2" from={S(335) + 10} to={S(336) - 4} />
 					<Say text="ఇకమీదట మేడిగడ్డ వార్త వచ్చినప్పుడు: మూడు విషయాలు" at={S(335)} y={190} size={52} color={C.ink} bg={C.yellow} />
 					<Box x={170} text="డిసెంబర్ లో పనులు నిజంగా మొదలయ్యాయా?" at={S(336)} />
 					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} />
@@ -277,6 +283,7 @@ export const ChG: React.FC = () => {
 			{/* 350-358: the close */}
 			<Shot from={S(350)} to={1e9}>
 				<Paper>
+					<Evidence pages={[{src: 'docs/ndsa-2.png', aspect: 0.684}, {src: 'docs/cag-1.png'}, {src: 'docs/hc-109.png', aspect: 0.709}]} from={S(350)} to={S(351)} y={780} h={560} spread={380} />
 					<Say text="సబ్స్క్రైబ్ చేసుకోండి" at={W(350, 'ఛానల్')} until={S(351)} y={480} size={84} color={C.white} bg={C.red} />
 					<Say text="రిపోర్ట్ పేజీలతో సహా · గొడవ లేకుండా" at={S(350)} until={S(351)} y={320} size={52} />
 					{f >= S(351) && f < S(354) ? (

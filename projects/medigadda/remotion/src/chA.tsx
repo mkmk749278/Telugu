@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
-import {DocPage, Flow, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, ramp} from './kit';
+import {DocPage, Evidence, Flow, Honesty, Line, Paper, Plate, Ring, Roll, Say, Sheet, Shot, Source, Tag, ramp} from './kit';
 import {E, S, W, an, hero} from './t';
 import {C, F} from './theme';
 
@@ -107,6 +107,7 @@ export const ChA: React.FC = () => {
 				<Say text="కింద · పునాదిలో" at={W(20, 'కింద')} until={S(23)} y={930} size={64} color={C.yellow} />
 				<Say text="వాళ్ళు ఏం తేల్చారు?" at={S(21)} until={S(23)} x={480} y={260} size={52} />
 				<Say text="అవతలి వైపు జవాబు?" at={W(22, 'అవతలి')} until={S(23)} x={1440} y={260} size={52} />
+				<Evidence pages={[{src: 'docs/ndsa-2.png', aspect: 0.684}, {src: 'docs/cag-1.png'}, {src: 'docs/hc-109.png', aspect: 0.709}]} from={W(23, 'రిపోర్ట్') - 4} to={W(23, 'ఇసుకలోకి') - 6} y={640} h={560} spread={360} />
 				<Say text="రిపోర్ట్ లు చేతిలో పట్టుకుని" at={W(23, 'రిపోర్ట్')} until={S(24)} y={170} size={52} />
 				<Honesty text="ILLUSTRATION" from={S(16)} to={S(24)} />
 			</Shot>
