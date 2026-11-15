@@ -12,7 +12,7 @@
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
 - **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
   enough; a push-in to the cut added; **r4** rendered from this branch:
-  `Telugu/Medigadda/renders/medigadda_review_720p_r4.mp4` (r2 and r3 there are superseded). Next: measure r4, then the independent viewer
+  `Telugu/Medigadda/renders/medigadda_review_720p_r4.mp4` (r2 and r3 there are superseded). Measured clean: −14.3 LUFS, peak −1.4 dBFS, no black, no freeze. Next: then the independent viewer
   review of the cut (PLAYBOOK §11.1) and the owner.
 
 
