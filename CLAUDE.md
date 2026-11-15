@@ -15,7 +15,9 @@ go in `docs/research/` and are evidence, not instructions.
 picture rules, tools; the old Telugu rules are in its `docs/archive/PLAYBOOK_2026-11-05.md` §4a, §4b),
 `mkmk749278/Margin-of-Error` (the forensic standard: attribution, fairness, exhibits) and
 `mkmk749278/Built-on-Bharat` (a Remotion reference). Owner, 2026-11-10: "Work on Telugu, don't edit anything in other
-repos." Our films match their quality.
+repos." Our films match their quality. The one exception so far, at the owner's request (2026-11-15): the
+real-footage rule and the Creative Commons YouTube search were added to Margin-of-Error's docs (and Creator's, when a
+session is allowed to attach it). Any other edit there needs the owner's word again.
 
 ## Current work (read first when the owner says "continue")
 - **New direction, 2026-11-13:** regional infrastructure autopsies; **two films a week** (owner, 2026-11-13).
