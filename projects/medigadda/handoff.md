@@ -17,7 +17,9 @@ the voice explains a mechanism (PLAYBOOK §8). Where it stands:
   June 2019, the pile rig and the bores, gates down and water held, the gate jet, today's release, the Polavaram
   D-wall, construction, "we see gates, water", the Godavari, the SLBC teaser), each with its captions, an honesty
   label and a credit; chG's farmer's acre is a real Telugu farmer and his paddy. The 3D stays for the mechanism.
-  Every clip is a row in `media_manifest.csv`. **r8** renders this on 20 runners.
+  Every clip is a row in `media_manifest.csv`. **r8** (`renders/medigadda_review_720p_r8.mp4`, 20 runners, supersedes r1–r7) measured clean: 1114.1 s, −14.3
+  LUFS, peak −1.3 dBFS, no black, no freeze; the footage plays in the render (frames 0.5 s apart differ). Next: the
+  owner watches r8.
 - Still 3D or paper that could take real footage next: s16–s23 (the complaint, the Delhi engineers), s26–s28 (the
   barrage's size), s248–s252 (pumping 162 TMC: the MEIL pump clips are there), s289–s293 (today: satellite and the
   pump house photo).
