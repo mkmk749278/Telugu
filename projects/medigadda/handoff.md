@@ -17,8 +17,9 @@
   held longer, the coins on a dimmed page, music drops at s207 and s269, ticks on the checkmarks) and why the rest
   was not (no licensed footage of the barrage exists). r6 rendered; Gemini listened to it
   (`review/gemini_listen_r6_check.md`): our timing confirmed against the waveform; its "abrupt music" was the ducking
-  pumping, now gentler (ratio 4, 150 ms / 1.4 s, equal-power 3 s crossfades, silent intros skipped). **r7**:
-  `renders/medigadda_review_720p_r7.mp4`.
+  pumping, now gentler (ratio 4, 150 ms / 1.4 s, equal-power 3 s crossfades, silent intros skipped). **r7**
+  (`renders/medigadda_review_720p_r7.mp4`, supersedes r1–r6) measured clean: 1114.1 s, −14.3 LUFS, peak −1.4 dBFS, no
+  black, no freeze, the new mix in it. r7 is the cut for the viewer review and the owner's listen.
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
 - **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
   enough; a push-in to the cut added; **r4** rendered from this branch:

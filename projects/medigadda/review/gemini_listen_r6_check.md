@@ -22,4 +22,4 @@ Gemini transcribed r6 and reported on the mix (`gemini_listen_r6.csv.md`). Its t
   and 13:37, the three ticks at 17:25.
 - Its two "edit seams" (5:00 "రిజిడ్ స్ట్రక్చర్", 15:00 "ప్రశ్న ఒక్కటే") are inside takes, not joins: the owner's
   ear decides.
-- Final mix −14.3 LUFS, peak −1.4 dBFS. **r7** carries it.
+- Final mix −14.3 LUFS, peak −1.4 dBFS. **r7** carries it, measured clean (no black, no freeze; its audio matches the new mix, residual −62 dB).
