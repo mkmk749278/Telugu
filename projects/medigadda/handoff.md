@@ -1,5 +1,18 @@
 # Medigadda film: handoff (15 Nov 2026)
 
+## Owner's direction, 15 Nov (after watching r7): real footage first
+"Visuals are artificial, no satisfaction; the narration is absolutely good." The picture is rebuilt: real moving
+footage for every beat about the place, the event, the structure working, people, money and today; the 3D only while
+the voice explains a mechanism (PLAYBOOK §8). Where it stands:
+- Termux search done: 322 YouTube videos checked, 179 Creative Commons and not news; list and thumbnails in Drive
+  `Creator/Creator/Telugu/Medigadda/footage/candidates/` (one level too deep: the phone's rclone remote is rooted at
+  `Creator/`; later uploads use `Telugu/...`). The find: MEIL's 43 CC videos (Lakshmi pump house beside the barrage,
+  Annaram, Sundilla, the Godavari from the air, pumps, Polavaram D-wall, TBMs), a local clip of the July 2022
+  Godavari flood, the Pranahita, Kaleshwaram town, KRS dam overflowing, piling rigs, farmers.
+- Next: the owner runs `tools/termux_footage_get.sh` (40 shortlisted videos to Drive `footage/raw/`); then contact
+  sheets, licence check in each `.info.json`, segments per beat (the shot list B01–B24 is in the Termux search
+  queries), rows in `media_manifest.csv`, and the rebuild of the picture.
+
 ## Done in the session of 15 Nov
 - **Our review of r1** (`review/cut_r1_own_review.md`): all 223 frames at 5 s, then every suspect window at 1 s, and
   a measurement of mostly-paper frames. Fixed in the code: labels cut by the frame edge (`Tag` now keeps itself on

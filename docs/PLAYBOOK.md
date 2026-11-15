@@ -187,6 +187,43 @@ a crowded topic needs a new angle (Hyderabad Metro).
 
 ## 8. Picture
 
+- **Real footage first; 3D only for the science** (owner, 2026-11-15, after watching r7: "visuals are artificial,
+  no satisfaction; the narration is good"). Every beat about a place, an event, a structure working, people, money or
+  today is real moving footage: the river, gates lifting and water jumping out, the flood, pump houses running, rigs,
+  farmers, repair crews. The 3D cutaway and diagrams appear only while the voice explains a mechanism (what is under
+  the raft, seepage, piping, the cutoff, the pile wall, the reconstruction), and the film returns to real footage as
+  soon as the explanation ends. Footage need not be of the exact site, but it must match what the voice says (a
+  barrage for a barrage, a flood for a flood). *Why:* the 3D-led r1–r7 felt like a diagram; real water and concrete
+  carry the story, the 3D carries the proof.
+- **Where real clips come from, in this order:**
+  1. **The project's own Creative Commons footage on YouTube.** Contractors and departments often mark their videos
+     "Creative Commons Attribution licence (reuse allowed)" (for Kaleshwaram: Megha Engineering, MEIL, 43 videos of
+     the pump houses, the river and the works). CC BY allows commercial reuse with credit.
+  2. Other Creative Commons YouTube footage from channels that filmed it themselves (drone and travel videographers,
+     local channels, farmers' and engineering channels).
+  3. Wikimedia Commons (via Cowork, or the Wikipedia API for licences), Pixabay (`scripts/pixabay_fetch.py`, Pixabay
+     Content License, key in the environment), government releases under GODL-India.
+- **How the YouTube clips are collected** (the cloud session may not run yt-dlp against YouTube; the owner's phone
+  does, in Termux, and its rclone remote is rooted at Drive `Creator/`):
+  1. `projects/<slug>/tools/termux_footage_search.sh` (one block for Termux): per shot of the film, searches YouTube
+     with the Creative Commons filter (`sp=EgIwAQ%3D%3D`), reads each result's licence, channel and length with
+     yt-dlp, keeps "Creative Commons" from channels that are not news or parties, saves thumbnails, uploads
+     `footage/candidates/` to Drive. About 15–20 minutes for 30 queries.
+  2. The session reviews the list and thumbnails, drops news, party and re-upload channels, and shortlists.
+  3. `projects/<slug>/tools/termux_footage_get.sh`: downloads the shortlist, picture only, up to 1080p, each with its
+     `.info.json`, and uploads `footage/raw/` to Drive.
+  4. The session makes contact sheets of every video, **checks the licence line in each `.info.json` again**, picks
+     the seconds for each beat, and writes each clip in `media_manifest.csv` (video URL, channel, licence, segment,
+     beat).
+  *Why:* chatbots cannot open YouTube's description box, so Gemini found none it could verify (15 Nov); yt-dlp reads
+  the licence YouTube itself reports.
+- **Never from YouTube, even when marked Creative Commons:** TV news channels (TV9, NTV, V6, ABN, Sakshi, TV5, ETV,
+  Mango, NDTV and the like), party and politicians' channels, re-uploads and "no copyright" compilation channels,
+  movie or song clips, AI-generated video, faces of politicians. *Why:* a news channel's CC mark does not cover the
+  agency footage inside it, and party footage breaks "physics, not parties".
+- **Honesty and credit on every real clip:** if it is not the site the voice names, the label says so
+  (ILLUSTRATIVE FOOTAGE · <where it is>); the credit names the channel and licence ("MEIL / YouTube · CC BY").
+  Channel logos burned into the picture are cropped out where the frame allows.
 - **Built for the TV:** 1920×1080 authored, 4K master; labels of 2–4 words; ≥ 44 px for what the voice points to and
   ≥ 30 px for other facts at 1080; 7:1 contrast; Telugu on-screen text in a tested Telugu font; ₹ with Indian
   grouping, dates day-first.
@@ -207,7 +244,7 @@ a crowded topic needs a new angle (Hyderabad Metro).
   re-run both after any picture change, then the mix. Measured 13–18 dB under the voice; the owner's ears are the check.
 - **The place:** satellite and terrain plates, India's official boundary on every map, the town and district named.
 - **Real people at work in every chapter:** licensed photos and footage of the site, engineers, workers, farmers
-  (Commons, GODL-India, PIB, agency releases with a licence, the owner's Cowork fetches). Every asset in
+  (Creative Commons YouTube footage as above, Commons, GODL-India, PIB, the owner's Cowork fetches). Every asset in
   `media_manifest.csv` with its licence; commercial-use licences only.
 - **No TV-news or film clips.** *Why:* Section 52 fair dealing is narrow, and such clips are the main takedown risk
   on Telugu YouTube. Our own 3D and graphics plus short quoted excerpts of public reports keep the risk low; they do
