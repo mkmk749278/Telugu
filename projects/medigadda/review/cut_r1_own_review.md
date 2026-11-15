@@ -52,3 +52,6 @@ the cut now moves it (0.0076 mean change per frame on local stills, the detector
 - The court passage: done in r5 (the gate on s254–256, the building on s260); the commission lines s257–259 stay on paper.
 - Nobody has listened to the mix: the owner's ears.
 - The Sentinel dates in the Copernicus Browser; the independent viewer review of the cut; the owner.
+
+**r5 (15 Nov), measured:** the same clean numbers as r4, with the court's gate and building in place. This is the
+cut for the independent viewer review.

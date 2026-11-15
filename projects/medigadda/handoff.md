@@ -11,7 +11,8 @@
 - **Cowork request replaced:** only two named High Court photos (CC BY-SA 4.0) are left for the laptop.
 - **The court as a place** (Cowork's two High Court photos, CC BY-SA 4.0, in Drive `photos/court/`): the gate with
   its sign on s254–256, the building on s260 (framed above the parked cars: no number plates); `Photo pos` sets the
-  crop. `build_media.sh` pulls them. **r5** renders this: `renders/medigadda_review_720p_r5.mp4` supersedes r4.
+  crop. `build_media.sh` pulls them. **r5** (`renders/medigadda_review_720p_r5.mp4`, supersedes r4) measured clean: 1114.1 s, −14.3 LUFS, peak
+  −1.4 dBFS, no black, no freeze; both court shots checked in the render. r5 is the cut for the viewer review.
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
 - **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
   enough; a push-in to the cut added; **r4** rendered from this branch:
