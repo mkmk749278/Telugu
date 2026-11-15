@@ -40,7 +40,8 @@ PLAN = [
 ]
 SEG = [(tr, S(i) if i else 0.0, (S(PLAN[k + 1][1]) if k + 1 < len(PLAN) else END), off, g) for k, (tr, i, off, g) in enumerate(PLAN)]
 THUD = [(W(7, 'శబ్దం'), 0), (W(191, 'దిగింది') - 0.45, -7)]   # the sound of the evening; the same sound, softer
-HUSH = [(THUD[0][0] - 1.2, THUD[0][0] + 1.5), (W(121, 'కిటికీ') - 0.8, W(121, 'కిటికీ') + 1.6), (THUD[1][0] - 1.5, THUD[1][0] + 2.0)]
+HUSH = [(THUD[0][0] - 1.2, THUD[0][0] + 1.5), (W(121, 'కిటికీ') - 0.8, W(121, 'కిటికీ') + 1.6), (THUD[1][0] - 1.5, THUD[1][0] + 2.0),
+        (S(207) - 0.3, S(208)), (S(269) - 0.3, S(270) + 0.3)]   # the turn to the other side; the turn to the money
 
 inputs, chains, labels = [], [], []
 for i, (tr, a, b, off, g) in enumerate(SEG):

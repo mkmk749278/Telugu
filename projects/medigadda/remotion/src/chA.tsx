@@ -73,13 +73,14 @@ export const ChA: React.FC = () => {
 				<Honesty text="ILLUSTRATION" from={S(3)} to={S(10)} />
 			</Shot>
 			{/* the real deck, right after our drawing has sunk: the committee's photo (the plan's "P" on దిగిపోయి) */}
-			<Shot from={sunk + 22} to={S(10) + 4} x={6} out={8} hold={0}>
-				<DocPage src="docs/ndsa-8.png" from={sunk + 22} to={S(10) + 12} box={[0, 0.58, 0.98, 0.42]} aspect={0.981} zoom={[1.9, 2.05]} />
+			<Shot from={sunk + 22} to={S(11) + 4} x={6} out={8} hold={0}>
+				<DocPage src="docs/ndsa-8.png" from={sunk + 22} to={S(11) + 12} box={[0, 0.58, 0.98, 0.42]} aspect={0.981} zoom={[1.9, 2.05]} />
 				<Say text="అసలు రోడ్ · ఆ తర్వాతి రోజుల్లో" at={sunk + 24} x={1320} y={150} size={50} />
-				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={sunk + 24} to={S(10) + 4} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={sunk + 24} to={S(11) + 4} />
 			</Shot>
 			{/* 10-15: the paradox: the 2022 flood it survived */}
-			<Shot from={S(10)} to={S(16)}>
+			{/* starts on s11 so the real deck photo above holds through s10 (outside review of r5: the photo was a 1 s flash) */}
+			<Shot from={S(11) - 6} to={S(16)}>
 				<Plate layers={[{src: hero('h1_front_open'), at: S(10)}, {src: hero('h1_front_water'), at: S(14), fade: 20}]} cam={[{f: S(10), s: 1.15, x: 0.45, y: 0.5}, {f: S(13), s: 1.4, x: 0.5, y: 0.47}, {f: S(16), s: 1.2, x: 0.55, y: 0.5}]}>
 					<Flow pts={[an(FR, 'pond', -0.1, -0.05), an(FR, 'pond_gate', -0.06, -0.03), an(FR, 'tail_gate', 0.05, -0.05), an(FR, 'tail', 0.05, -0.04)]} at={S(11)} until={S(14)} w={16} speed={7} />
 				</Plate>

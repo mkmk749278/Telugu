@@ -65,7 +65,7 @@ export const ChG: React.FC = () => {
 			</Shot>
 			<Shot from={S(277)} to={S(280)}>
 				<DocPage src="docs/cag-1.png" from={S(277)} to={S(280)} box={[0.231, 0.354, 0.638, 0.036]} hl={W(279, 'కాగ్')} zoom={[1.5, 2.0]} />
-				<AbsoluteFill style={{background: 'rgba(23,17,10,0.35)'}} />
+				<AbsoluteFill style={{background: 'rgba(23,17,10,0.66)'}} />
 				<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
 					<Coin x={520} y={640} r={120} label="₹1" />
 					<path d="M700 640 L860 640 m-30 -24 l34 24 l-34 24" stroke={C.white} strokeWidth={10} fill="none" strokeLinecap="round" />
@@ -272,8 +272,8 @@ export const ChG: React.FC = () => {
 					{/* s339: a slow push into the three boxes to the cut (r2 and r3 held still 2.4 s after the ticks) */}
 					<AbsoluteFill style={{transform: `scale(${1 + 0.16 * interpolate(f, [S(339), S(340)], [0, 1], clamp)})`, transformOrigin: '50% 48%'}}>
 					<Box x={170} text="డిసెంబర్ లో పనులు నిజంగా మొదలయ్యాయా?" at={S(336)} tick={W(339, 'మూడూ') + 0} />
-					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} tick={W(339, 'మూడూ') + 10} />
-					<Box x={1250} text="జూన్ 2027 కి కన్నేపల్లి పంపులు తిరిగాయా?" at={S(338)} tick={W(339, 'మూడూ') + 20} />
+					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} tick={W(339, 'మూడూ') + 16} />
+					<Box x={1250} text="జూన్ 2027 కి కన్నేపల్లి పంపులు తిరిగాయా?" at={S(338)} tick={W(339, 'మూడూ') + 32} />
 					<Say text="ఈ మూడూ జరిగితే: మొదటి మెట్టు మళ్ళీ నిలబడినట్టు" at={S(339)} y={860} size={54} />
 					</AbsoluteFill>
 				</Paper>

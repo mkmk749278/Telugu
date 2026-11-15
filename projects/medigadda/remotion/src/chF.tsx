@@ -100,10 +100,10 @@ export const ChF: React.FC = () => {
 				</Paper>
 			</Shot>
 			{/* "the foundation is still under water": the committee's own photo of the structure at the water line */}
-			<Shot from={S(232) - 4} to={S(233) + 10} x={6} out={8} hold={0}>
-				<DocPage src="docs/ndsa-9.png" from={S(232) - 4} to={S(233) + 20} box={[0, 0, 1, 0.42]} aspect={0.691} zoom={[1.9, 2.15]} />
+			<Shot from={S(232) - 4} to={S(233) + 55} x={6} out={8} hold={0}>
+				<DocPage src="docs/ndsa-9.png" from={S(232) - 4} to={S(233) + 65} box={[0, 0, 1, 0.42]} aspect={0.691} zoom={[1.9, 2.15]} />
 				<Say text="ఫౌండేషన్ ఇంకా నీళ్ళ కిందే" at={S(232)} y={950} size={56} color={C.ink} bg={C.yellow} />
-				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={S(232)} to={S(233) + 10} />
+				<Source text="NDSA కమిటీ రిపోర్ట్ లోని ఫోటో · 2023" from={S(232)} to={S(233) + 55} />
 			</Shot>
 			{/* voice 3: L&T */}
 			<Shot from={S(236)} to={S(246)}>

@@ -31,12 +31,12 @@ def ev(expr):
     except Exception: return None
 
 
-TAG = {'DocPage': ('from', 'paper'), 'Evidence': ('from', 'paper'), 'Sheet': ('at', 'paper'), 'Quote': ('at', 'paper'), 'Ring': ('at', 'tap'), 'Point': ('at', 'tap')}
+TAG = {'DocPage': ('from', 'paper'), 'Evidence': ('from', 'paper'), 'Sheet': ('at', 'paper'), 'Quote': ('at', 'paper'), 'Ring': ('at', 'tap'), 'Box': ('tick', 'tap'), 'Point': ('at', 'tap')}
 PLATE_TAP = re.compile(r"hero\('(h2_piles_build\d+|h2_\w+_gap|h3_\w+_(?:85|6))'\),\s*at:\s*([SW]\([^)]*\)(?:\s*[+-]\s*\d+)?)")
 cues, skipped = [], []
 for src in sorted((P / 'remotion/src').glob('ch*.tsx')):
     code = src.read_text('utf-8').replace('sunk + ', "W(9, 'దిగిపోయి') + ")   # chA's named frame
-    for m in re.finditer(r'<(DocPage|Evidence|Sheet|Quote|Ring|Point)\b([^>]*)', code):
+    for m in re.finditer(r'<(DocPage|Evidence|Sheet|Quote|Ring|Point|Box)\b([^>]*)', code):
         attr, kind = TAG[m.group(1)]
         a = re.search(attr + r'=\{((?:[^{}]|\{[^{}]*\})*)\}', m.group(2))
         v = ev(a.group(1)) if a else None
