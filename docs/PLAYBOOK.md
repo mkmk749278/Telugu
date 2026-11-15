@@ -217,6 +217,11 @@ a crowded topic needs a new angle (Hyderabad Metro).
      beat).
   *Why:* chatbots cannot open YouTube's description box, so Gemini found none it could verify (15 Nov); yt-dlp reads
   the licence YouTube itself reports.
+- **How the footage goes into the film** (Medigadda, 15 Nov): `tools/cut_footage.py` (licence check, crops for
+  burned-in logos and banners, 1080p, no audio) and a `Reel` layer (`src/footage.tsx`) over the chapters, one per beat,
+  with its own captions, label and credit; `tools/sfx_cues.py` drops the hidden layer's sounds in those windows. Check
+  every cut's first, middle and last frame (logos and tags hide at the corners) and that each clip outlasts its window
+  at its playback rate: a clip that runs out freezes on its last frame.
 - **Never from YouTube, even when marked Creative Commons:** TV news channels (TV9, NTV, V6, ABN, Sakshi, TV5, ETV,
   Mango, NDTV and the like), party and politicians' channels, re-uploads and "no copyright" compilation channels,
   movie or song clips, AI-generated video, faces of politicians. *Why:* a news channel's CC mark does not cover the

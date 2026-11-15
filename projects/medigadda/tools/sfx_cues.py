@@ -44,6 +44,14 @@ for src in sorted((P / 'remotion/src').glob('ch*.tsx')):
     for m in PLATE_TAP.finditer(code):
         v = ev(m.group(2))
         (cues.append((v, 'pins' if m.group(1).startswith('h3') else 'tap')) if v is not None else skipped.append(f'{src.name}: {m.group(1)} at {m.group(2)}'))
+# real footage plays over these windows (src/footage.tsx): the hidden layer's events make no sound there
+HIDDEN = []
+for m in re.finditer(r'<Reel from=\{([^}]*)\} to=\{([^}]*)\}', (P / 'remotion/src/footage.tsx').read_text('utf-8')):
+    a, b = ev(m.group(1)), ev(m.group(2))
+    if a is not None and b is not None: HIDDEN.append((a, b))
+dropped = [c for c in cues if any(a <= c[0] < b for a, b in HIDDEN)]
+cues = [c for c in cues if not any(a <= c[0] < b for a, b in HIDDEN)]
+print(len(HIDDEN), 'footage windows;', len(dropped), 'cues under footage dropped')
 # one sound per event: drop repeats of the same kind within half a second
 cues.sort()
 out = []

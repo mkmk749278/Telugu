@@ -9,9 +9,18 @@ the voice explains a mechanism (PLAYBOOK §8). Where it stands:
   `Creator/`; later uploads use `Telugu/...`). The find: MEIL's 43 CC videos (Lakshmi pump house beside the barrage,
   Annaram, Sundilla, the Godavari from the air, pumps, Polavaram D-wall, TBMs), a local clip of the July 2022
   Godavari flood, the Pranahita, Kaleshwaram town, KRS dam overflowing, piling rigs, farmers.
-- Next: the owner runs `tools/termux_footage_get.sh` (40 shortlisted videos to Drive `footage/raw/`); then contact
-  sheets, licence check in each `.info.json`, segments per beat (the shot list B01–B24 is in the Termux search
-  queries), rows in `media_manifest.csv`, and the rebuild of the picture.
+- Downloaded: 37 of 40 (3 refused by YouTube with 403), all 37 licences "Creative Commons Attribution" in their
+  `.info.json`; Drive `Telugu/Medigadda/footage/raw/`, local `assets/footage/raw/` (gitignored).
+- **Built (r8):** `tools/cut_footage.py` cuts 32 shots into `remotion/public/footage/` (crops leave out MEIL logos,
+  a KINEMASTER mark, a date tag and a vlogger's name); `remotion/src/footage.tsx` plays them as `Reel`s over the
+  chapters on 15 beats (the evening of 21 Oct, the 2022 flood, the Pranahita and Kaleshwaram, the first pumping of
+  June 2019, the pile rig and the bores, gates down and water held, the gate jet, today's release, the Polavaram
+  D-wall, construction, "we see gates, water", the Godavari, the SLBC teaser), each with its captions, an honesty
+  label and a credit; chG's farmer's acre is a real Telugu farmer and his paddy. The 3D stays for the mechanism.
+  Every clip is a row in `media_manifest.csv`. **r8** renders this on 20 runners.
+- Still 3D or paper that could take real footage next: s16–s23 (the complaint, the Delhi engineers), s26–s28 (the
+  barrage's size), s248–s252 (pumping 162 TMC: the MEIL pump clips are there), s289–s293 (today: satellite and the
+  pump house photo).
 
 ## Done in the session of 15 Nov
 - **Our review of r1** (`review/cut_r1_own_review.md`): all 223 frames at 5 s, then every suspect window at 1 s, and

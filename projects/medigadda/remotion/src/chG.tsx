@@ -83,15 +83,27 @@ export const ChG: React.FC = () => {
 			{/* 280-288: to the farmer's acre */}
 			<Shot from={S(280)} to={S(289)}>
 				<AbsoluteFill>
-					<Photo src="photos/paddy.jpg" from={S(280)} to={S(289)} credit="Dhananjaya.karre / Wikimedia Commons · CC BY-SA 3.0" zoom={[1.05, 1.22]} pan={[30, -20, -40, 10]} />
+					{/* a real farmer and his paddy (owner, 2026-11-15: real footage first), then the farmland from the air */}
+					{[
+						{clip: 'farmer_pipe', a: S(280), b: S(281) + 20, startAt: 0, rate: 1},
+						{clip: 'farmer_field', a: S(281) + 20, b: S(285), startAt: 0, rate: 1},
+						{clip: 'farmer_walk', a: S(285), b: S(287), startAt: 0, rate: 1},
+						{clip: 'farmer_walk', a: S(287), b: S(288), startAt: 120, rate: 0.8},
+						{clip: 'paddy_air', a: S(288), b: S(289), startAt: 0, rate: 0.62},
+					].map((c, i) => (
+						<Shot key={c.clip + i} from={c.a} to={c.b + 8} x={i ? 8 : 0} hold={0}>
+							<Photo src={`footage/${c.clip}.mp4`} video from={c.a} to={c.b + 8} startAt={c.startAt} rate={c.rate} zoom={[1.02, 1.08]} pan={[0, 0, -12, -6]} credit={c.clip === 'paddy_air' ? 'Megha Engineering (MEIL) / YouTube · CC BY' : 'Digital Green / YouTube · CC BY'} />
+						</Shot>
+					))}
+					<Honesty text={f < S(288) ? 'ILLUSTRATIVE FOOTAGE · ఆంధ్రప్రదేశ్ రైతు (Digital Green)' : 'ILLUSTRATIVE FOOTAGE · తెలంగాణ పొలాలు (MEIL)'} from={S(280)} to={S(289)} />
 					<AbsoluteFill style={{background: 'linear-gradient(90deg, transparent 35%, rgba(23,17,10,0.72) 62%)'}} />
-					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
+					<svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, opacity: 1 - ramp(f, S(282), 10)}}>
 						<g transform={`translate(120 ${520 - 0.02 * (f - S(280))}) scale(${0.92 + 0.0002 * (f - S(280))})`}>
 							<path d="M0 300 L260 0 L900 0 L760 300 Z" fill="none" stroke={C.yellow} strokeWidth={9} strokeDasharray={2600} strokeDashoffset={2600 * (1 - ramp(f, W(281, 'ఎకరానికి') - 30, 30))} />
 							<path d="M-260 330 L60 330" stroke={C.blue} strokeWidth={16} strokeLinecap="round" strokeDasharray="20 12" strokeDashoffset={-f * 1.5} />
 						</g>
 					</svg>
-					<Say text="ఒక ఎకరం" at={W(281, 'ఎకరానికి') - 20} until={S(289)} x={520} y={900} size={46} color={C.ink} bg={C.yellow} />
+					<Say text="ఒక ఎకరం" at={W(281, 'ఎకరానికి') - 20} until={S(282)} x={520} y={900} size={46} color={C.ink} bg={C.yellow} />
 					<Roll to={46364} start={W(281, 'ఫార్టీ') - 20} land={W(281, 'రూపాయలు')} until={S(289)} x={1380} y={330} size={120} prefix="₹" color={C.ink} bg={C.yellow} />
 					<Say text="ప్రతి ఏడాది · ప్రతి ఎకరానికి" at={W(281, 'ప్రతి')} until={S(289)} x={1380} y={210} size={46} />
 					<Say text="కరెంట్ + మెయింటెనెన్స్" at={W(281, 'కరెంట్')} until={S(289)} x={1380} y={450} size={42} />
