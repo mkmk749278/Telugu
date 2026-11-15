@@ -56,7 +56,7 @@ When done, list what you saved and what you could not find.
 gives the real pages for the document walks; part 2 is the real people and places for every chapter (PLAYBOOK §8);
 part 3 is the place plate under the map and the staircase.
 
-## Second request (replaced 15 Nov 2026): two photos of the High Court building
+## Second request (replaced 15 Nov 2026): two photos of the High Court building (done 15 Nov)
 
 The licence checks of the first version are done (15 Nov: the Commons pages read through the Wikipedia API, which
 answers the cloud; rows in `media_manifest.csv`). Commons and upload.wikimedia.org still answer the cloud with HTTP 429,

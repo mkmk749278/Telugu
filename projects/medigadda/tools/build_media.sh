@@ -37,6 +37,10 @@ ph "Rice saplings in telangana.jpeg" paddy
 ph "Sand boil discovered in Tallulah, Louisiana.jpg" sandboil
 ph "IODP Kernlager Bremen.jpg" cores
 ph "Polavaram Project -1.jpg" polavaram
+# the High Court building (Cowork, 15 Nov 2026: photos/court/)
+[ -n "$(ls -A "$P/assets/photos/court" 2>/dev/null)" ] || "$DL" Telugu/Medigadda/photos/court --pull "$P/assets/photos/court"
+ph "court/High Court of Telangana in Hyderabad06.jpg" hc_gate
+ph "court/Telangana High Court 10.jpg" hc_building
 clip() { [ -f "$PUB/photos/$1.mp4" ] || ffmpeg -v error -y -ss "$2" -to "$3" -i "$P/assets/photos/Lakshmi Pumphouse of KLIP video by MEIL.webm" \
   -an -r 30 -c:v libx264 -crf 18 -maxrate 12M -bufsize 24M -pix_fmt yuv420p "$PUB/photos/$1.mp4"; }
 clip v_pump 9.0 12.7; clip v_pipes 6.0 8.65; clip v_pipes2 17.45 21.65

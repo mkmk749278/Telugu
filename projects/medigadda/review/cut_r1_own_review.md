@@ -49,6 +49,6 @@ the cut now moves it (0.0076 mean change per frame on local stills, the detector
 ≥ 0.1 s, no freeze ≥ 1.5 s. This is the cut for the independent viewer review.
 
 ## Still open
-- The court passage (s254–261) is type on paper: two High Court photos (CC BY-SA 4.0) are named in the Cowork request.
+- The court passage: done in r5 (the gate on s254–256, the building on s260); the commission lines s257–259 stay on paper.
 - Nobody has listened to the mix: the owner's ears.
 - The Sentinel dates in the Copernicus Browser; the independent viewer review of the cut; the owner.

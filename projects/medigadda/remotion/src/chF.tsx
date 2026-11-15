@@ -165,7 +165,6 @@ export const ChF: React.FC = () => {
 					<Say text="వేసింది: ఇప్పటి కాంగ్రెస్ గవర్నమెంట్" at={S(257)} until={S(261)} y={320} size={42} />
 					<Say text="జులై 2025: రిపోర్ట్" at={S(258)} until={S(261)} y={420} size={48} />
 					<Say text="బాధ్యులుగా చెప్పింది: అప్పటి ముఖ్యమంత్రి కేసీఆర్, అప్పటి ఇరిగేషన్ మినిస్టర్ హరీష్ రావు" at={S(259)} until={S(261)} y={560} size={40} w={1500} />
-					<Say text="వాళ్ళు హైకోర్ట్ లో ఛాలెంజ్ చేశారు" at={S(260)} until={S(261)} y={720} size={48} />
 
 					<Evidence pages={[{src: 'docs/hc-109.png', aspect: 0.709}]} from={S(266)} to={S(267) - 6} y={680} h={720} dim={0.25} />
 					{f >= S(266) ? (
@@ -183,6 +182,16 @@ export const ChF: React.FC = () => {
 					) : null}
 				</Paper>
 				<Source text="Deccan Herald · newsonair.gov.in" from={S(257)} to={S(269)} />
+			</Shot>
+			{/* the court as a place: its gate on "the court", its building on "challenged in the High Court" (Cowork, 15 Nov) */}
+			<Shot from={S(254)} to={S(257)} x={10} hold={0} out={8}>
+				<Photo src="photos/hc_gate.jpg" from={S(254)} to={S(257) + 8} credit="Tarunsamanta / Wikimedia Commons · CC BY-SA 4.0" zoom={[1.02, 1.12]} pan={[0, 10, 0, 30]} />
+				<Say text="తెలంగాణ హైకోర్ట్ · హైదరాబాద్" at={S(254)} until={S(255)} y={930} size={52} />
+				<Say text="కోర్ట్ ఒక పక్షం కాదు · కానీ దాని మాట తెలియాలి" at={S(255)} until={S(257)} y={930} size={52} color={C.ink} bg={C.yellow} />
+			</Shot>
+			<Shot from={S(260)} to={S(261) + 6} x={10} hold={0} out={8}>
+				<Photo src="photos/hc_building.jpg" from={S(260)} to={S(261) + 14} credit="Chanduclicks / Wikimedia Commons · CC BY-SA 4.0" zoom={[1.08, 1.14]} pan={[20, 20, 0, 10]} pos="50% 15%" />
+				<Say text="వాళ్ళు హైకోర్ట్ లో ఛాలెంజ్ చేశారు" at={S(260)} until={S(261) + 6} y={930} size={54} />
 			</Shot>
 			<Shot from={S(261)} to={S(266)} x={10} hold={0} out={8}>
 				<DocPage src="docs/hc-109.png" from={S(261)} to={S(266)} box={f < S(263) - 6 ? [0.2, 0.465, 0.63, 0.135] : [0.2, 0.603, 0.63, 0.17]} hl={f < S(263) - 6 ? S(262) : S(263)} aspect={0.709} zoom={[0.95, 1.5]} />

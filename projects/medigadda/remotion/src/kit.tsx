@@ -286,10 +286,10 @@ export const Evidence: React.FC<{pages: {src: string; aspect?: number}[]; from: 
 };
 
 /** A real photo or clip, slowly moving, with its credit. */
-export const Photo: React.FC<{src: string; from: number; to: number; credit?: string; zoom?: [number, number]; pan?: [number, number, number, number]; video?: boolean; startAt?: number; label?: string; rate?: number}> = ({src, from, to, credit, zoom = [1.06, 1.16], pan = [0, 0, -30, -14], video = false, startAt = 0, label, rate = 1}) => {
+export const Photo: React.FC<{src: string; from: number; to: number; credit?: string; zoom?: [number, number]; pan?: [number, number, number, number]; video?: boolean; startAt?: number; label?: string; rate?: number; pos?: string}> = ({src, from, to, credit, zoom = [1.06, 1.16], pan = [0, 0, -30, -14], video = false, startAt = 0, label, rate = 1, pos = '50% 50%'}) => {
 	const f = useCurrentFrame();
 	const t = interpolate(f, [from, to], [0, 1], clamp);
-	const st: React.CSSProperties = {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${lerp(zoom[0], zoom[1], t)}) translate(${lerp(pan[0], pan[2], t)}px, ${lerp(pan[1], pan[3], t)}px)`};
+	const st: React.CSSProperties = {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: pos, transform: `scale(${lerp(zoom[0], zoom[1], t)}) translate(${lerp(pan[0], pan[2], t)}px, ${lerp(pan[1], pan[3], t)}px)`};
 	return (
 		<AbsoluteFill style={{background: C.night, overflow: 'hidden'}}>
 			{video ? (

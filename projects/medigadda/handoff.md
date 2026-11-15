@@ -9,6 +9,9 @@
 - **Licences closed** through the Wikipedia API (Commons itself still answers 429): all seven pending files are
   CC BY / CC BY-SA; the sand-boil credit said "Public domain" and is now CC BY 2.0; credits name each author.
 - **Cowork request replaced:** only two named High Court photos (CC BY-SA 4.0) are left for the laptop.
+- **The court as a place** (Cowork's two High Court photos, CC BY-SA 4.0, in Drive `photos/court/`): the gate with
+  its sign on s254–256, the building on s260 (framed above the parked cars: no number plates); `Photo pos` sets the
+  crop. `build_media.sh` pulls them. **r5** renders this: `renders/medigadda_review_720p_r5.mp4` supersedes r4.
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
 - **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
   enough; a push-in to the cut added; **r4** rendered from this branch:
@@ -77,7 +80,7 @@
 2. **Our own review of r1** (`review-cut` checks: flash, freeze, loudness, the 15% text rule, no static plate over
    1.5 s) and a listen to the SFX and the mix. The whole-film contact sheet of 14 Nov found and fixed: the camera
    leaving its plate, the clipped 2016 label, highlights under captions, the thin s304 timeline, the empty s354.
-3. **Still type on paper:** the court passage (s254–261) and the four-voices cards (s216–228). A High Court building
+3. **Still type on paper:** the commission lines (s257–259) and the four-voices cards (s216–228); the court itself now has its building. A High Court building
    photo is asked for in `cowork_request.md` (second request); with it, s254–260 can sit on the real building.
 4. **Licences:** pump_pipes, paddy, sandboil, polavaram and the MEIL clip still wait for their Commons page (Cowork
    second request); the Sentinel dates in the Copernicus Browser. Drive `hero/hero_plates_22.tar` is superseded by
