@@ -273,7 +273,8 @@ The order is Creator's ("Promise first", "decide early, build once"); owner gate
    Blender heroes.
 6. **Audio** by the owner from the blocks; checked; aligned.
 7. **Word map and picture** built to the locked audio.
-8. **Render on GitHub Actions** (`remotion-render.yml`), at most 6 runners at once.
+8. **Render on GitHub Actions** (`remotion-render.yml`): 6 runners by default, up to 20 when the owner says the
+   account's runners are free (owner, 2026-11-15). *Why:* the 20 are shared with the other channels.
 9. **Music and sound** from Drive `Music-Library/` (`scripts/music_pull.sh`).
 10. **720p review cut** after our own full review; **the owner approves the cut.**
 11. **4K master**, then the package; **the owner chooses the title and thumbnail**; upload private, publish on the

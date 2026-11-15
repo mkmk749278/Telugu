@@ -2,7 +2,8 @@
 # film's public/ folder (media, fonts, textures, the master mix) as one tar from Drive
 # Creator/<drive>/render-media/public_media.tar, renders its block of shards, and uploads them as an artifact; one last
 # job joins them, lays the mix under the picture, checks the lengths and puts the film in Drive <drive>/renders/.
-# Needs the repo secret GDRIVE_RCLONE_TOKEN. At most 6 runners: the account's 20 are shared with the other channels.
+# Needs the repo secret GDRIVE_RCLONE_TOKEN. Default 6 runners, because the account's 20 are shared with the other
+# channels; up to 20 when the owner says they are free (owner, 2026-11-15).
 name: remotion-render
 on:
   workflow_dispatch:
@@ -20,7 +21,7 @@ on:
         description: "2/3 = 720p, 1 = 1080p, 2 = 4K"
         default: "2"
       runners:
-        description: "parallel runners (max 6)"
+        description: "parallel runners (default 6; up to 20 when the account's runners are free)"
         default: "6"
       crf:
         description: "x264 CRF"
@@ -51,7 +52,7 @@ jobs:
           t = json.load(open("projects/${{ inputs.film }}/vo/timing.json"))
           total, per = t["durationInFrames"] + 150, 10 * t["fps"]
           starts = list(range(0, total, per))
-          n = max(1, min(6, int("${{ inputs.runners }}")))
+          n = max(1, min(20, int("${{ inputs.runners }}")))
           size = -(-len(starts) // n)
           blocks = [f"{s[0]}-{min(s[-1] + per, total) - 1}" for s in (starts[i:i + size] for i in range(0, len(starts), size))]
           print("blocks=" + json.dumps(blocks))
