@@ -15,12 +15,19 @@ const Coin: React.FC<{x: number; y: number; r: number; label: string; k?: number
 		<text textAnchor="middle" y={r * 0.2} fontFamily="Inter Tight" fontWeight={800} fontSize={r * 0.6} fill={C.ink}>{label}</text>
 	</g>
 );
-const Box: React.FC<{x: number; text: string; at: number; done?: boolean}> = ({x, text, at}) => {
+const Box: React.FC<{x: number; text: string; at: number; tick?: number}> = ({x, text, at, tick = 1e9}) => {
 	const f = useCurrentFrame();
 	const t = ramp(f, at, 10);
+	const k = ramp(f, tick, 9); // s339 "if these three happen": each box ticks in turn (r2 froze 2.3 s here)
 	return (
 		<div style={{position: 'absolute', left: x, top: 380, width: 500, height: 330, transform: `translateY(${(1 - t) * 40}px)`, opacity: t, background: '#FBF6E9', borderRadius: 10, boxShadow: '0 18px 36px rgba(40,20,0,0.35)', padding: 30, boxSizing: 'border-box', fontFamily: F.te, color: C.ink}}>
-			<div style={{width: 70, height: 70, border: `6px solid ${C.ink}`, borderRadius: 8}} />
+			<div style={{width: 70, height: 70, border: `6px solid ${C.ink}`, borderRadius: 8, background: k > 0 ? C.yellow : undefined, position: 'relative'}}>
+				{k > 0 ? (
+					<svg viewBox="0 0 70 70" style={{position: 'absolute', left: -6, top: -6, width: 70, height: 70, overflow: 'visible'}}>
+						<path d="M14 36 L30 52 L60 14" fill="none" stroke={C.ink} strokeWidth={10} strokeLinecap="round" strokeLinejoin="round" strokeDasharray={80} strokeDashoffset={80 * (1 - k)} />
+					</svg>
+				) : null}
+			</div>
 			<div style={{fontWeight: 700, fontSize: 44, lineHeight: 1.35, marginTop: 20}}>{text}</div>
 		</div>
 	);
@@ -262,9 +269,9 @@ export const ChG: React.FC = () => {
 					<Say text="మేడిగడ్డ · ఫిబ్రవరి 2025" at={S(335) + 10} until={S(336) - 4} x={1420} y={420} size={44} />
 					<Source text="శాటిలైట్: Copernicus Sentinel-2" from={S(335) + 10} to={S(336) - 4} />
 					<Say text="ఇకమీదట మేడిగడ్డ వార్త వచ్చినప్పుడు: మూడు విషయాలు" at={S(335)} y={190} size={52} color={C.ink} bg={C.yellow} />
-					<Box x={170} text="డిసెంబర్ లో పనులు నిజంగా మొదలయ్యాయా?" at={S(336)} />
-					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} />
-					<Box x={1250} text="జూన్ 2027 కి కన్నేపల్లి పంపులు తిరిగాయా?" at={S(338)} />
+					<Box x={170} text="డిసెంబర్ లో పనులు నిజంగా మొదలయ్యాయా?" at={S(336)} tick={W(339, 'మూడూ') + 0} />
+					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} tick={W(339, 'మూడూ') + 10} />
+					<Box x={1250} text="జూన్ 2027 కి కన్నేపల్లి పంపులు తిరిగాయా?" at={S(338)} tick={W(339, 'మూడూ') + 20} />
 					<Say text="ఈ మూడూ జరిగితే: మొదటి మెట్టు మళ్ళీ నిలబడినట్టు" at={S(339)} y={860} size={54} />
 				</Paper>
 			</Shot>

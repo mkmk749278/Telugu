@@ -39,6 +39,11 @@ CC BY-SA 4.0), MEIL clips (CC BY 3.0). On-screen credits now name each author.
 - The paddy photo carries s280–288 (25 s) with the camera moving and a new overlay every 3–5 s. A second Telangana
   field photo would help; none with a checked licence is in hand yet.
 
+## r2 (GitHub run 43681762799, 15 Nov)
+Measured: 1114.1 s, 33,424 frames, 1280×720, 30 fps, −14.3 LUFS, peak −1.4 dBFS, no black frame. One freeze of
+2.3 s at 17:25 (s339: the three boxes, only a caption arriving): the boxes now tick in turn on "ఈ మూడూ జరిగితే".
+r3 carries that fix.
+
 ## Still open
 - The court passage (s254–261) is type on paper: two High Court photos (CC BY-SA 4.0) are named in the Cowork request.
 - Nobody has listened to the mix: the owner's ears.
