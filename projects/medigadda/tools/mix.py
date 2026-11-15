@@ -19,17 +19,17 @@ T = json.loads((P / 'vo/timing.json').read_text('utf-8'))
 S = lambda i: T['sentences'][i]['start']
 W = lambda i, pre: next(w['start'] for w in T['words'] if w['s'] == i and w['w'].startswith(pre))
 END = T['durationInFrames'] / T['fps']
-XF = 2.5
+XF = 3.0
 # (track, from sentence, offset into the track, gain dB): each runs to the next one's start
 PLAN = [
     ('bp03_low_tension', 0, 0, -2),      # the void, the evening, the paradox
     ('bp01_curious_pulse', 24, 0, -4),   # where it is, the staircase, why here
-    ('bp08_flow', 52, 0, -3),            # sand, raft, seepage, the tank bund, cutoffs
+    ('bp08_flow', 52, 1, -3),            # sand, raft, seepage, the tank bund, cutoffs
     ('fx07_evidence', 92, 0, -3),        # the two reports
     ('fx07_evidence', 130, 70, -3),
     ('fx02_mechanism', 151, 0, -4),      # the reconstruction
-    ('fx08_countdown', 174, 0, -11),     # under the raft: almost nothing but the voice
-    ('fx09_aftermath', 191, 0, -3),      # the evening, the snag
+    ('fx08_countdown', 174, 4, -11),     # under the raft: almost nothing but the voice
+    ('fx09_aftermath', 191, 3, -3),      # the evening, the snag
     ('fx03_boardroom', 207, 0, -4),      # the other side
     ('bp09_precision', 246, 0, -4),
     ('pr01_investigation', 269, 0, -5),  # the money
@@ -48,8 +48,8 @@ for i, (tr, a, b, off, g) in enumerate(SEG):
     a0 = max(0.0, a - (XF if i else 0))
     dur = b - a0 + (XF if i < len(SEG) - 1 else 0)
     inputs += ['-stream_loop', '-1', '-ss', str(off), '-t', f'{dur:.3f}', '-i', str(MUS / f'{tr}.wav')]
-    chains.append(f'[{i}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={g}dB,afade=t=in:st=0:d={XF if i else 0.5},'
-                  f'afade=t=out:st={max(0, dur - XF):.3f}:d={XF},adelay={int(a0 * 1000)}|{int(a0 * 1000)}[m{i}]')
+    chains.append(f'[{i}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={g}dB,afade=t=in:st=0:d={XF if i else 0.5}:curve=qsin,'
+                  f'afade=t=out:st={max(0, dur - XF):.3f}:d={XF}:curve=qsin,adelay={int(a0 * 1000)}|{int(a0 * 1000)}[m{i}]')
     labels.append(f'[m{i}]')
 n = len(SEG)
 hush = '*'.join(f"(1-between(t,{x - 0.4:.2f},{y:.2f})+between(t,{x - 0.4:.2f},{y:.2f})*max(0,min(1,max(({x:.2f}-t)/0.4,(t-{y:.2f})/0.6))))" for x, y in HUSH)
@@ -63,7 +63,7 @@ for k, (t0, g) in enumerate(THUD):
     th.append(f'[t{k}]')
 fc += f'[{n}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={END}[vo];[vo]asplit=2[vo1][vokey];'
 fc += f'[{n + 1}:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={END}[fx];'
-fc += '[bed][vokey]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=450:makeup=1[duck];'
+fc += '[bed][vokey]sidechaincompress=threshold=0.03:ratio=4:attack=150:release=1400:makeup=1[duck];'
 fc += f"[vo1][duck][fx]{''.join(th)}amix=inputs={3 + len(th)}:normalize=0,atrim=0:{END},loudnorm=I=-14:TP=-1.5:LRA=11[out]"
 subprocess.run(['ffmpeg', '-y', '-v', 'error', *inputs, '-i', str(VO), '-i', str(SFX), '-filter_complex', fc, '-map', '[out]', '-ar', '48000', '-c:a', 'pcm_s16le', str(OUT)], check=True)
 r = subprocess.run(['ffmpeg', '-i', str(OUT), '-af', 'ebur128=peak=true', '-f', 'null', '-'], capture_output=True, text=True).stderr

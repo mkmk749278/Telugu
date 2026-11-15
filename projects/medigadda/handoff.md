@@ -15,7 +15,10 @@
   −1.4 dBFS, no black, no freeze; both court shots checked in the render. r5 went to an outside review (another chatbot, via the
   owner): `review/outside_review_r5_triage.md` lists what was taken (the real deck photo held 3 s, the water line
   held longer, the coins on a dimmed page, music drops at s207 and s269, ticks on the checkmarks) and why the rest
-  was not (no licensed footage of the barrage exists). **r6** carries it: `renders/medigadda_review_720p_r6.mp4`.
+  was not (no licensed footage of the barrage exists). r6 rendered; Gemini listened to it
+  (`review/gemini_listen_r6_check.md`): our timing confirmed against the waveform; its "abrupt music" was the ducking
+  pumping, now gentler (ratio 4, 150 ms / 1.4 s, equal-power 3 s crossfades, silent intros skipped). **r7**:
+  `renders/medigadda_review_720p_r7.mp4`.
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
 - **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
   enough; a push-in to the cut added; **r4** rendered from this branch:
