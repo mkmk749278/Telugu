@@ -10,8 +10,9 @@
   CC BY / CC BY-SA; the sand-boil credit said "Public domain" and is now CC BY 2.0; credits name each author.
 - **Cowork request replaced:** only two named High Court photos (CC BY-SA 4.0) are left for the laptop.
 - SFX cues read `Evidence`; stem and mix rebuilt (−14.3 LUFS); `render-media/public_media.tar` re-uploaded.
-- **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed; **r3** rendered from this
-  branch: `Telugu/Medigadda/renders/medigadda_review_720p_r3.mp4`. Next: measure r3, then the independent viewer
+- **r2** rendered (run 43681762799) and measured; its one freeze (2.3 s, s339) fixed by ticks, which r3 showed was not
+  enough; a push-in to the cut added; **r4** rendered from this branch:
+  `Telugu/Medigadda/renders/medigadda_review_720p_r4.mp4` (r2 and r3 there are superseded). Next: measure r4, then the independent viewer
   review of the cut (PLAYBOOK §11.1) and the owner.
 
 

@@ -269,10 +269,13 @@ export const ChG: React.FC = () => {
 					<Say text="మేడిగడ్డ · ఫిబ్రవరి 2025" at={S(335) + 10} until={S(336) - 4} x={1420} y={420} size={44} />
 					<Source text="శాటిలైట్: Copernicus Sentinel-2" from={S(335) + 10} to={S(336) - 4} />
 					<Say text="ఇకమీదట మేడిగడ్డ వార్త వచ్చినప్పుడు: మూడు విషయాలు" at={S(335)} y={190} size={52} color={C.ink} bg={C.yellow} />
+					{/* s339: a slow push into the three boxes to the cut (r2 and r3 held still 2.4 s after the ticks) */}
+					<AbsoluteFill style={{transform: `scale(${1 + 0.16 * interpolate(f, [S(339), S(340)], [0, 1], clamp)})`, transformOrigin: '50% 48%'}}>
 					<Box x={170} text="డిసెంబర్ లో పనులు నిజంగా మొదలయ్యాయా?" at={S(336)} tick={W(339, 'మూడూ') + 0} />
 					<Box x={710} text="బ్లాక్ 7 మీద నిర్ణయం వచ్చిందా?" at={S(337)} tick={W(339, 'మూడూ') + 10} />
 					<Box x={1250} text="జూన్ 2027 కి కన్నేపల్లి పంపులు తిరిగాయా?" at={S(338)} tick={W(339, 'మూడూ') + 20} />
 					<Say text="ఈ మూడూ జరిగితే: మొదటి మెట్టు మళ్ళీ నిలబడినట్టు" at={S(339)} y={860} size={54} />
+					</AbsoluteFill>
 				</Paper>
 			</Shot>
 			{/* 340-349: the saying */}

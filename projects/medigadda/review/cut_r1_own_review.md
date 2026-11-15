@@ -42,7 +42,8 @@ CC BY-SA 4.0), MEIL clips (CC BY 3.0). On-screen credits now name each author.
 ## r2 (GitHub run 43681762799, 15 Nov)
 Measured: 1114.1 s, 33,424 frames, 1280×720, 30 fps, −14.3 LUFS, peak −1.4 dBFS, no black frame. One freeze of
 2.3 s at 17:25 (s339: the three boxes, only a caption arriving): the boxes now tick in turn on "ఈ మూడూ జరిగితే".
-r3 carries that fix.
+r3 (15 Nov): the same numbers, but the card still held 2.4 s after the ticks finished; a 16% push-in from s339 to
+the cut now moves it (0.0076 mean change per frame on local stills, the detector's floor is 0.003). r4 carries it.
 
 ## Still open
 - The court passage (s254–261) is type on paper: two High Court photos (CC BY-SA 4.0) are named in the Cowork request.
